@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kairos — Procesos que trabajan solos</title>
+<meta name="description" content="Kairos automatiza los procesos repetitivos de su empresa en Panamá: cada operación se hace a su hora y queda verificada, lo dudoso lo revisa una persona y sus datos no salen de su empresa.">
+
+<link rel="icon" href="assets/isotipo.svg">
+
+<link rel="stylesheet" href="assets/fuentes.css">
+<style>
+:root{
+  --paper:#F7F3EA;--paper2:#EFE8DA;--card:#FFFDF8;--rule:#D8CDB8;--rule2:#C4B596;
+  --ink:#0E1E36;--ink2:#2B3A52;--mut:#6A6F78;--gold:#7A5E2C;--gold2:#B8975A;--teal:#0B6E62;--warn:#9A5B16;
+  --serif:"Cormorant Garamond",Garamond,"Times New Roman",serif;--max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--paper)}
+body{font-family:"Inter Tight",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.sc{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1,h2,h3,.cont,.libro,.firmas b{font-variant-numeric:lining-nums}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.08}
+h2{font-size:clamp(2.4rem,4.6vw,3.7rem);margin:14px 0 18px}
+h2 em,h1 em{font-style:italic;color:var(--gold)}
+.lead{font-size:1.12rem;color:var(--ink2);max-width:640px}
+section{padding:120px 0;position:relative}
+.orn{display:flex;align-items:center;gap:16px;color:var(--gold2);justify-content:center;margin:0 auto;max-width:300px}
+.orn::before,.orn::after{content:"";flex:1;height:1px;background:var(--rule2)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;font-weight:500;font-size:.95rem;letter-spacing:.02em;border:1px solid var(--ink);cursor:pointer;transition:background .25s,color .25s}
+.btn-p{background:var(--ink);color:var(--paper)}.btn-p:hover{background:var(--gold);border-color:var(--gold)}
+.btn-g{background:transparent;color:var(--ink)}.btn-g:hover{background:var(--ink);color:var(--paper)}
+.lk{border-bottom:1px solid var(--gold2);color:var(--ink);transition:color .2s}.lk:hover{color:var(--gold)}
+
+/* barra superior */
+.top{border-bottom:1px solid var(--rule);font-size:.8rem;color:var(--mut)}
+.top .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px}
+nav{position:sticky;top:0;z-index:100;background:rgba(247,243,234,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:78px}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:1.55rem;font-weight:600;letter-spacing:.18em}
+.logo svg{width:26px;height:26px}
+.links{display:flex;gap:30px;font-size:.92rem;color:var(--ink2)}
+.links a{position:relative;padding:4px 0}.links a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:1px;background:var(--gold);transition:right .25s}
+.links a:hover::after{right:0}
+nav .btn{padding:11px 20px;font-size:.88rem;white-space:nowrap}
+@media(max-width:1000px){.links{display:none}}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--rule);background:transparent;font-size:1.1rem;cursor:pointer;color:var(--ink)}
+@media(max-width:1000px){.burger{display:block}nav.open .links{display:flex;position:absolute;top:78px;left:0;right:0;flex-direction:column;gap:0;background:var(--card);border-bottom:1px solid var(--rule);padding:8px 28px 16px}nav.open .links a{padding:12px 0;border-bottom:1px solid var(--paper2)}}
+
+@media(max-width:560px){.top{display:none}nav .lg{display:none}.logo{font-size:1.3rem}}
+
+/* portada */
+.hero{padding:90px 0 100px;border-bottom:1px solid var(--rule)}
+.hero-g{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.hero h1{font-size:clamp(3.4rem,7vw,6.4rem);line-height:.98;margin-top:18px}
+.hero .lead{margin-top:28px;font-size:1.2rem}
+.ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
+.firmas{display:flex;gap:34px;flex-wrap:wrap;margin-top:48px;padding-top:24px;border-top:1px solid var(--rule)}
+.firmas div{font-size:.86rem;color:var(--mut);max-width:170px}.firmas b{display:block;font-family:var(--serif);font-size:1.5rem;color:var(--ink);font-weight:500}
+
+/* libro de registro */
+.libro{background:var(--card);border:1px solid var(--rule);box-shadow:0 1px 0 var(--rule),0 30px 60px -40px rgba(14,30,54,.35);padding:34px 34px 26px;position:relative}
+.libro::before{content:"";position:absolute;inset:8px;border:1px solid var(--paper2);pointer-events:none}
+.libro h4{font-family:var(--serif);font-size:1.45rem;font-weight:500;display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--ink);padding-bottom:10px}
+.libro h4 small{font:500 .7rem "Inter Tight";letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.libro table{width:100%;border-collapse:collapse;margin-top:6px;font-size:.88rem}
+.libro td{padding:11px 4px;border-bottom:1px solid var(--paper2)}
+.libro td:first-child{color:var(--mut);width:64px;font-variant-numeric:tabular-nums}
+.libro td:last-child{text-align:right;font-family:var(--serif);font-style:italic;font-size:1.05rem}
+.libro tr{animation:in .6s ease both}@keyframes in{from{opacity:0}}
+.v{color:var(--teal)}.p{color:var(--warn)}
+.libro .pie{display:flex;justify-content:space-between;margin-top:18px;font-size:.8rem;color:var(--mut)}
+.libro .pie b{font-family:var(--serif);font-size:1.6rem;color:var(--ink);font-weight:500;margin-right:6px}
+.sello{position:absolute;right:-18px;top:-22px;width:92px;height:92px;border-radius:50%;border:1px solid var(--gold2);display:grid;place-items:center;text-align:center;background:var(--paper);font-family:var(--serif);font-style:italic;color:var(--gold);font-size:.86rem;line-height:1.15;transform:rotate(-8deg)}
+.sello::before{content:"";position:absolute;inset:5px;border-radius:50%;border:1px dashed var(--gold2)}
+@media(max-width:960px){.hero-g{grid-template-columns:1fr;gap:50px}.sello{right:8px}}
+
+/* principios */
+.principios{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)}
+.principios div{padding:34px 30px 34px 0}.principios div+div{padding-left:30px;border-left:1px solid var(--rule)}
+.principios i{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1.1rem}
+.principios h3{font-size:1.65rem;margin:6px 0 8px}.principios p{color:var(--ink2);font-size:.96rem}
+@media(max-width:860px){.principios{grid-template-columns:1fr}.principios div+div{padding-left:0;border-left:0;border-top:1px solid var(--rule)}}
+
+/* expedientes (carpetas con pestañas) */
+.carp{margin-top:56px}
+.vdemo{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin:60px 0 70px}
+.vdemo video{width:100%;aspect-ratio:1;display:block;border:1px solid var(--rule);background:var(--paper2)}
+.vdemo ul{list-style:none;margin-top:18px;display:grid;gap:10px;color:var(--ink2)}.vdemo li::before{content:"— ";color:var(--gold2)}
+@media(max-width:900px){.vdemo{grid-template-columns:1fr;gap:28px}}
+.insig{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px;align-items:center}
+.insig span{border:1px solid var(--rule);background:var(--card);padding:8px 14px;font-size:.86rem;color:var(--ink2)}
+.insig a{font-size:.9rem;color:var(--gold);text-decoration:underline;margin-left:4px}
+.tareas{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:34px 0 0}
+.tareas a{display:block;padding:18px 20px;background:var(--card);border:1px solid var(--rule);transition:border-color .2s}
+.tareas a:hover,.tareas a:focus-visible{border-color:var(--gold2);outline:none}
+.tareas b{display:block;font-size:1.02rem;color:var(--ink)}.tareas span{display:block;font-size:.86rem;color:var(--mut);margin-top:4px}
+@media(max-width:900px){.tareas{grid-template-columns:1fr 1fr}}
+.pest{display:flex;gap:4px;flex-wrap:wrap;padding-left:14px}
+.pest button{all:unset;cursor:pointer;padding:12px 20px 10px;background:var(--paper2);border:1px solid var(--rule);border-bottom:0;font-size:.88rem;color:var(--ink2);position:relative;top:1px;transition:background .2s}
+.pest button:hover{background:#E8DFCC}
+.pest button[aria-selected=true]{background:var(--card);color:var(--ink);font-weight:600}
+.pest button:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+.folio{background:var(--card);border:1px solid var(--rule);padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:56px;min-height:420px;box-shadow:0 30px 60px -45px rgba(14,30,54,.4)}
+.folio .sc{display:block}
+.folio h3{font-size:2.5rem;margin:10px 0 14px}
+.folio p.d{color:var(--ink2)}
+.estado{display:inline-block;margin-top:16px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border:1px solid currentColor}
+.e-live{color:var(--teal)}.e-demo{color:var(--gold)}
+.folio ol{list-style:none;counter-reset:r}
+.folio li{counter-increment:r;display:grid;grid-template-columns:48px 1fr;gap:10px;padding:14px 0;border-bottom:1px solid var(--paper2);opacity:0;transform:translateX(8px);transition:opacity .45s,transform .45s}
+.folio li.on{opacity:1;transform:none}
+.folio li::before{content:counter(r,upper-roman);font-family:var(--serif);font-size:1.35rem;color:var(--gold);font-style:italic}
+.folio li b{display:block;font-weight:600}.folio li span{color:var(--mut);font-size:.9rem}
+.folio .duda{margin-top:18px;padding:16px 18px;background:var(--paper);border-left:2px solid var(--warn);font-size:.92rem}
+.folio .duda b{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--warn);display:block}
+.folio .ctas{margin-top:26px}
+@media(max-width:900px){.folio{grid-template-columns:1fr;padding:28px;gap:24px}.pest{padding-left:0;overflow-x:auto;flex-wrap:nowrap}.pest button{white-space:nowrap}}
+
+/* método: línea de tiempo */
+.metodo{background:var(--ink);color:var(--paper)}
+.metodo .sc{color:var(--gold2)}.metodo h2 em{color:var(--gold2)}.metodo .lead{color:#C9CED8}
+.linea{margin-top:60px;display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.linea::before{content:"";position:absolute;left:0;right:0;top:34px;height:1px;background:rgba(247,243,234,.2)}
+.linea .prog{position:absolute;left:0;top:34px;height:1px;background:var(--gold2);width:0;transition:width 1.6s ease}
+.linea div{padding-right:28px;position:relative}
+.linea .n{width:68px;height:68px;border-radius:50%;border:1px solid rgba(247,243,234,.3);background:var(--ink);display:grid;place-items:center;font-family:var(--serif);font-size:1.6rem;font-style:italic;color:var(--gold2);position:relative;z-index:1;transition:border-color .4s,background .4s}
+.linea div.on .n{border-color:var(--gold2);background:#13284A}
+.linea h3{font-size:1.7rem;margin:22px 0 4px}.linea small{color:var(--gold2);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
+.linea p{color:#C9CED8;font-size:.94rem;margin-top:8px}
+.cita{margin-top:80px;padding-top:40px;border-top:1px solid rgba(247,243,234,.15);display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:start}
+.cita q{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.3rem);font-style:italic;line-height:1.3;quotes:"“" "”"}
+.cita span{display:block;margin-top:16px;color:var(--gold2);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase}
+.cita .k{font-family:var(--serif);font-size:5rem;line-height:.8;color:var(--gold2)}
+@media(max-width:860px){.linea{grid-template-columns:1fr 1fr;gap:34px}.linea::before,.linea .prog{display:none}}
+@media(max-width:560px){.linea{grid-template-columns:1fr}.linea div{padding-right:0}}
+
+/* portafolio + ventanas */
+.port{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:1px solid var(--ink)}
+.port article{padding:34px 30px 30px 0}.port article+article{padding-left:30px;border-left:1px solid var(--rule)}
+.port h3{font-size:2rem}.port .sub{color:var(--mut);font-size:.92rem;margin:6px 0 22px}
+.port ul{list-style:none}
+.port li button{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:13px 0;border-bottom:1px solid var(--paper2);transition:padding .2s}
+.port li button:hover{padding-left:8px}.port li button:hover b{color:var(--gold)}
+.port li b{font-family:var(--serif);font-size:1.3rem;font-weight:500;transition:color .2s}
+.port li i{font-style:normal;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+.port .nota{grid-column:1/-1;padding-top:26px;color:var(--mut);font-size:.92rem}
+@media(max-width:900px){.port{grid-template-columns:1fr}.port article+article{padding-left:0;border-left:0;border-top:1px solid var(--rule)}}
+dialog{border:0;padding:0;background:transparent;width:min(680px,calc(100% - 32px));max-width:none;margin:auto}
+dialog::backdrop{background:rgba(14,30,54,.55);backdrop-filter:blur(3px)}
+.ficha{background:var(--card);border:1px solid var(--rule);padding:46px;position:relative;animation:sube .35s ease}
+@keyframes sube{from{opacity:0;transform:translateY(14px)}}
+.ficha::before{content:"";position:absolute;inset:9px;border:1px solid var(--paper2);pointer-events:none}
+.ficha .x{position:absolute;right:18px;top:14px;background:none;border:0;font-family:var(--serif);font-size:2rem;cursor:pointer;color:var(--mut);z-index:1}.ficha .x:hover{color:var(--ink)}
+.ficha h3{font-size:2.6rem;margin:8px 0 10px}.ficha p{color:var(--ink2)}
+.ficha dl{display:grid;grid-template-columns:150px 1fr;margin-top:24px;border-top:1px solid var(--rule)}
+.ficha dt,.ficha dd{padding:12px 0;border-bottom:1px solid var(--paper2);font-size:.93rem}
+.ficha dt{color:var(--mut)}.ficha dd{font-weight:500}
+.ficha .ctas{margin-top:28px}
+@media(max-width:560px){.ficha{padding:28px 22px}.ficha dl{grid-template-columns:1fr}.ficha dt{border-bottom:0;padding-bottom:0}}
+
+/* libro contable (calculadora) */
+.cont{display:grid;grid-template-columns:1fr 1fr;margin-top:56px;background:var(--card);border:1px solid var(--rule);box-shadow:0 30px 60px -45px rgba(14,30,54,.4)}
+.cont .in{padding:44px;border-right:1px solid var(--rule);display:grid;gap:30px}
+.cont label{display:grid;gap:12px;font-size:.94rem;color:var(--ink2)}
+.cont .lb{display:flex;justify-content:space-between;align-items:baseline}
+.cont .lb b{font-family:var(--serif);font-size:1.5rem;font-weight:500;color:var(--ink)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:2px;background:linear-gradient(90deg,var(--gold) var(--p,50%),var(--rule) var(--p,50%));outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--card);border:2px solid var(--gold);cursor:pointer}
+input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:var(--card);border:2px solid var(--gold);cursor:pointer}
+.cont .out{padding:44px}
+.cont table{width:100%;border-collapse:collapse}
+.cont td{padding:14px 0;border-bottom:1px solid var(--paper2);font-size:.95rem;color:var(--ink2)}
+.cont td:last-child{text-align:right;font-family:var(--serif);font-size:1.35rem;color:var(--ink);font-variant-numeric:tabular-nums}
+.cont tr.t td{border-top:2px solid var(--ink);border-bottom:3px double var(--ink);font-weight:600;color:var(--ink)}
+.cont tr.t td:last-child{font-size:2.3rem;color:var(--gold)}
+.cont .nota{font-size:.8rem;color:var(--mut);margin-top:18px}
+@media(max-width:860px){.cont{grid-template-columns:1fr}.cont .in{border-right:0;border-bottom:1px solid var(--rule);padding:28px}.cont .out{padding:28px}}
+
+/* datos */
+.datos-g{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;margin-top:50px;align-items:start}
+.sw{display:inline-flex;border:1px solid var(--ink);margin-bottom:26px}
+.sw button{all:unset;cursor:pointer;padding:10px 20px;font-size:.88rem}
+.sw button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.comp{border-top:1px solid var(--ink)}
+.comp div{display:grid;grid-template-columns:170px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--rule)}
+.comp dt{font-family:var(--serif);font-size:1.2rem}.comp dd{color:var(--ink2);font-size:.95rem}
+.comp .mal{color:var(--warn)}
+.garant{display:grid;gap:0;border-top:1px solid var(--ink)}
+.garant>div{padding:20px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:44px 1fr;gap:12px}
+.garant i{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1.3rem}
+.garant b{display:block;font-family:var(--serif);font-size:1.35rem;font-weight:500}.garant span{color:var(--ink2);font-size:.94rem}
+@media(max-width:900px){.datos-g{grid-template-columns:1fr;gap:40px}.comp div{grid-template-columns:1fr;gap:4px}}
+
+/* preguntas */
+.faq{margin-top:46px;border-top:1px solid var(--ink);max-width:900px}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;list-style:none;padding:22px 0;font-family:var(--serif);font-size:1.45rem;display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold);font-size:1.6rem;line-height:1;transition:transform .25s}.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{padding:0 0 22px;color:var(--ink2);max-width:760px}
+
+/* contacto */
+.carta{display:grid;grid-template-columns:1fr 1fr;gap:60px;background:var(--card);border:1px solid var(--rule);padding:60px;position:relative}
+.carta::before{content:"";position:absolute;inset:10px;border:1px solid var(--paper2);pointer-events:none}
+#form{display:grid;gap:14px;position:relative}
+#form input,#form select,#form textarea{width:100%;padding:13px 2px;border:0;border-bottom:1px solid var(--rule2);background:transparent;color:var(--ink);font:inherit;border-radius:0}
+#form input:focus,#form select:focus,#form textarea:focus{outline:none;border-bottom-color:var(--gold)}
+#form textarea{min-height:100px;resize:vertical}#form .btn{justify-content:center;margin-top:10px}
+.note{font-size:.78rem;color:var(--mut)}
+.firma{margin-top:30px;font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--gold)}
+@media(max-width:860px){.carta{grid-template-columns:1fr;padding:30px;gap:34px}}
+footer{padding:50px 0 40px;font-size:.86rem;color:var(--mut);border-top:1px solid var(--rule)}
+footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}footer a:hover{color:var(--ink)}
+
+.vx-bar{background:var(--paper)!important;color:var(--mut)!important;border-top:1px solid var(--rule)!important}.vx-bar a{color:var(--ink)!important}.vx-r{border-radius:0!important;border-color:var(--rule)!important}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}.rv.vis{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.folio li{opacity:1;transform:none}}
+
+/* Kairos Central: franja que conecta los tres paquetes (las tres columnas del portafolio) */
+.port .central{grid-column:1/-1;position:relative;display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;margin-top:34px;padding:16px 20px;
+  border:1px solid var(--ink,#0E1E36);background:var(--ink,#0E1E36);color:#F7F3EA;text-decoration:none}
+.port .central b{font-family:var(--serif,Georgia);font-weight:500;font-size:1.35rem;letter-spacing:.01em}
+.port .central span{font-size:.92rem;color:#E9E1D0}
+.port .central::before{content:"";position:absolute;left:16.66%;right:16.66%;top:-34px;height:34px;
+  border-left:1px solid var(--ink,#0E1E36);border-right:1px solid var(--ink,#0E1E36);
+  background:linear-gradient(var(--ink,#0E1E36),var(--ink,#0E1E36)) center/1px 100% no-repeat}
+.port .central:hover{background:#18304F}
+@media(max-width:900px){.port .central::before{content:none}}
+</style>
+<!--VX:HEAD-->
+<link rel="canonical" href="https://kairosgrouppanama.com/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Kairos">
+<meta property="og:locale" content="es_PA">
+<meta property="og:title" content="Kairos — Procesos que trabajan solos">
+<meta property="og:description" content="Kairos automatiza los procesos repetitivos de su empresa en Panamá: cada operación se hace a su hora y queda verificada, lo dudoso lo revisa una persona y sus datos no salen de su empresa.">
+<meta property="og:url" content="https://kairosgrouppanama.com/">
+<meta property="og:image" content="https://kairosgrouppanama.com/assets/compartir.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F7F3EA">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Kairos", "legalName": "Kairos Group, S.A., en constitución", "url": "https://kairosgrouppanama.com/", "logo": "https://kairosgrouppanama.com/assets/isotipo.svg", "email": "contacto@kairosgrouppanama.com", "slogan": "Procesos que trabajan solos.", "areaServed": "PA", "address": {"@type": "PostalAddress", "addressLocality": "Ciudad de Panamá", "addressCountry": "PA"}, "sameAs": ["https://www.linkedin.com/company/kairosgrouppa", "https://www.instagram.com/kairos.ptty"]}</script>
+<!--/VX:HEAD-->
+</head>
+<body>
+<div class="top"><div class="wrap"><span>Ciudad de Panamá · Kairos Group, S.A., en constitución</span><span>contacto@kairosgrouppanama.com</span></div></div>
+<nav aria-label="Principal"><div class="wrap">
+  <a href="index.html" class="logo" aria-label="Kairos, inicio"><svg viewBox="0 0 32 32" fill="none"><path d="M8 5V27" stroke="#0E1E36" stroke-width="3.2" stroke-linecap="round"/><path d="M25 5L18 12M18 20L25 27" stroke="#0E1E36" stroke-width="3.2" stroke-linecap="round"/><circle cx="14.3" cy="16" r="2.6" fill="#9C7A3C"/></svg>KAIROS</a>
+  <div class="links" onclick="this.closest('nav').classList.remove('open')"><a href="#soluciones">Soluciones</a><a href="productos.html">Productos</a><a href="#metodo">Cómo trabajamos</a><a href="precios.html">Precios</a><a href="laboratorio.html">Laboratorio</a><a href="nosotros.html">Nosotros</a></div>
+  <div style="display:flex;gap:10px;align-items:center"><a href="#contacto" class="btn btn-p">Diagnóstico<span class="lg">&nbsp;gratis</span></a><button class="burger" aria-label="Menú" aria-expanded="false" onclick="var n=this.closest('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">☰</button></div>
+</div></nav>
+
+<header class="hero"><div class="wrap hero-g">
+  <div>
+    <span class="sc">Automatización de procesos · Panamá</span>
+    <h1>Procesos que<br><em>trabajan solos.</em></h1>
+    <p class="lead">Su equipo deja el trabajo repetitivo. Cada operación se hace a su hora y queda verificada; lo dudoso siempre lo revisa una persona, y sus datos no salen de su empresa.</p>
+    <div class="ctas"><a data-agenda href="https://calendar.app.google/kDueUtrgYfQMWu889" target="_blank" rel="noopener" class="btn btn-p">Elegir fecha y hora (30 min)</a><a href="autodiagnostico.html" class="btn btn-g">Hacer el autodiagnóstico (10 min)</a></div>
+    <div class="firmas">
+      <div><b>30 días</b>de piloto supervisado, sin permanencia</div>
+      <div><b>Siempre</b>una persona revisa los casos dudosos</div>
+      <div><b>Ley 81</b>de 2019, firmada antes de empezar</div>
+    </div>
+  </div>
+  <aside class="libro rv" aria-label="Libro de registro de ejemplo con datos ficticios">
+    <div class="sello">Datos<br>ficticios</div>
+    <h4>Registro del día</h4>
+    <table><tbody id="reg"></tbody></table>
+    <div class="pie"><span><b id="nV">0</b>verificados</span><span><b id="nP">0</b>revisados por una persona</span></div>
+  </aside>
+</div></header>
+<section style="padding:0"><div class="wrap">
+  <nav class="tareas" aria-label="Lo que Kairos hace por usted">
+    <a href="#soluciones" data-exp="4"><b>Atender</b><span>Correos y mensajes respondidos o derivados</span></a>
+    <a href="#soluciones" data-exp="0"><b>Agendar</b><span>Citas confirmadas y reprogramadas</span></a>
+    <a href="#soluciones" data-exp="5"><b>Cobrar</b><span>Recordatorios y seguimiento de cartera</span></a>
+    <a href="#soluciones" data-exp="8"><b>Revisar documentos</b><span>Expedientes completos antes de enviarse</span></a>
+  </nav>
+</div></section>
+
+<section style="padding-bottom:0"><div class="wrap">
+  <div class="vdemo rv">
+    <video controls muted playsinline preload="none" poster="assets/video/demo-agenda.png" aria-label="Demostración de Kairos Agenda con datos ficticios">
+      <source src="assets/video/demo-agenda.mp4" type="video/mp4"></video>
+    <div><span class="sc">Véalo funcionar · 45 segundos</span><h2>Una cita a las 9:40 p.m., <em>sin nadie en recepción.</em></h2>
+      <ul><li>Agenda con los horarios reales de la clínica</li><li>Reprograma sin llamadas y libera el espacio</li><li>Lo médico o dudoso pasa a una persona, con el motivo anotado</li></ul>
+      <p style="margin-top:18px;color:var(--mut);font-size:.9rem">Demostración con datos ficticios (Clínica Demo).</p>
+      <div class="ctas" style="margin-top:22px"><a href="demo-agenda.html" class="btn btn-g">Probar la demo usted mismo</a></div></div>
+  </div>
+</div></section>
+
+<section style="padding:0"><div class="wrap">
+  <div class="principios">
+    <div><i>Primero,</i><h3>sus reglas</h3><p>Escribimos con su equipo cada regla del proceso. Usted las aprueba antes de que el sistema haga nada.</p></div>
+    <div><i>Siempre,</i><h3>una persona</h3><p>Ante la duda, el sistema no decide. El caso pasa a alguien de su equipo, con el motivo anotado.</p></div>
+    <div><i>Nunca,</i><h3>sus datos fuera</h3><p>Todo corre en su empresa. Firmamos confidencialidad y tratamiento de datos antes de empezar.</p></div>
+  </div>
+</div></section>
+
+<section id="soluciones"><div class="wrap">
+  <div class="rv" style="max-width:780px"><span class="sc">Expedientes</span><h2>¿Qué le quita más tiempo <em>a su equipo?</em></h2>
+  <p class="lead">Abra el expediente de cada problema: cómo lo resolvemos, paso a paso, y qué ocurre cuando algo no está claro.</p></div>
+  <div class="carp rv">
+    <div class="pest" role="tablist" id="pest"></div>
+    <div class="folio" id="folio" role="tabpanel" aria-live="polite"></div>
+  </div>
+</div></section>
+
+<section class="metodo" id="metodo"><div class="wrap">
+  <div class="rv" style="max-width:760px"><span class="sc">Método</span><h2>De la primera conversación <em>a la operación diaria.</em></h2>
+  <p class="lead">Cuatro etapas, sin sorpresas: su primer proceso entra a piloto en 4 a 8 semanas. Usted decide en cada una si seguimos.</p></div>
+  <div class="linea" id="linea"><span class="prog" id="prog"></span>
+    <div><span class="n">I</span><small>30 minutos · gratis</small><h3>Conversación</h3><p>Revisamos un proceso y le decimos con sus números si conviene automatizarlo. Si no se recupera en 12 meses, se lo decimos.</p></div>
+    <div><span class="n">II</span><small>1 a 2 semanas</small><h3>Diagnóstico</h3><p>Medimos el proceso, escribimos las reglas con su equipo y usted las aprueba.</p></div>
+    <div><span class="n">III</span><small>30 días</small><h3>Piloto</h3><p>El sistema trabaja supervisado y revisamos el 100 % de lo que hace. Sin permanencia.</p></div>
+    <div><span class="n">IV</span><small>Mes a mes</small><h3>Operación</h3><p>Vigilancia diaria, ajustes e informe mensual de valor con Kairos Care.</p></div>
+  </div>
+  <div class="cita rv"><span class="k">“</span><div><q>Preferimos decirle que no conviene automatizar algo, antes que venderle un proyecto que no se paga solo.</q><span>Equipo Kairos</span></div></div>
+</div></section>
+
+<section id="portafolio"><div class="wrap">
+  <div class="rv" style="max-width:780px"><span class="sc">Portafolio</span><h2>Tres áreas, <em>un mismo método.</em></h2>
+  <p class="lead">Seleccione un producto para abrir su ficha. Puede empezar con uno y sumar los demás por fases.</p></div>
+  <div class="port rv" id="port">
+    <article><span class="sc">Kairos Cliente</span><h3>Atención y ventas</h3><p class="sub">Que ningún mensaje, cita ni prospecto se pierda.</p><ul data-a="cliente"></ul></article>
+    <article><span class="sc">Kairos Dinero</span><h3>Reclamos y cobros</h3><p class="sub">Cobre a tiempo y sepa siempre cuánto le deben.</p><ul data-a="dinero"></ul></article>
+    <article><span class="sc">Kairos Documentos</span><h3>Trabajo interno</h3><p class="sub">Su equipo deja de copiar y revisar papeles.</p><ul data-a="documentos"></ul></article>
+    <a class="central" href="producto-central.html" aria-label="Kairos Central: vigila, coordina y corrige los procesos de los tres paquetes">
+      <b>Kairos Central</b><span>Con tres o más procesos, los vigila, coordina y corrige desde su propio servidor · instalación incluida →</span></a>
+    <p class="nota">Precios en USD en la <a class="lk" href="precios.html">lista de precios</a>. Por industria: <a class="lk" href="industria-salud.html">salud</a>, <a class="lk" href="industria-logistica.html">logística y Zona Libre</a>, <a class="lk" href="industria-servicios.html">servicios</a>.</p>
+  </div>
+</div></section>
+<dialog id="dlg"><div class="ficha" id="ficha"></div></dialog>
+
+<section id="calculadora" style="padding-top:0"><div class="wrap">
+  <div class="orn" aria-hidden="true">✦</div>
+  <div class="rv" style="max-width:780px;margin-top:70px"><span class="sc">Estimación</span><h2>Las cuentas, <em>antes que nada.</em></h2>
+  <p class="lead">Parte de una clínica mediana típica (reclamos, citas y documentos). Mueva los valores a los de su proceso; el Diagnóstico calcula la cifra real con sus datos.</p></div>
+  <div class="cont rv">
+    <div class="in">
+      <label><span class="lb">Operaciones al mes <b id="vOps">2.500</b></span><input type="range" id="ops" min="100" max="10000" step="100" value="2500"></label>
+      <label><span class="lb">Minutos por operación <b id="vMin">5</b></span><input type="range" id="min" min="1" max="20" value="5"></label>
+      <label><span class="lb">Costo por hora del equipo (USD) <b id="vCost">7</b></span><input type="range" id="cost" min="3" max="30" value="7"></label>
+    </div>
+    <div class="out">
+      <table>
+        <tr><td>Horas de trabajo hoy</td><td id="hHoy">0</td></tr>
+        <tr><td>Horas que se automatizan (70 %)</td><td id="hAuto">0</td></tr>
+        <tr><td>Horas que siguen con su equipo</td><td id="hrs">0</td></tr>
+        <tr class="t"><td>Valor mensual del tiempo</td><td>US$<span id="usd">0</span></td></tr>
+      </table>
+      <p class="nota">Estimación orientativa, solo del tiempo. En Panamá, el mayor valor suele estar en el dinero que se recupera (glosas, inasistencias, cartera): véalo con el <a class="lk" href="autodiagnostico.html">autodiagnóstico</a>, que incluye precios y retorno.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="datos" style="padding-top:40px"><div class="wrap">
+  <div class="rv" style="max-width:780px"><span class="sc">Confidencialidad</span><h2>Sus datos, <em>en su casa.</em></h2></div>
+  <div class="datos-g">
+    <div class="rv">
+      <div class="sw" role="group" aria-label="Comparar"><button aria-pressed="true" data-m="k">Con Kairos</button><button aria-pressed="false" data-m="n">Lo habitual</button></div>
+      <dl class="comp" id="comp"></dl>
+    </div>
+    <div class="garant rv">
+      <div><i>i.</i><div><b>En su infraestructura</b><span>Los procesos corren en sus equipos o en su nube. Los datos sensibles no pasan por Kairos.</span></div></div>
+      <div><i>ii.</i><div><b>Firmado antes de empezar</b><span>Acuerdo de confidencialidad y de tratamiento de datos según la Ley 81 de 2019.</span></div></div>
+      <div><i>iii.</i><div><b>Código sin datos</b><span>Nuestros repositorios solo guardan código; un verificador revisa cada cambio antes de guardarlo.</span></div></div>
+      <div><i>iv.</i><div><b>Al terminar, se borran</b><span>Le entregamos lo acordado y eliminamos sus datos, con constancia escrita.</span></div></div>
+    </div>
+  </div>
+  <div class="insig rv" aria-label="Seguridad y cumplimiento">
+    <span>Ley 81 de 2019</span><span>Acuerdo de tratamiento de datos en cada contrato</span><span>Procesos en su infraestructura</span><span>Registro auditable de cada operación</span><span>API oficial de WhatsApp Business (Meta)</span><span>Hoja de ruta: ISO/IEC 27001</span>
+    <a href="seguridad.html">Ver el Marco de Seguridad →</a>
+  </div>
+</div></section>
+
+<section id="preguntas" style="padding-top:40px"><div class="wrap">
+  <div class="rv"><span class="sc">Preguntas frecuentes</span><h2>Lo que suelen <em>preguntarnos.</em></h2></div>
+  <div class="faq">
+    <details><summary>¿Qué pasa si el piloto no funciona?</summary><p>Antes de empezar fijamos en un acta el criterio de éxito. Si el piloto de 30 días no lo cumple, usted termina sin penalidad y paga solo el 50 % inicial de la implementación.</p></details>
+    <details><summary>¿Me amarro a un contrato largo?</summary><p>No. Después del piloto todo es mes a mes y puede terminar con 30 días de aviso, sin penalidad.</p></details>
+    <details><summary>¿El sistema decide solo?</summary><p>Solo en lo que sus reglas permiten. Todo caso dudoso pasa a una persona de su equipo, y cada acción queda registrada con hora y verificación.</p></details>
+    <details><summary>¿Necesito cambiar mis sistemas?</summary><p>No. Kairos trabaja sobre los sistemas y portales que ya usa, como lo haría un analista de su equipo.</p></details>
+    <details><summary>¿Cuánto cuesta empezar?</summary><p>La conversación inicial de 30 minutos (Diagnóstico Express) es gratis. El Diagnóstico Kairos completo cuesta US$490 y se descuenta al 100 % si contrata la implementación en 60 días.</p></details>
+    <details><summary>¿Qué productos están listos hoy?</summary><p>Kairos Claims completó un piloto real con una aseguradora. Los demás tienen motor programado y una demostración con datos ficticios en el <a class="lk" href="laboratorio.html">Laboratorio</a>; los tres primeros clientes de cada uno tienen 20 % de descuento en la implementación.</p></details>
+  </div>
+</div></section>
+
+<section id="contacto" style="padding-top:40px"><div class="wrap"><div class="carta rv">
+  <div><span class="sc">Correspondencia</span><h2>Conversemos <em>30 minutos.</em></h2>
+    <p class="lead">Cuéntenos qué proceso le quita más tiempo a su equipo. Le respondemos con una estimación honesta: si conviene automatizarlo y cuánto puede ahorrar.</p>
+    <div class="ctas" style="margin-top:22px"><a data-agenda href="https://calendar.app.google/kDueUtrgYfQMWu889" target="_blank" rel="noopener" class="btn btn-p">Elegir fecha y hora →</a></div>
+    <p style="margin-top:12px;color:var(--mut);font-size:.9rem">Reserve directamente en nuestra agenda (Google Meet), o escríbanos con el formulario.</p>
+    <p class="firma">— Equipo Kairos</p>
+    <p style="margin-top:8px;color:var(--mut);font-size:.9rem">Ciudad de Panamá · contacto@kairosgrouppanama.com</p></div>
+  <form id="form">
+    <input placeholder="Nombre y apellido" required aria-label="Nombre y apellido">
+    <input placeholder="Empresa" required aria-label="Empresa">
+    <input type="email" placeholder="Correo corporativo" required aria-label="Correo corporativo">
+    <select required name="Industria" aria-label="Industria"><option value="">Industria</option><option>Salud</option><option>Seguros</option><option>Banca y finanzas</option><option>Logística / Zona Libre</option><option>Comercio y retail</option><option>Servicios profesionales</option><option>Otra</option></select>
+    <select name="Cómo nos conoció" aria-label="¿Cómo nos conoció?"><option value="">¿Cómo nos conoció? (opcional)</option><option>LinkedIn</option><option>Instagram o Facebook</option><option>Recomendación de alguien</option><option>Evento o congreso</option><option>Búsqueda en Google</option><option>Otro</option></select>
+    <select name="Horario preferido" aria-label="Horario preferido para la conversación"><option value="">Horario preferido (opcional)</option><option>Mañana (8:00–12:00)</option><option>Mediodía (12:00–14:00)</option><option>Tarde (14:00–18:00)</option></select>
+    <textarea placeholder="¿Qué proceso le gustaría automatizar? (no incluya datos personales de terceros)" aria-label="Proceso"></textarea>
+    <button class="btn btn-p">Enviar solicitud</button>
+    <span class="note">Al enviar acepta nuestra <a class="lk" href="privacidad.html">Política de Privacidad</a>.</span>
+  </form>
+</div></div></section>
+
+
+<script>
+(function(){
+"use strict";
+var $=function(id){return document.getElementById(id)};
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+
+/* Registro del día (datos ficticios) */
+var reg=$("reg"),nV=0,nP=0,id=90412,t=new Date();t.setHours(7,2,0);
+var TIPOS=[["Reclamo","presentado"],["Factura","cargada al sistema"],["Cita","confirmada"],["Correo","respondido"],["Recordatorio","enviado"]];
+var MOT=["falta la firma","total no cuadra","pidió hablar con alguien"];
+function fila(){var dud=Math.random()<.16,k=Math.floor(Math.random()*TIPOS.length),hh=t.toTimeString().slice(0,5);t=new Date(t.getTime()+(4+Math.random()*9)*60000);
+  var tr=document.createElement("tr");
+  tr.innerHTML="<td>"+hh+"</td><td>"+TIPOS[k][0]+" "+(id++)+" · "+(dud?MOT[id%3]:TIPOS[k][1])+"</td><td class=\""+(dud?"p\">a revisión":"v\">verificado")+"</td>";
+  reg.prepend(tr);if(reg.children.length>6)reg.lastChild.remove();dud?nP++:nV++;$("nV").textContent=nV;$("nP").textContent=nP}
+for(var i=0;i<6;i++)fila();if(!RM)setInterval(fila,3200);
+
+/* Expedientes */
+var EXP=[
+ {k:"Citas y mensajes",p:"Agenda",s:"demo",d:"Un asistente de WhatsApp agenda, confirma y reprograma citas a cualquier hora, con sus horarios y el tono de su empresa.",f:[["Recibe el mensaje","Del paciente o cliente, a cualquier hora"],["Consulta su agenda","Los horarios reales disponibles"],["Confirma la cita","Y la anota en su sistema"],["Recuerda","24 horas antes, con consentimiento"]],h:"Una pregunta fuera de lo previsto pasa a su recepción.",l:"demo-agenda.html"},
+ {k:"Reclamos a aseguradoras",p:"Claims",s:"live",d:"Presenta cada reclamo en el portal de la aseguradora, registra el número y verifica que quedó bien hecho.",f:[["Lee el expediente","Formulario, factura y documentos"],["Aplica sus reglas","La matriz aprobada por su equipo"],["Presenta el reclamo","En el portal de la aseguradora"],["Verifica","Y registra el número de vuelta"]],h:"Sin firma, sin diagnóstico o duplicado: lo revisa una persona.",l:"claims.html"},
+ {k:"Facturas y embarques",p:"Docs",s:"demo",d:"Lee facturas comerciales y conocimientos de embarque, comprueba que los montos cuadren y los carga a su sistema.",f:[["Lee el documento","Factura o B/L"],["Extrae los campos","Número, proveedor, montos"],["Comprueba","Que el total cuadre"],["Carga y verifica","En su ERP"]],h:"Si falta un dato o no cuadra, no adivina: va a revisión.",l:"laboratorio.html#docs"},
+ {k:"Seguimiento de ventas",p:"CRM",s:"demo",d:"Cada mañana deja a cada vendedor su tarea del día: primer contacto, seguimiento o recordar la propuesta.",f:[["Revisa el embudo","Todas las oportunidades abiertas"],["Mide el silencio","Días sin contacto"],["Asigna la tarea","A cada vendedor"],["Resume","Por etapa, sin nombres"]],h:"Negociaciones y clientes molestos: decide el vendedor.",l:"laboratorio.html#crm"},
+ {k:"Correo entrante",p:"Inbox",s:"demo",d:"Clasifica cada correo, responde lo repetitivo con plantillas aprobadas y abre la solicitud al área que corresponde.",f:[["Lee el correo","Asunto y contenido"],["Lo clasifica","Cotización, pedido, factura"],["Responde","Con su plantilla aprobada"],["Registra","La solicitud y la respuesta"]],h:"Reclamos y correos ambiguos: los atiende una persona.",l:"laboratorio.html#inbox"},
+ {k:"Cobranza",p:"Cobra",s:"demo",d:"Recordatorios de facturas vencidas: cordiales al principio, firmes después, siempre respetando acuerdos.",f:[["Revisa la cartera","Facturas vencidas"],["Respeta acuerdos","Disputas y promesas de pago"],["Recuerda","Solo número y días de atraso"],["Verifica","Que el mensaje llegó"]],h:"Tras tres recordatorios, llama una persona.",l:"laboratorio.html#cobra"},
+ {k:"Consultas internas",p:"Assist",s:"demo",d:"Responde las preguntas de su equipo citando la sección exacta del manual de la empresa.",f:[["Recibe la pregunta","De cualquier colaborador"],["Busca","En sus manuales"],["Cita la sección","Textual, con su nombre"],["Mide la certeza","Antes de responder"]],h:"Temas sensibles o sin respuesta: a la persona responsable.",l:"laboratorio.html#assist"},
+ {k:"Confirmación de citas",p:"Voice",s:"demo",d:"Llama con un guion aprobado para confirmar citas y entiende respuestas sencillas.",f:[["Revisa","Consentimiento y horario"],["Llama","Con el guion aprobado"],["Entiende","Confirmar o cambiar"],["Anota","El resultado en su agenda"]],h:"Si piden hablar con alguien, devuelve la llamada una persona.",l:"laboratorio.html#voice"},
+ {k:"Documentos incompletos",p:"DocCheck",s:"demo",d:"Revisa que cada documento esté completo antes de enviarlo: campos, formato, vigencia y firma.",f:[["Recibe","El documento"],["Revisa","Los campos obligatorios"],["Valida","Formato y vigencia"],["Señala","Cada falla con su código"]],h:"Nunca guarda el contenido: solo el código de cada falla.",l:"laboratorio.html#doccheck"},
+ {k:"Cartera",p:"Monitor",s:"demo",d:"Un tablero de su cartera con aseguradoras: antigüedad, glosas, días de pago y alertas a tiempo.",f:[["Consolida","Sus fuentes de información"],["Agrupa","Por aseguradora"],["Calcula","Antigüedad y glosas"],["Alerta","Los atrasos"]],h:"Solo cifras agregadas: rechaza cualquier dato personal.",l:"demo-monitor.html"}
+];
+var ROM=["I","II","III","IV","V","VI","VII","VIII","IX","X"];
+var pest=$("pest"),folio=$("folio"),tm=[];
+EXP.forEach(function(e,i){var b=document.createElement("button");b.setAttribute("role","tab");b.setAttribute("aria-selected",i===0);b.textContent=e.k;
+  b.onclick=function(){[].forEach.call(pest.children,function(x){x.setAttribute("aria-selected",x===b)});abrir(i)};pest.appendChild(b)});
+[].forEach.call(document.querySelectorAll(".tareas a"),function(a){a.addEventListener("click",function(){var b=pest.children[+a.dataset.exp];if(b)b.click()})});
+function abrir(i){var e=EXP[i];tm.forEach(clearTimeout);tm=[];
+  folio.innerHTML="<div><span class=\"sc\">Expediente "+ROM[i]+" · Kairos "+e.p+"</span><h3>"+esc(e.k)+"</h3><p class=\"d\">"+esc(e.d)+"</p>"+
+   "<span class=\"estado "+(e.s==="live"?"e-live\">Piloto completado":"e-demo\">Demostración disponible")+"</span>"+
+   "<div class=\"ctas\"><a class=\"btn btn-p\" href=\""+e.l+"\">"+(e.s==="live"?"Ver cómo funciona":"Ver la demostración")+"</a><a class=\"btn btn-g\" href=\"#contacto\">Conversarlo</a></div></div>"+
+   "<div><ol>"+e.f.map(function(f){return"<li><div><b>"+esc(f[0])+"</b><span>"+esc(f[1])+"</span></div></li>"}).join("")+"</ol>"+
+   "<div class=\"duda\"><b>Ante la duda</b>"+esc(e.h)+"</div></div>";
+  [].forEach.call(folio.querySelectorAll("li"),function(li,j){tm.push(setTimeout(function(){li.classList.add("on")},RM?0:150+j*200))})}
+abrir(0);
+
+/* Línea del método: avanza al verla */
+var linea=$("linea");
+function avanzar(){var ds=linea.querySelectorAll(":scope > div");[].forEach.call(ds,function(d,j){setTimeout(function(){d.classList.add("on")},RM?0:j*420)});$("prog").style.width="100%"}
+
+/* Portafolio con fichas en ventana (precios = comercial/lista_precios.md) */
+var PRO={cliente:[["Agenda","demo","Asistente de WhatsApp que agenda, confirma y recuerda citas.","Desde US$500 + US$120 al mes por sede","demo-agenda.html","Clínicas, consultorios, servicios"],
+  ["Inbox","demo","Clasifica correos, responde lo repetitivo y abre solicitudes.","US$600 + US$90/mes por buzón","laboratorio.html#inbox","Atención al cliente, back-office"],
+  ["Voice","demo","Llamadas automáticas de confirmación con guion aprobado.","US$1.000 + US$0,12 por minuto (mín. US$200/mes)","laboratorio.html#voice","Clínicas, cobranza"],
+  ["CRM","demo","Embudo de ventas con la tarea del día para cada vendedor.","Desde US$1.500 + US$90 al mes (hasta 5 usuarios; +US$15 por usuario adicional)","laboratorio.html#crm","Pymes de servicios"]],
+ dinero:[["Claims","live","Presenta y verifica reclamos en el portal de la aseguradora.","Desde US$1.500 + US$250/mes · Pro: US$0,40 por reclamo (mín. US$300/mes)","claims.html","Clínicas, hospitales, laboratorios"],
+  ["Cobra","demo","Recordatorios de facturas vencidas que respetan acuerdos.","US$800 + US$300/mes","laboratorio.html#cobra","Toda empresa con cartera"],
+  ["Monitor","demo","Tablero de cartera por aseguradora con alertas.","US$800 + US$120/mes","demo-monitor.html","Clínicas, grupos hospitalarios"]],
+ documentos:[["Docs","demo","Lee facturas y B/L y los carga a su sistema.","US$1.200 + US$0,07 por documento (mín. US$100/mes)","laboratorio.html#docs","Logística, Zona Libre, contabilidad"],
+  ["DocCheck","demo","Revisa que cada documento esté completo antes de enviarlo.","US$1.000 + US$0,06 por documento (mín. US$100/mes)","laboratorio.html#doccheck","Salud, seguros, banca"],
+  ["Assist","demo","Responde a su equipo citando los manuales de la empresa.","US$1.200 + US$120/mes (hasta 50 usuarios)","laboratorio.html#assist","Empresas medianas y grandes"]]};
+var AREA={cliente:"Cliente",dinero:"Dinero",documentos:"Documentos"};
+var dlg=$("dlg"),ficha=$("ficha");
+Object.keys(PRO).forEach(function(a){var ul=document.querySelector('[data-a="'+a+'"]');
+  PRO[a].forEach(function(p){var li=document.createElement("li"),b=document.createElement("button");
+    b.innerHTML="<b>Kairos "+p[0]+"</b><i class=\""+(p[1]==="live"?"e-live\">Piloto completado":"e-demo\">Demostración")+"</i>";
+    b.onclick=function(){ficha.innerHTML="<button class=\"x\" aria-label=\"Cerrar\">×</button><span class=\"sc\">Kairos "+AREA[a]+"</span><h3>Kairos "+p[0]+"</h3><p>"+esc(p[2])+"</p>"+
+      "<dl><dt>Estado</dt><dd class=\""+(p[1]==="live"?"e-live\">Piloto completado con una aseguradora":"e-demo\">Demostración disponible · aún sin cliente")+"</dd><dt>Para quién</dt><dd>"+esc(p[5])+"</dd><dt>Inversión</dt><dd>"+esc(p[3])+"</dd><dt>Primeros clientes</dt><dd>"+(p[1]==="live"?"Piloto de 30 días sin permanencia":"20 % de descuento en la implementación")+"</dd></dl>"+
+      "<div class=\"ctas\"><a class=\"btn btn-p\" href=\""+p[4]+"\">"+(p[1]==="live"?"Ver cómo funciona":"Ver la demostración")+"</a><a class=\"btn btn-g\" href=\"#contacto\" data-c>Conversarlo</a></div>";
+      ficha.querySelector(".x").onclick=function(){dlg.close()};ficha.querySelector("[data-c]").onclick=function(){dlg.close()};
+      dlg.showModal()};
+    li.appendChild(b);ul.appendChild(li)})});
+dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close()});
+
+/* Libro contable */
+var f={format:function(n){return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,".")}};
+function pct(el){el.style.setProperty("--p",((el.value-el.min)/(el.max-el.min)*100)+"%")}
+function calc(){var o=+$("ops").value,m=+$("min").value,c=+$("cost").value,hoy=o*m/60,hh=hoy*.7;
+  $("vOps").textContent=f.format(o);$("vMin").textContent=m;$("vCost").textContent=c;
+  $("hHoy").textContent=f.format(hoy)+" h";$("hAuto").textContent=f.format(hh)+" h";$("hrs").textContent=f.format(hoy-hh)+" h";$("usd").textContent=f.format(hh*c);
+  ["ops","min","cost"].forEach(function(k){pct($(k))})}
+["ops","min","cost"].forEach(function(k){$(k).oninput=calc});calc();
+
+/* Comparación de datos */
+var CMP={k:[["Dónde corre","En sus equipos o su nube"],["Quién ve los datos","Solo su equipo"],["Qué recibe Kairos","Código y conteos, nunca datos"],["Ante un caso dudoso","Lo decide una persona"],["Al terminar","Se borran, con constancia"]],
+ n:[["Dónde corre","En la nube del proveedor"],["Quién ve los datos","El proveedor y sus terceros"],["Qué recibe el proveedor","Copia de sus datos"],["Ante un caso dudoso","El sistema decide solo"],["Al terminar","Quedan en servidores ajenos"]]};
+function modo(m){[].forEach.call(document.querySelectorAll(".sw button"),function(b){b.setAttribute("aria-pressed",b.dataset.m===m)});
+  $("comp").innerHTML=CMP[m].map(function(r){return"<div><dt>"+r[0]+"</dt><dd"+(m==="n"?" class=\"mal\"":"")+">"+r[1]+"</dd></div>"}).join("")}
+[].forEach.call(document.querySelectorAll(".sw button"),function(b){b.onclick=function(){modo(b.dataset.m)}});modo("k");
+
+/* Aparición al bajar */
+if("IntersectionObserver" in window&&!RM){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vis");if(e.target===linea)avanzar();io.unobserve(e.target)}})},{threshold:.15});
+  [].forEach.call(document.querySelectorAll(".rv"),function(e){io.observe(e)});io.observe(linea)}
+else{[].forEach.call(document.querySelectorAll(".rv"),function(e){e.classList.add("vis")});avanzar()}
+})();
+</script>
+<!--VX:PIE-->
+<style>
+.kpie{border-top:1px solid #D8CDB8;background:#F7F3EA;color:#5F6670;font:400 .9rem/1.6 "Inter Tight",system-ui,sans-serif;padding:56px 0 34px;margin-top:40px}
+.kpie .kw{max-width:1180px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+.kpie b{display:block;font:500 .7rem "Inter Tight",sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#7A5E2C;margin-bottom:12px}
+.kpie a{display:block;color:#2B3A52;text-decoration:none;margin-bottom:6px}.kpie a:hover{color:#7A5E2C}
+.kpie .km{font:600 1.4rem "Cormorant Garamond",Garamond,serif;letter-spacing:.18em;color:#0E1E36;margin-bottom:6px}
+.kpie .kl{font:italic 500 1.15rem "Cormorant Garamond",Garamond,serif;color:#7A5E2C}
+.kpie .kb{max-width:1180px;margin:34px auto 0;padding:18px 28px 0;border-top:1px solid #E5DCCB;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.8rem}
+@media(max-width:760px){.kpie .kw{grid-template-columns:1fr 1fr}}
+</style>
+<footer class="kpie"><div class="kw">
+  <div><div class="km">KAIROS</div><div class="kl">Procesos que trabajan solos.</div><p style="margin-top:10px;max-width:280px">Automatización de procesos para empresas en Panamá. Lo dudoso siempre lo revisa una persona.</p></div>
+  <div><b>Soluciones</b><a href="productos.html">Productos</a><a href="laboratorio.html">Laboratorio</a><a href="autodiagnostico.html">Autodiagnóstico</a><a href="demo-agenda.html">Demo Agenda</a><a href="demo-monitor.html">Demo Monitor</a><a href="claims.html">Kairos Claims</a></div>
+  <div><b>Empresa</b><a href="index.html#metodo">Cómo trabajamos</a><a href="precios.html">Precios</a><a href="casos.html">Casos</a><a href="nosotros.html">Nosotros</a><a data-agenda href="https://calendar.app.google/kDueUtrgYfQMWu889" target="_blank" rel="noopener">Reservar Diagnóstico gratis</a></div>
+  <div><b>Industrias y legal</b><a href="industria-salud.html">Salud</a><a href="industria-logistica.html">Logística y Zona Libre</a><a href="industria-servicios.html">Servicios</a><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="seguridad.html">Seguridad</a><a href="ia-responsable.html">IA responsable</a></div>
+</div><div class="kb"><span>© 2026 Kairos · Kairos Group, S.A., en constitución · Ciudad de Panamá</span><span><a href="en.html" style="display:inline">English</a></span></div></footer>
+<!--/VX:PIE-->
+<!--VX:CF--><!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "57566581ada04beaa4677b902b4ea7d3"}'></script><!-- End Cloudflare Web Analytics --><!--/VX:CF-->
+<!--VX:COM-->
+<style>
+.vx-wa{position:fixed;right:20px;bottom:20px;z-index:200;display:flex;align-items:center;gap:10px;padding:13px 18px;border-radius:999px;background:#25D366;color:#06281a;font:600 .92rem "Inter Tight",system-ui,sans-serif;text-decoration:none;box-shadow:0 12px 30px -8px rgba(37,211,102,.6)}
+body{padding-bottom:76px}
+.vx-wa svg{width:22px;height:22px}@media(max-width:600px){.vx-wa span{display:none}.vx-wa{padding:14px}}
+.vx-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;padding:22px 16px;border-top:1px solid #D8CDB8;font:500 .88rem "Inter Tight",system-ui,sans-serif;color:#5F6670;background:#F7F3EA}
+.vx-bar a{color:#0E1E36;text-decoration:none;display:inline-block;padding:12px 4px}.vx-r{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:0;border:1px solid #D8CDB8;font-weight:700;font-size:.8rem}
+.vx-r:hover{border-color:#7A5E2C;color:#7A5E2C}
+</style>
+<a class="vx-wa" href="https://wa.me/573122561848?text=Hola%20Kairos%2C%20quiero%20agendar%20un%20Diagn%C3%B3stico." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="#06281a"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg><span>Escríbanos por WhatsApp</span></a>
+<div class="vx-bar"><a href="mailto:contacto@kairosgrouppanama.com">contacto@kairosgrouppanama.com</a><a href="https://www.linkedin.com/company/kairosgrouppa" target="_blank" rel="noopener" aria-label="linkedin" class="vx-r">in</a><a href="https://www.instagram.com/kairos.ptty" target="_blank" rel="noopener" aria-label="instagram" class="vx-r">IG</a></div>
+<script>
+(function(){var WA="https://wa.me/573122561848?text=Hola%20Kairos%2C%20quiero%20agendar%20un%20Diagn%C3%B3stico.",DM="https://ig.me/m/kairos.ptty",MAIL="contacto@kairosgrouppanama.com";
+/* origen de la visita (utm_source/utm_campaign), sin cookies: solo en esta pestaña y solo viaja en el mensaje que el visitante decide enviar */
+var OR='';try{var q=new URLSearchParams(location.search),s=q.get('utm_source'),c=q.get('utm_campaign');if(s){OR=(s+(c?' / '+c:'')).replace(/[^\w\s\/.-]/g,'').slice(0,60);sessionStorage.setItem('kx_origen',OR)}else{OR=sessionStorage.getItem('kx_origen')||''}}catch(_){}
+if(OR)document.querySelectorAll('a[href*="wa.me/"]').forEach(function(a){try{var u=new URL(a.href),t=u.searchParams.get('text')||'';u.searchParams.set('text',t+' (ref: '+OR+')');a.href=u.toString()}catch(_){}});
+document.querySelectorAll('form#form, #contacto form, #contact form').forEach(function(f){var b0=f.querySelector('button');if(WA&&b0)b0.textContent="Enviar por WhatsApp \u2192";f.onsubmit=function(e){e.preventDefault();
+var v=[].map.call(f.querySelectorAll('input,select,textarea'),function(x){return (x.placeholder||x.name||'')+': '+x.value}).filter(function(s){return !/: $/.test(s)}).join('\n');
+var msg='Solicitud de Diagnóstico Kairos\n'+v+(OR?'\nOrigen: '+OR:'');
+var b=f.querySelector('button');
+if(WA){window.open(WA.split('?')[0]+'?text='+encodeURIComponent(msg),'_blank');if(b)b.textContent='Abriendo WhatsApp…';}
+else if(DM){try{navigator.clipboard.writeText(msg)}catch(_){}window.open(DM,'_blank');if(b)b.textContent='Mensaje copiado: péguelo en Instagram';}
+else if(MAIL){window.open('mailto:'+MAIL+'?subject='+encodeURIComponent('Diagnóstico Kairos')+'&body='+encodeURIComponent(msg),'_blank');if(b)b.textContent='Abriendo su correo…';}
+else{if(b){b.textContent='Canales de contacto en configuración: muy pronto';b.disabled=true;}}}});})();
+</script>
+<!--/VX:COM-->
+</body></html>

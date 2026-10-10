@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Self-assessment — Kairos</title>
+<meta name="description" content="Free 10-minute self-assessment: go through your whole company and see what is worth automating, with savings, investment and payback. Your answers never leave your browser.">
+<link rel="icon" href="assets/isotipo.svg">
+
+
+<link rel="stylesheet" href="assets/site.css">
+<link rel="alternate" hreflang="es" href="index.html">
+<style>
+.priv{background:#FFFDF8;border:1px solid #D8CDB8;padding:10px 14px;font-size:.92rem;color:#3E4A5C;max-width:760px}
+.ad{max-width:820px;margin:26px 0 60px}
+.ad .card{background:#FFFDF8;border:1px solid #D8CDB8;padding:26px 26px 22px}
+.ad .area{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:#7A5E2C;font-weight:600}
+.ad h3{font:500 1.6rem "Cormorant Garamond",Georgia,serif;margin:8px 0 18px;line-height:1.25}
+.ad .ops{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px}
+.ad button.op,.ad .sec{border:1px solid #0E1E36;background:#fff;color:#0E1E36;padding:9px 16px;font:inherit;cursor:pointer}
+.ad button.op:hover,.ad button.op.sel{background:#0E1E36;color:#fff}
+.ad input[type=number]{font:inherit;padding:9px 12px;border:1px solid #0E1E36;width:180px}
+.ad .pie{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:16px;font-size:.9rem;color:#5F6670}
+.ad .pie a{color:#5F6670;cursor:pointer;text-decoration:underline;margin-right:14px}
+.ad .barra{height:4px;background:#E5DCCB;margin-bottom:18px}.ad .barra i{display:block;height:4px;background:#9C7A3C}
+.ad .k{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}.ad .k span{background:#FFFDF8;border:1px solid #D8CDB8;padding:9px 13px}
+.ad .op-r{border-left:4px solid #0B6E62;background:#FFFDF8;padding:12px 16px;margin:10px 0}
+.ad .op-r.lim{border-color:#2B6CB0}.ad .op-r.ord{border-color:#B7791F}.ad .op-r.no{border-color:#9B2C2C}
+.ad .op-r small{color:#5F6670;display:block;margin-top:4px}
+.ad details{margin:10px 0}.ad summary{cursor:pointer;color:#2B3A52}
+.ad .graf{margin:18px 0 8px}.ad .graf .ley{display:flex;gap:18px;flex-wrap:wrap;font-size:.85rem;color:#3E4A5C;margin-bottom:10px}
+.ad .graf .ley i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.ad .graf .fila{display:grid;grid-template-columns:minmax(90px,150px) 1fr;gap:4px 12px;align-items:center;margin:0 0 12px}
+.ad .graf .nom{font-size:.9rem;color:#0E1E36;grid-row:span 2}
+.ad .graf .pista{position:relative;height:16px}
+.ad .graf .b{position:absolute;left:0;top:2px;height:12px;border-radius:0 4px 4px 0;outline:none}
+.ad .graf .b:focus-visible{box-shadow:0 0 0 2px #0E1E36}
+.ad .graf .rg{position:absolute;top:7px;height:2px;background:#5F6670}
+.ad .graf .v{position:absolute;top:-1px;font-size:.78rem;color:#3E4A5C;white-space:nowrap;padding-left:6px}
+.ad .graf .v.in{color:#fff;padding:0 6px 0 0;top:0;font-weight:600}
+@media(max-width:440px){.ad .graf .fila{grid-template-columns:1fr}.ad .graf .nom{grid-row:auto;font-weight:600}}
+.ad .graf .nota{font-size:.8rem;color:#5F6670;margin-top:4px}
+.ad .aviso{font-size:.85rem;color:#5F6670;margin-top:18px}
+</style>
+<!--VX:HEAD-->
+<link rel="canonical" href="https://kairosgrouppanama.com/en-assessment.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Kairos">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Self-assessment — Kairos">
+<meta property="og:description" content="Free 10-minute self-assessment: go through your whole company and see what is worth automating, with savings, investment and payback. Your answers never leave your browser.">
+<meta property="og:url" content="https://kairosgrouppanama.com/en-assessment.html">
+<meta property="og:image" content="https://kairosgrouppanama.com/assets/compartir.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F7F3EA">
+<!--/VX:HEAD-->
+</head>
+<body>
+<nav>
+  <a href="en.html" class="logo"><svg viewBox="0 0 32 32" fill="none"><path d="M8 5V27" stroke="#0B1320" stroke-width="3.6" stroke-linecap="round"/><path d="M25 5L18 12M18 20L25 27" stroke="#0B1320" stroke-width="3.6" stroke-linecap="round"/><circle cx="14.3" cy="16" r="2.7" fill="#0FA894"/></svg>KAIROS</a>
+  <div class="links"><a href="en.html#services">Services</a><a href="en.html#industries">Industries</a><a href="en.html#case">Demos</a><a href="laboratorio.html">Lab (ES)</a><a href="en-assessment.html">Self-assessment</a><a href="en-pricing.html">Pricing</a><a href="en.html#security">Security</a><a href="en.html#faq">FAQ</a><a href="index.html">ES</a></div>
+  <a href="en.html#contact" class="btn btn-p">Free 30-min assessment</a>
+  <button class="burger" aria-label="Menu" onclick="this.closest('nav').classList.toggle('open')">☰</button>
+</nav>
+<section style="padding-top:170px"><div class="wrap">
+  <span class="eyebrow">Self-assessment · free · 10 minutes</span>
+  <h1 class="t2">Where is your company losing money? <span class="grad">And what is worth automating.</span></h1>
+  <p class="lead">Answer a few questions about your operation. We go through the whole company —customer service, sales, collections, insurance claims, documents, operations and finance— and show you what is worth automating, with numbers, and also what is not.</p>
+  <p class="priv">🔒 Your answers never leave this browser and are not stored. Only numbers and options: we don't ask for names or any data about your customers.</p>
+  <div id="ad" class="ad" aria-live="polite"></div>
+  <noscript><p>Please enable JavaScript to use the self-assessment, or <a data-agenda href="https://calendar.app.google/kDueUtrgYfQMWu889" target="_blank" rel="noopener">book the free assessment</a>.</p></noscript>
+</div></section>
+
+<!--AUTODIAG:a089202dec6fd479-->
+<script>
+const DIAG={"preguntas": [{"id": "sector", "area": "general", "texto": "¿A qué se dedica la empresa?", "tipo": "opcion", "opciones": ["salud", "logistica", "servicios", "comercio", "otro"]}, {"id": "costo_hora", "area": "general", "texto": "¿Cuánto cuesta en promedio una hora de trabajo del equipo administrativo (salario + cargas)?", "tipo": "numero", "unidad": "US$/h"}, {"id": "sistemas", "area": "sistemas", "texto": "¿Qué sistemas usan para operar?", "tipo": "multi", "opciones": ["excel", "erp", "crm", "portales_web", "whatsapp", "correo", "papel"]}, {"id": "datos_sensibles", "area": "sistemas", "texto": "¿Manejan datos de salud, financieros o de identidad de sus clientes?", "tipo": "sino"}, {"id": "atiende_whatsapp", "area": "atencion", "texto": "¿Atienden clientes por WhatsApp o redes?", "tipo": "sino"}, {"id": "citas_mes", "area": "atencion", "texto": "¿Cuántas citas o reservas agendan al mes? (0 si no aplica)", "tipo": "numero", "unidad": "citas/mes"}, {"id": "inasistencia", "area": "atencion", "si": {"citas_mes": ">0"}, "texto": "¿De cada 100 citas, cuántas no se presentan?", "tipo": "numero", "unidad": "%"}, {"id": "valor_cita", "area": "atencion", "si": {"citas_mes": ">0"}, "texto": "¿Cuánto factura en promedio una cita?", "tipo": "numero", "unidad": "US$"}, {"id": "min_confirmar", "area": "atencion", "si": {"citas_mes": ">0"}, "texto": "¿Cuántos minutos toma confirmar o reprogramar una cita?", "tipo": "numero", "unidad": "min"}, {"id": "correos_mes", "area": "atencion", "texto": "¿Cuántos correos de clientes o proveedores reciben al mes en la bandeja principal?", "tipo": "numero", "unidad": "correos/mes"}, {"id": "min_correo", "area": "atencion", "si": {"correos_mes": ">0"}, "texto": "¿Cuántos minutos toma clasificar y responder cada correo?", "tipo": "numero", "unidad": "min"}, {"id": "respuestas_repetidas", "area": "atencion", "si": {"correos_mes": ">0"}, "texto": "¿Qué tanto se repiten las respuestas? (1 = cada caso es único, 5 = casi siempre lo mismo)", "tipo": "escala"}, {"id": "vende_b2b", "area": "ventas", "texto": "¿Tienen un equipo que da seguimiento a prospectos o cotizaciones?", "tipo": "sino"}, {"id": "prospectos_mes", "area": "ventas", "si": {"vende_b2b": true}, "texto": "¿Cuántos prospectos o cotizaciones nuevas manejan al mes?", "tipo": "numero", "unidad": "prospectos/mes"}, {"id": "vendedores", "area": "ventas", "si": {"vende_b2b": true}, "texto": "¿Cuántos vendedores?", "tipo": "numero", "unidad": "personas"}, {"id": "seguimiento_perdido", "area": "ventas", "si": {"vende_b2b": true}, "texto": "¿De cada 100 prospectos, cuántos se pierden por falta de seguimiento?", "tipo": "numero", "unidad": "%"}, {"id": "ticket_venta", "area": "ventas", "si": {"vende_b2b": true}, "texto": "¿Cuánto vale en promedio una venta?", "tipo": "numero", "unidad": "US$"}, {"id": "factura_credito", "area": "cobros", "texto": "¿Venden a crédito (facturas que se cobran después)?", "tipo": "sino"}, {"id": "facturas_vencidas_mes", "area": "cobros", "si": {"factura_credito": true}, "texto": "¿Cuántas facturas vencidas gestionan al mes?", "tipo": "numero", "unidad": "facturas/mes"}, {"id": "min_cobro", "area": "cobros", "si": {"factura_credito": true}, "texto": "¿Cuántos minutos dedica el equipo a cada gestión de cobro?", "tipo": "numero", "unidad": "min"}, {"id": "monto_factura", "area": "cobros", "si": {"factura_credito": true}, "texto": "¿Cuánto vale en promedio una factura vencida?", "tipo": "numero", "unidad": "US$"}, {"id": "incobrable", "area": "cobros", "si": {"factura_credito": true}, "texto": "¿De cada 100 facturas vencidas, cuántas nunca se llegan a cobrar?", "tipo": "numero", "unidad": "%"}, {"id": "cartera_visible", "area": "cobros", "si": {"factura_credito": true}, "texto": "¿Saben en todo momento cuánto les deben y desde cuándo? (1 = nunca, 5 = siempre)", "tipo": "escala"}, {"id": "horas_reporte_cartera", "area": "cobros", "si": {"factura_credito": true}, "texto": "¿Cuántas horas al mes se van armando reportes de cartera?", "tipo": "numero", "unidad": "h/mes"}, {"id": "trabaja_aseguradoras", "area": "seguros", "texto": "¿Facturan a aseguradoras (reclamos o cuentas de pacientes)?", "tipo": "sino"}, {"id": "reclamos_mes", "area": "seguros", "si": {"trabaja_aseguradoras": true}, "texto": "¿Cuántos reclamos presentan al mes?", "tipo": "numero", "unidad": "reclamos/mes"}, {"id": "aseguradoras", "area": "seguros", "si": {"trabaja_aseguradoras": true}, "texto": "¿Con cuántas aseguradoras trabajan?", "tipo": "numero", "unidad": "aseguradoras"}, {"id": "min_reclamo", "area": "seguros", "si": {"trabaja_aseguradoras": true}, "texto": "¿Cuántos minutos toma presentar cada reclamo?", "tipo": "numero", "unidad": "min"}, {"id": "glosa", "area": "seguros", "si": {"trabaja_aseguradoras": true}, "texto": "¿De cada 100 reclamos, cuántos devuelven o glosan?", "tipo": "numero", "unidad": "%"}, {"id": "valor_reclamo", "area": "seguros", "si": {"trabaja_aseguradoras": true}, "texto": "¿Cuánto vale en promedio un reclamo?", "tipo": "numero", "unidad": "US$"}, {"id": "portal_reclamos", "area": "seguros", "si": {"trabaja_aseguradoras": true}, "texto": "¿Se presentan por portal web?", "tipo": "sino"}, {"id": "documentos_mes", "area": "documentos", "texto": "¿Cuántos documentos (facturas de proveedores, formularios, comprobantes) se digitan o revisan al mes?", "tipo": "numero", "unidad": "documentos/mes"}, {"id": "min_documento", "area": "documentos", "si": {"documentos_mes": ">0"}, "texto": "¿Cuántos minutos toma cada uno?", "tipo": "numero", "unidad": "min"}, {"id": "documentos_digitales", "area": "documentos", "si": {"documentos_mes": ">0"}, "texto": "¿Llegan en digital (PDF, correo) o en papel?", "tipo": "opcion", "opciones": ["digital", "mixto", "papel"]}, {"id": "error_documentos", "area": "documentos", "si": {"documentos_mes": ">0"}, "texto": "¿De cada 100 documentos, cuántos tienen errores o faltantes que se descubren tarde?", "tipo": "numero", "unidad": "%"}, {"id": "consultas_internas_mes", "area": "documentos", "texto": "¿Cuántas consultas internas al mes ('cómo se hace…', '¿dónde está…?') recibe el equipo experto?", "tipo": "numero", "unidad": "consultas/mes"}, {"id": "manual_escrito", "area": "documentos", "si": {"consultas_internas_mes": ">0"}, "texto": "¿Los procedimientos están escritos en algún manual?", "tipo": "sino"}, {"id": "operacion_logistica", "area": "operaciones", "texto": "¿Tienen operación de envíos, inventario o despacho?", "tipo": "sino"}, {"id": "ordenes_mes", "area": "operaciones", "si": {"operacion_logistica": true}, "texto": "¿Cuántas órdenes o envíos procesan al mes?", "tipo": "numero", "unidad": "órdenes/mes"}, {"id": "min_orden", "area": "operaciones", "si": {"operacion_logistica": true}, "texto": "¿Cuántos minutos de trabajo manual lleva cada orden (registrar, avisar, actualizar)?", "tipo": "numero", "unidad": "min"}, {"id": "consultas_estado_mes", "area": "operaciones", "si": {"operacion_logistica": true}, "texto": "¿Cuántas veces al mes los clientes preguntan '¿dónde está mi pedido?'", "tipo": "numero", "unidad": "consultas/mes"}, {"id": "conciliacion_horas", "area": "finanzas", "texto": "¿Cuántas horas al mes se van conciliando pagos y bancos?", "tipo": "numero", "unidad": "h/mes"}, {"id": "reportes_horas", "area": "finanzas", "texto": "¿Cuántas horas al mes se van armando reportes para la gerencia?", "tipo": "numero", "unidad": "h/mes"}, {"id": "ingresos_personal_ano", "area": "personas", "texto": "¿Cuántas personas contratan al año?", "tipo": "numero", "unidad": "personas/año"}, {"id": "horas_ingreso", "area": "personas", "si": {"ingresos_personal_ano": ">0"}, "texto": "¿Cuántas horas de trabajo administrativo lleva cada ingreso (papeles, accesos, inducción)?", "tipo": "numero", "unidad": "h"}, {"id": "reglas_claras", "area": "general", "texto": "En general, ¿sus procesos siguen reglas que se puedan explicar? (1 = todo es criterio de alguien, 5 = todo tiene reglas)", "tipo": "escala"}, {"id": "urgencia", "area": "general", "texto": "¿Para cuándo necesitan resolver lo más urgente?", "tipo": "opcion", "opciones": ["este_mes", "trimestre", "semestre", "sin_fecha"]}, {"id": "contra", "area": "general", "texto": "¿Qué haría que automatizar no valga la pena para ustedes? (elija la principal)", "tipo": "opcion", "opciones": ["costo", "cambio_de_habitos", "sistemas_cerrados", "confidencialidad", "volumen_bajo", "ninguna"]}], "oportunidades": [{"id": "agenda", "nombre": "Kairos Agenda: confirmar citas por WhatsApp", "area": "atencion", "paquete": "Cliente", "precio": "Kairos Agenda", "requiere": {"citas_mes": ">0"}, "grupo": "confirmacion", "tiempo": {"volumen": "citas_mes", "minutos": "min_confirmar", "fraccion": 0.8}, "ingreso": {"formula": ["citas_mes", "inasistencia%", "valor_cita"], "factor": 0.3, "supuesto": "los recordatorios evitan 3 de cada 10 inasistencias"}, "viabilidad": {"atiende_whatsapp": {"true": 1.0, "false": 0.8}}}, {"id": "voice", "nombre": "Kairos Voice: llamadas de confirmación", "area": "atencion", "paquete": "Cliente", "precio": "Kairos Voice", "requiere": {"citas_mes": ">0"}, "grupo": "confirmacion", "unidades": {"volumen": "citas_mes", "por": 1.5}, "tiempo": {"volumen": "citas_mes", "minutos": "min_confirmar", "fraccion": 0.6}, "ingreso": {"formula": ["citas_mes", "inasistencia%", "valor_cita"], "factor": 0.2, "supuesto": "las llamadas evitan 2 de cada 10 inasistencias"}, "viabilidad": {"atiende_whatsapp": {"true": 0.6, "false": 1.0}}}, {"id": "inbox", "nombre": "Kairos Inbox: correo clasificado y respondido", "area": "atencion", "paquete": "Cliente", "precio": "Kairos Inbox", "requiere": {"correos_mes": ">0"}, "tiempo": {"volumen": "correos_mes", "minutos": "min_correo", "fraccion": 0.5, "escala": "respuestas_repetidas"}, "viabilidad": {}}, {"id": "crm", "nombre": "Kairos CRM: seguimiento de prospectos", "area": "ventas", "paquete": "Cliente", "precio": "Kairos CRM", "requiere": {"vende_b2b": true}, "tiempo": {"volumen": "prospectos_mes", "minutos": 10, "fraccion": 0.5}, "ingreso": {"formula": ["prospectos_mes", "seguimiento_perdido%", "ticket_venta"], "factor": 0.05, "supuesto": "se recupera 1 de cada 4 prospectos perdidos por falta de seguimiento y cierra 1 de cada 5"}, "viabilidad": {}, "usuarios": {"cantidad": "vendedores", "incluidos": 5, "precio_extra": 15}}, {"id": "claims", "nombre": "Kairos Claims: reclamos a aseguradoras", "area": "seguros", "paquete": "Dinero", "precio": "Kairos Claims", "requiere": {"trabaja_aseguradoras": true}, "unidades": {"volumen": "reclamos_mes", "por": 1}, "tiempo": {"volumen": "reclamos_mes", "minutos": "min_reclamo", "fraccion": 0.7}, "errores": {"volumen": "reclamos_mes", "tasa": "glosa", "reduccion": 0.3, "minutos_retrabajo": 20, "supuesto": "la revisión previa evita 3 de cada 10 glosas (20 min de retrabajo cada una)"}, "viabilidad": {"portal_reclamos": {"true": 1.0, "false": 0.6}}, "caja": {"supuesto": "presentar el mismo día acorta los días de cobro; no se suma al ahorro"}, "ingreso": {"formula": ["reclamos_mes", "glosa%", "valor_reclamo"], "factor": 0.1, "supuesto": "de cada 100 glosas, la revisión previa evita 30, y de esas 1 de cada 3 se habría perdido del todo (el resto se recupera con retrabajo)"}, "precio_depende": ["aseguradoras", "reclamos_mes"]}, {"id": "monitor", "nombre": "Kairos Monitor: cartera visible por pagador", "area": "cobros", "paquete": "Dinero", "precio": "Kairos Monitor", "requiere": {"factura_credito": true}, "horas": {"horas": "horas_reporte_cartera", "fraccion": 0.8}, "viabilidad": {"cartera_visible": {"1": 1.0, "2": 1.0, "3": 0.9, "4": 0.6, "5": 0.4}}, "ingreso": {"formula": ["facturas_vencidas_mes", "incobrable%", "monto_factura"], "factor": 0.1, "supuesto": "ver la cartera por antigüedad a tiempo evita perder 1 de cada 10 facturas que hoy terminan sin cobrarse"}}, {"id": "cobra", "nombre": "Kairos Cobra: recordatorios de cobro", "area": "cobros", "paquete": "Dinero", "precio": "Kairos Cobra", "requiere": {"factura_credito": true}, "tiempo": {"volumen": "facturas_vencidas_mes", "minutos": "min_cobro", "fraccion": 0.7}, "viabilidad": {}, "caja": {"supuesto": "recordar a tiempo reduce los días de cobro; no se suma al ahorro"}, "ingreso": {"formula": ["facturas_vencidas_mes", "incobrable%", "monto_factura"], "factor": 0.25, "supuesto": "recordar a tiempo y con constancia evita perder 1 de cada 4 facturas que hoy terminan sin cobrarse"}}, {"id": "doccheck", "nombre": "Kairos DocCheck: documentos completos antes de enviarlos", "area": "documentos", "paquete": "Documentos", "precio": "Kairos DocCheck", "requiere": {"documentos_mes": ">0"}, "unidades": {"volumen": "documentos_mes", "por": 1}, "tiempo": {"volumen": "documentos_mes", "minutos": "min_documento", "fraccion": 0.2}, "errores": {"volumen": "documentos_mes", "tasa": "error_documentos", "reduccion": 0.6, "minutos_retrabajo": 30, "supuesto": "la revisión automática atrapa 6 de cada 10 errores (30 min de retrabajo cada uno)"}, "viabilidad": {"documentos_digitales": {"digital": 1.0, "mixto": 0.8, "papel": 0.4}}}, {"id": "docs", "nombre": "Kairos Docs: facturas y comprobantes sin digitar", "area": "documentos", "paquete": "Documentos", "precio": "Kairos Docs", "requiere": {"documentos_mes": ">0"}, "unidades": {"volumen": "documentos_mes", "por": 1}, "tiempo": {"volumen": "documentos_mes", "minutos": "min_documento", "fraccion": 0.7}, "viabilidad": {"documentos_digitales": {"digital": 1.0, "mixto": 0.7, "papel": 0.3}}}, {"id": "assist", "nombre": "Kairos Assist: respuestas del manual interno", "area": "documentos", "paquete": "Documentos", "precio": "Kairos Assist", "requiere": {"consultas_internas_mes": ">0"}, "tiempo": {"volumen": "consultas_internas_mes", "minutos": 10, "fraccion": 0.5}, "viabilidad": {"manual_escrito": {"true": 1.0, "false": 0.3}}}, {"id": "envios", "nombre": "A medida: registro y avisos de órdenes y envíos", "area": "operaciones", "paquete": "A medida", "precio": "Automatización a medida", "requiere": {"operacion_logistica": true}, "tiempo": {"volumen": "ordenes_mes", "minutos": "min_orden", "fraccion": 0.6}, "tiempo2": {"volumen": "consultas_estado_mes", "minutos": 3, "fraccion": 0.7}, "viabilidad": {}}, {"id": "conciliacion", "nombre": "A medida: conciliación de pagos y bancos", "area": "finanzas", "paquete": "A medida", "precio": "Integraciones / flujos", "requiere": {"conciliacion_horas": ">0"}, "horas": {"horas": "conciliacion_horas", "fraccion": 0.6}, "viabilidad": {}}, {"id": "reportes", "nombre": "A medida: reportes de gerencia automáticos", "area": "finanzas", "paquete": "A medida", "precio": "Flujo simple", "requiere": {"reportes_horas": ">0"}, "horas": {"horas": "reportes_horas", "fraccion": 0.7}, "viabilidad": {}}, {"id": "ingresos", "nombre": "A medida: ingreso de personal (papeles, accesos, inducción)", "area": "personas", "paquete": "A medida", "precio": "Automatización a medida", "requiere": {"ingresos_personal_ano": ">0"}, "horas": {"horas": ["ingresos_personal_ano", "horas_ingreso"], "por_mes": 12, "fraccion": 0.5}, "viabilidad": {}}], "precios": {"Kairos Claims · Starter": {"impl": 1500.0, "mensual": 250.0, "unidad": null}, "Kairos Claims · Pro": {"impl": 2500.0, "mensual": 300.0, "unidad": 0.4}, "Kairos Claims · Enterprise": {"impl": 6000.0, "mensual": 0.0, "unidad": null}, "Kairos Agenda": {"impl": 500.0, "mensual": 120.0, "unidad": null}, "Kairos Monitor": {"impl": 800.0, "mensual": 120.0, "unidad": null}, "Kairos DocCheck": {"impl": 1000.0, "mensual": 100.0, "unidad": 0.06}, "Kairos Docs": {"impl": 1200.0, "mensual": 100.0, "unidad": 0.07}, "Kairos Assist": {"impl": 1200.0, "mensual": 120.0, "unidad": null}, "Kairos CRM": {"impl": 1500.0, "mensual": 90.0, "unidad": null}, "Kairos Cobra": {"impl": 800.0, "mensual": 300.0, "unidad": null}, "Kairos Inbox": {"impl": 600.0, "mensual": 90.0, "unidad": null}, "Kairos Voice": {"impl": 1000.0, "mensual": 200.0, "unidad": 0.12}, "Kairos Central": {"impl": 900.0, "mensual": 0.0, "unidad": null}, "Automatización a medida": {"impl": 3500.0, "mensual": 0.0, "unidad": null}, "Flujo simple": {"impl": 500.0, "mensual": 0.0, "unidad": null}, "Integraciones / flujos": {"impl": 900.0, "mensual": 0.0, "unidad": null}, "Care Básico": {"impl": 0.0, "mensual": 150.0, "unidad": null}, "Care Pro": {"impl": 0.0, "mensual": 400.0, "unidad": null}}, "reglas": {"1": 0.5, "2": 0.65, "3": 0.8, "4": 0.9, "5": 1.0}, "max_pct": 0.4, "max_meses": 12};
+window.KAIROS_AGENDA="https://calendar.app.google/kDueUtrgYfQMWu889";
+window.TR={"_nota": "Traducción al inglés del autodiagnóstico. Una prueba exige que cada texto en español tenga su traducción aquí.", "preguntas": {"sector": "What does your company do?", "costo_hora": "On average, how much does one hour of your administrative team's work cost (salary + benefits)?", "sistemas": "Which systems do you use to operate?", "datos_sensibles": "Do you handle health, financial or identity data about your customers?", "atiende_whatsapp": "Do you serve customers over WhatsApp or social media?", "citas_mes": "How many appointments or bookings do you schedule per month? (0 if not applicable)", "inasistencia": "Out of every 100 appointments, how many are no-shows?", "valor_cita": "On average, how much do you bill per appointment?", "min_confirmar": "How many minutes does it take to confirm or reschedule one appointment?", "correos_mes": "How many customer or supplier emails reach your main inbox per month?", "min_correo": "How many minutes does it take to sort and answer each email?", "respuestas_repetidas": "How repetitive are the answers? (1 = every case is unique, 5 = almost always the same)", "vende_b2b": "Do you have a team that follows up on leads or quotes?", "prospectos_mes": "How many new leads or quotes do you handle per month?", "vendedores": "How many salespeople?", "seguimiento_perdido": "Out of every 100 leads, how many are lost for lack of follow-up?", "ticket_venta": "What is the average value of a sale?", "factura_credito": "Do you sell on credit (invoices collected later)?", "facturas_vencidas_mes": "How many overdue invoices do you chase per month?", "min_cobro": "How many minutes does your team spend on each collection attempt?", "monto_factura": "What is the average value of an overdue invoice?", "incobrable": "Out of every 100 overdue invoices, how many are never collected?", "cartera_visible": "Do you always know how much you are owed and since when? (1 = never, 5 = always)", "horas_reporte_cartera": "How many hours per month go into building receivables reports?", "trabaja_aseguradoras": "Do you bill insurance companies (claims or patient accounts)?", "reclamos_mes": "How many claims do you submit per month?", "aseguradoras": "How many insurance companies do you work with?", "min_reclamo": "How many minutes does it take to submit each claim?", "glosa": "Out of every 100 claims, how many are denied or returned?", "valor_reclamo": "What is the average value of a claim?", "portal_reclamos": "Are claims submitted through a web portal?", "documentos_mes": "How many documents (supplier invoices, forms, receipts) are keyed in or checked per month?", "min_documento": "How many minutes does each one take?", "documentos_digitales": "Do they arrive digitally (PDF, email) or on paper?", "error_documentos": "Out of every 100 documents, how many have errors or missing items that are found too late?", "consultas_internas_mes": "How many internal questions per month ('how do we…', 'where is…?') does your expert staff receive?", "manual_escrito": "Are your procedures written down in a manual?", "operacion_logistica": "Do you run shipping, inventory or dispatch operations?", "ordenes_mes": "How many orders or shipments do you process per month?", "min_orden": "How many minutes of manual work does each order take (logging, notifying, updating)?", "consultas_estado_mes": "How many times per month do customers ask 'where is my order?'", "conciliacion_horas": "How many hours per month go into reconciling payments and bank accounts?", "reportes_horas": "How many hours per month go into building management reports?", "ingresos_personal_ano": "How many people do you hire per year?", "horas_ingreso": "How many hours of admin work does each new hire take (paperwork, access, onboarding)?", "reglas_claras": "In general, do your processes follow rules that can be explained? (1 = it all depends on someone's judgment, 5 = everything has rules)", "urgencia": "When do you need the most urgent issue solved?", "contra": "What would make automation not worth it for you? (choose the main one)"}, "opciones": {"salud": "Healthcare", "logistica": "Logistics or Free Zone", "servicios": "Services", "comercio": "Retail or wholesale", "otro": "Other", "excel": "Excel", "erp": "ERP or accounting system", "crm": "CRM", "portales_web": "Web portals", "whatsapp": "WhatsApp", "correo": "Email", "papel": "Paper", "digital": "Digital (PDF, email)", "mixto": "Mixed", "este_mes": "This month", "trimestre": "This quarter", "semestre": "Within six months", "sin_fecha": "No set date", "costo": "The cost", "cambio_de_habitos": "Changing how we work", "sistemas_cerrados": "Systems that can't be connected", "confidencialidad": "Confidentiality", "volumen_bajo": "Low volume", "ninguna": "None"}, "unidades": {"%": "%", "US$": "US$", "US$/h": "US$/hour", "aseguradoras": "insurers", "citas/mes": "appointments/month", "consultas/mes": "questions/month", "correos/mes": "emails/month", "documentos/mes": "documents/month", "facturas/mes": "invoices/month", "h": "hours", "h/mes": "hours/month", "min": "min", "personas": "people", "personas/año": "people/year", "prospectos/mes": "leads/month", "reclamos/mes": "claims/month", "órdenes/mes": "orders/month"}, "areas": {"general": "Your company", "sistemas": "Systems", "atencion": "Customer service", "ventas": "Sales", "cobros": "Collections", "seguros": "Insurance claims", "documentos": "Documents", "operaciones": "Operations", "finanzas": "Finance", "personas": "People"}, "oportunidades": {"agenda": "Kairos Agenda: appointment confirmations over WhatsApp", "voice": "Kairos Voice: confirmation calls", "inbox": "Kairos Inbox: email sorted and answered", "crm": "Kairos CRM: lead follow-up", "claims": "Kairos Claims: insurance claims", "monitor": "Kairos Monitor: receivables visible by payer", "cobra": "Kairos Cobra: payment reminders", "doccheck": "Kairos DocCheck: complete documents before they are sent", "docs": "Kairos Docs: invoices and receipts without manual keying", "assist": "Kairos Assist: answers from your internal manual", "envios": "Custom: order and shipment logging and notifications", "conciliacion": "Custom: payment and bank reconciliation", "reportes": "Custom: automatic management reports", "ingresos": "Custom: employee onboarding (paperwork, access, induction)"}, "supuestos": {"los recordatorios evitan 3 de cada 10 inasistencias": "reminders prevent 3 out of 10 no-shows", "las llamadas evitan 2 de cada 10 inasistencias": "calls prevent 2 out of 10 no-shows", "se recupera 1 de cada 4 prospectos perdidos por falta de seguimiento y cierra 1 de cada 5": "1 in 4 leads lost for lack of follow-up is recovered, and 1 in 5 of those closes", "la revisión previa evita 3 de cada 10 glosas (20 min de retrabajo cada una)": "checking before submission prevents 3 out of 10 denials (20 min of rework each)", "de cada 100 glosas, la revisión previa evita 30, y de esas 1 de cada 3 se habría perdido del todo (el resto se recupera con retrabajo)": "out of 100 denials, checking first prevents 30, and 1 in 3 of those would have been lost entirely (the rest is recovered with rework)", "presentar el mismo día acorta los días de cobro; no se suma al ahorro": "same-day submission shortens collection time; not added to the savings", "ver la cartera por antigüedad a tiempo evita perder 1 de cada 10 facturas que hoy terminan sin cobrarse": "seeing receivables by age in time prevents losing 1 in 10 invoices that today go uncollected", "recordar a tiempo y con constancia evita perder 1 de cada 4 facturas que hoy terminan sin cobrarse": "timely, consistent reminders prevent losing 1 in 4 invoices that today go uncollected", "recordar a tiempo reduce los días de cobro; no se suma al ahorro": "timely reminders shorten collection time; not added to the savings", "la revisión automática atrapa 6 de cada 10 errores (30 min de retrabajo cada uno)": "automatic checks catch 6 out of 10 errors (30 min of rework each)"}, "motivos": {"el proceso necesita orden (reglas, manual o digitalización) antes de automatizarlo": "the process needs to be organized (rules, manual or digitization) before automating it", "la mensualidad pasaría del 40 % del ahorro": "the monthly fee would exceed 40% of the savings", "la inversión no se recupera en 12 meses": "the investment would not pay back within 12 months", "otra opción del mismo tipo rinde más": "another option of the same kind delivers more", " con el valor medio, pero no en el extremo alto: confirmar los supuestos en el piloto": " at the mid estimate, but not at the high end: confirm the assumptions in the pilot"}, "ui": {"Antes de empezar": "Before you start", "Unas 15 a 25 preguntas. Si no sabe un número, use un aproximado o pulse «No sé».": "About 15 to 25 questions. If you don't know a number, use an estimate or press “I don't know”.", "Empezar": "Start", "Es una estimación orientativa con supuestos conservadores; el diagnóstico con su equipo la confirma.": "This is an indicative estimate based on conservative assumptions; the assessment with your team confirms it.", "Es un aproximado": "It's an estimate", "Continuar": "Continue", "Sí": "Yes", "No": "No", "← Atrás": "← Back", "No sé": "I don't know", "Ver resultado con lo respondido": "See results so far", "Ahorro esperado": "Expected savings", "al mes": "per month", "inversión": "investment", "se recupera en": "pays back in", "meses": "months", "Su resultado": "Your result", "Esto es lo que conviene automatizar primero.": "Here is what is worth automating first.", "recomendadas": "recommended", "Inversión": "Investment", "incluye": "includes", "Retorno en": "Payback in", "Todavía <b>faltan datos</b> para recomendarle algo con números. Siga respondiendo: cada respuesta abre o descarta una posibilidad.": "We still <b>need more data</b> to recommend anything with numbers. Keep answering: each answer opens or rules out an option.", "Con lo que respondió, <b>no encontramos una automatización que le convenga hoy</b>. Preferimos decírselo con claridad.": "Based on your answers, <b>we found no automation that is worth it for you today</b>. We'd rather tell you plainly.", "Con 3 o más procesos se incluye <b>Kairos Central</b> para vigilarlos y coordinarlos.": "With 3 or more processes, <b>Kairos Central</b> is included to monitor and coordinate them.", "Al límite (se confirma en el diagnóstico)": "Borderline (confirmed in the assessment)", "Conviene ordenar antes de automatizar": "Worth organizing before automating", "No le conviene hoy": "Not worth it today", "Supuestos usados": "Assumptions used", "posibilidades sin datos suficientes: el diagnóstico con su equipo las completa.": "options without enough data: the assessment with your team completes them.", "Quedaron": "There are", "Reservar el diagnóstico gratis": "Book the free assessment", "Volver a empezar": "Start over", "Seguir respondiendo": "Keep answering", "Estimación orientativa en USD sin ITBMS, con precios de la lista vigente y supuestos conservadores. Sus respuestas no se enviaron ni se guardaron.": "Indicative estimate in USD before sales tax (ITBMS), using current list prices and conservative assumptions. Your answers were not sent or stored.", "Mensualidad": "Monthly fee", "Ahorro esperado frente a la mensualidad": "Expected savings versus monthly fee", "Ahorro esperado al mes (línea: rango)": "Expected savings per month (line: range)", "La mensualidad nunca pasa del 40 % del ahorro: si pasara, no se la recomendamos.": "The monthly fee never exceeds 40% of the savings: if it did, we would not recommend it.", "incluido en Care": "included in Care"}, "planes": {"Care Básico": "Care Basic", "Care Pro": "Care Pro"}};
+// Motor del autodiagnóstico: traducción fiel de core/diagnostico/diagnostico.py (misma lógica, mismos nombres).
+// Una prueba (core/pruebas/test_autodiagnostico.py) exige resultados idénticos a Python en cientos de empresas al azar.
+// Usa la constante global DIAG = {preguntas, oportunidades, precios, reglas, max_pct, max_meses}.
+const ESTADOS = ["recomendada", "al_limite", "alternativa", "ordenar_primero", "no_conviene", "falta_dato", "por_explorar", "no_aplica"];
+const val = (R, q) => (q in R ? R[q].valor : null);
+// Python round() redondea al par en los empates (.5); se replica para que los montos coincidan exactamente
+// Python round(): redondea el valor binario EXACTO (p. ej. 0,35 es en realidad 0,3499999…) y solo un ,5 exacto
+// va al par. Se trabaja sobre los dígitos decimales exactos que da toFixed (el estándar los calcula sin redondear antes).
+function pyRound(x, d = 0) {
+  const neg = x < 0, s = Math.abs(x).toFixed(Math.min(100, d + 40));
+  const [ent, frac] = s.split(".");
+  const dig = (ent + frac.slice(0, d)).split("").map(Number), resto = frac.slice(d);
+  const arriba = resto[0] > "5" || (resto[0] === "5" && (/[1-9]/.test(resto.slice(1)) || dig[dig.length - 1] % 2 === 1));
+  if (arriba) {
+    let k = dig.length - 1;
+    while (k >= 0 && dig[k] === 9) { dig[k] = 0; k--; }
+    if (k < 0) dig.unshift(1); else dig[k]++;
+  }
+  const t = dig.join(""), n = Number(d ? t.slice(0, t.length - d) + "." + t.slice(t.length - d) : t);
+  return neg ? -n : n;
+}
+function cumple(cond, R) {
+  let res = true;
+  for (const [k, esp] of Object.entries(cond)) {
+    const v = val(R, k);
+    if (v === null) { res = null; continue; }
+    const ok = esp === ">0" ? v > 0 : v === esp;
+    if (!ok) return false;
+  }
+  return res;
+}
+function entradas(o) {
+  const qs = new Set(["costo_hora"]);
+  for (const k of ["tiempo", "tiempo2"]) if (o[k]) for (const x of [o[k].volumen, o[k].minutos, o[k].escala]) if (typeof x === "string") qs.add(x);
+  if (o.horas) { const h = o.horas.horas; (Array.isArray(h) ? h : [h]).forEach(x => qs.add(x)); }
+  if (o.errores) { qs.add(o.errores.volumen); qs.add(o.errores.tasa); }
+  if (o.ingreso) o.ingreso.formula.forEach(x => qs.add(x.replace(/%$/, "")));
+  if (o.usuarios) qs.add(o.usuarios.cantidad);
+  (o.precio_depende || []).forEach(x => qs.add(x));
+  return qs;
+}
+function precioDe(o, R) {
+  const P = DIAG.precios;
+  const clave = o.precio === "Kairos Claims"
+    ? (val(R, "aseguradoras") <= 1 && val(R, "reclamos_mes") <= 1000 ? "Kairos Claims · Starter" : "Kairos Claims · Pro")
+    : o.precio;
+  const p = P[clave];
+  let mensual = p.mensual;
+  if (p.unidad && o.unidades) mensual = Math.max(mensual, p.unidad * (val(R, o.unidades.volumen) || 0) * o.unidades.por);
+  if (o.usuarios) mensual += o.usuarios.precio_extra * Math.max(0, (val(R, o.usuarios.cantidad) || 0) - o.usuarios.incluidos);
+  return [clave, p.impl, pyRound(mensual, 2)];
+}
+function evaluar(o, R) {
+  const ev = {id: o.id, nombre: o.nombre, area: o.area, paquete: o.paquete, supuestos: []};
+  const req = cumple(o.requiere, R);
+  if (req === false) return {...ev, estado: "no_aplica"};
+  if (req === null) return {...ev, estado: "por_explorar", faltan: Object.keys(o.requiere).filter(k => !(k in R)).sort()};
+  const faltan = [...entradas(o)].filter(q => !(q in R)).sort();
+  if (faltan.length) return {...ev, estado: "falta_dato", faltan};
+  const ch = val(R, "costo_hora");
+  let ahorro = 0;
+  for (const k of ["tiempo", "tiempo2"]) if (o[k]) {
+    const t = o[k], minutos = typeof t.minutos === "string" ? val(R, t.minutos) : t.minutos;
+    const escala = t.escala ? val(R, t.escala) / 5 : 1;
+    ahorro += val(R, t.volumen) * minutos * t.fraccion * escala / 60 * ch;
+  }
+  if (o.horas) {
+    const h = o.horas;
+    const horas = Array.isArray(h.horas) ? h.horas.reduce((a, x) => a * val(R, x), 1) / h.por_mes : val(R, h.horas);
+    ahorro += horas * h.fraccion * ch;
+  }
+  if (o.errores) {
+    const e = o.errores;
+    ahorro += val(R, e.volumen) * val(R, e.tasa) / 100 * e.reduccion * e.minutos_retrabajo / 60 * ch;
+    ev.supuestos.push(e.supuesto);
+  }
+  if (o.ingreso) {
+    const i = o.ingreso;
+    // mismo orden que Python: cada término se divide ANTES de multiplicar (math.prod de los cocientes)
+    ahorro += i.formula.reduce((a, x) => a * (val(R, x.replace(/%$/, "")) / (x.endsWith("%") ? 100 : 1)), 1) * i.factor;
+    ev.supuestos.push(i.supuesto);
+  }
+  if (o.caja) ev.supuestos.push(o.caja.supuesto);
+  let viab = 1.0;
+  for (const [q, mapa] of Object.entries(o.viabilidad)) if (q in R) {
+    const v = val(R, q), k = typeof v === "boolean" ? (v ? "true" : "false") : String(v).toLowerCase();
+    viab *= (k in mapa ? mapa[k] : 1.0);
+  }
+  if ("reglas_claras" in R) viab *= DIAG.reglas[val(R, "reglas_claras")];
+  const sis = val(R, "sistemas");
+  if (Array.isArray(sis) && sis.length === 1 && sis[0] === "papel") viab *= 0.7;
+  const [clave, impl, mensual] = precioDe(o, R);
+  const estimado = [...entradas(o)].some(q => q in R && R[q].fuente === "estimado");
+  const banda = estimado ? 0.4 : 0.15;
+  const esperado = ahorro * viab, neto = esperado - mensual;
+  const meses = neto > 0 ? impl / neto : Infinity;
+  Object.assign(ev, {precio: clave, impl, mensual, ahorro_mes: pyRound(esperado), viabilidad: pyRound(viab, 2),
+    rango: [pyRound(esperado * (1 - banda)), pyRound(esperado * (1 + banda))], estimado,
+    meses_retorno: meses === Infinity ? null : pyRound(meses, 1), prioridad: pyRound(12 * neto - impl)});
+  const alto = ev.rango[1];
+  const pasaAlto = mensual <= DIAG.max_pct * alto && (alto - mensual) > 0 && impl / (alto - mensual) <= DIAG.max_meses;
+  if (viab < 0.5) { ev.estado = "ordenar_primero"; ev.motivo = "el proceso necesita orden (reglas, manual o digitalización) antes de automatizarlo"; }
+  else if (mensual > DIAG.max_pct * esperado || meses > DIAG.max_meses) {
+    const motivo = mensual > DIAG.max_pct * esperado ? "la mensualidad pasaría del 40 % del ahorro" : "la inversión no se recupera en 12 meses";
+    if (pasaAlto) { ev.estado = "al_limite"; ev.motivo = motivo + " con el valor medio, pero no en el extremo alto: confirmar los supuestos en el piloto"; }
+    else { ev.estado = "no_conviene"; ev.motivo = motivo; }
+  } else ev.estado = "recomendada";
+  ev.pct_mensualidad = esperado ? pyRound(100 * mensual / esperado) : null;
+  return ev;
+}
+function plan(evs) {
+  const P = DIAG.precios;
+  const rec = evs.filter(e => e.estado === "recomendada").sort((a, b) => b.prioridad - a.prioridad);
+  const productos = rec.filter(e => e.paquete !== "A medida");
+  const vistos = new Set(); let impl = 0;
+  for (const e of rec) {
+    e.impl_plan = pyRound(e.impl * (vistos.has(e.paquete) && e.paquete !== "A medida" ? 0.8 : 1));
+    vistos.add(e.paquete); impl += e.impl_plan;
+  }
+  const central = productos.length >= 3, care = central ? "Care Pro" : "Care Básico";
+  const mensual = rec.reduce((a, e) => a + e.mensual, 0) + (rec.length ? P[care].mensual : 0);
+  const ahorro = rec.reduce((a, e) => a + e.ahorro_mes, 0);
+  const fases = [rec.slice(0, 1), rec.slice(1, 3), rec.slice(3)].filter(f => f.length).map(f => f.map(e => e.id));
+  return {recomendadas: rec.map(e => e.id), fases, central, care: rec.length ? care : null, impl_total: pyRound(impl),
+    mensual_total: pyRound(mensual), ahorro_mes: ahorro,
+    rango: [rec.reduce((a, e) => a + e.rango[0], 0), rec.reduce((a, e) => a + e.rango[1], 0)],
+    meses_retorno: ahorro > mensual ? pyRound(impl / (ahorro - mensual), 1) : null};
+}
+function diagnosticar(datos) {
+  const R = datos.respuestas || {};
+  const evs = DIAG.oportunidades.map(o => evaluar(o, R));
+  const grupos = {};
+  DIAG.oportunidades.forEach((o, i) => { if (evs[i].estado === "recomendada" && o.grupo) (grupos[o.grupo] = grupos[o.grupo] || []).push(evs[i]); });
+  for (const lista of Object.values(grupos))
+    [...lista].sort((a, b) => b.prioridad - a.prioridad).slice(1).forEach(ev => { ev.estado = "alternativa"; ev.motivo = "otra opción del mismo tipo rinde más"; });
+  return {oportunidades: evs, plan: plan(evs)};
+}
+function aplicables(datos) {
+  const R = datos.respuestas || {}, omit = new Set(datos.omitidas || []);
+  return DIAG.preguntas.filter(p => !(p.id in R) && !omit.has(p.id) && cumple(p.si || {}, R) === true).map(p => p.id);
+}
+function siguientePregunta(datos) {
+  const R = datos.respuestas || {};
+  const abiertas = DIAG.oportunidades.filter(o => ["por_explorar", "falta_dato"].includes(evaluar(o, R).estado));
+  const Q = Object.fromEntries(DIAG.preguntas.map(p => [p.id, p]));
+  let mejor = null, ptsMejor = 0;
+  for (const q of aplicables(datos)) {
+    let pts = 0;
+    for (const o of abiertas) {
+      const refs = new Set([...entradas(o), ...Object.keys(o.requiere), ...Object.keys(o.viabilidad)]);
+      if (refs.has(q)) pts += (q in o.requiere) ? 2 : 1;
+    }
+    pts += 0.5 * DIAG.preguntas.filter(p => p.si && q in p.si).length;
+    pts += Q[q].area === "general" ? 0.1 : 0;
+    if (pts > ptsMejor) { mejor = q; ptsMejor = pts; }
+  }
+  if (mejor === null) { const resto = aplicables(datos); mejor = resto.length ? resto[0] : null; }
+  return mejor ? Q[mejor] : null;
+}
+if (typeof module !== "undefined") module.exports = {diagnosticar, siguientePregunta, evaluar};
+
+// Interfaz del autodiagnóstico: una pregunta a la vez (la que elige el motor), resultado con el mismo motor.
+// Nada se envía ni se guarda: todo vive en la memoria de esta página.
+(function () {
+  const caja = document.getElementById("ad");
+  const E = s => String(s).replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+  // Idioma: la versión en inglés define window.TR (marketing/autodiagnostico/en.json); sin TR, todo queda en español.
+  const TR = window.TR || null, EN = !!TR;
+  const t = s => (TR && TR.ui[s]) || s;
+  const usd = x => "$" + String(Math.round(x)).replace(/\B(?=(\d{3})+(?!\d))/g, EN ? "," : ".");
+  const dec = x => EN ? String(x) : String(x).replace(".", ",");  // decimales: coma en español, punto en inglés
+  const texto = p => (TR && TR.preguntas[p.id]) || p.texto;
+  const opcion = o => (TR && TR.opciones[o]) || OPC[o] || o;
+  const unidad = u => (TR && TR.unidades[u]) || u;
+  const area = a => (TR && TR.areas[a]) || AREAS[a] || a;
+  const nombre = o => (TR && TR.oportunidades[o.id]) || o.nombre;
+  const supuesto = x => (TR && TR.supuestos[x]) || x;
+  const plan = x => (TR && TR.planes[x]) || x;
+  function motivo(m) {
+    if (!TR || !m) return m;
+    if (TR.motivos[m]) return TR.motivos[m];
+    for (const [es, en] of Object.entries(TR.motivos)) if (es.startsWith(" ") && m.endsWith(es)) return (TR.motivos[m.slice(0, -es.length)] || m.slice(0, -es.length)) + en;
+    return m;
+  }
+  const AREAS = {general: "Su empresa", sistemas: "Sistemas", atencion: "Atención al cliente", ventas: "Ventas", cobros: "Cobros",
+    seguros: "Reclamos a aseguradoras", documentos: "Documentos", operaciones: "Operaciones", finanzas: "Finanzas", personas: "Personal"};
+  const OPC = {salud: "Salud", logistica: "Logística o Zona Libre", servicios: "Servicios", comercio: "Comercio", otro: "Otro",
+    excel: "Excel", erp: "ERP o sistema contable", crm: "CRM", portales_web: "Portales web", whatsapp: "WhatsApp", correo: "Correo", papel: "Papel",
+    digital: "Digital (PDF, correo)", mixto: "Mixto", este_mes: "Este mes", trimestre: "Este trimestre", semestre: "Este semestre",
+    sin_fecha: "Sin fecha", costo: "El costo", cambio_de_habitos: "Cambiar la forma de trabajar", sistemas_cerrados: "Sistemas que no se pueden conectar",
+    confidencialidad: "La confidencialidad", volumen_bajo: "Que el volumen sea bajo", ninguna: "Ninguna"};
+  let datos, historial;
+
+  function inicio() {
+    datos = {respuestas: {}, omitidas: []}; historial = [];
+    caja.innerHTML = `<div class="card"><div class="area">${t("Antes de empezar")}</div><h3>${t("Unas 15 a 25 preguntas. Si no sabe un número, use un aproximado o pulse «No sé».")}</h3>
+      <div class="ops"><button class="op sel" id="ad-ir">${t("Empezar")}</button></div>
+      <div class="aviso">${t("Es una estimación orientativa con supuestos conservadores; el diagnóstico con su equipo la confirma.")}</div></div>`;
+    document.getElementById("ad-ir").onclick = preguntar;
+  }
+
+  function responder(p, valor, aprox) {
+    historial.push(p.id);
+    if (valor === null) datos.omitidas.push(p.id);
+    else datos.respuestas[p.id] = {valor, fuente: aprox ? "estimado" : "dato"};
+    preguntar();
+  }
+
+  function atras() {
+    const q = historial.pop();
+    if (!q) return inicio();
+    delete datos.respuestas[q];
+    datos.omitidas = datos.omitidas.filter(x => x !== q);
+    preguntar();
+  }
+
+  function preguntar() {
+    const p = siguientePregunta(datos);
+    if (!p) return resultado();
+    const n = Object.keys(datos.respuestas).length + datos.omitidas.length;
+    const pct = Math.min(95, Math.round(100 * n / (n + aplicables(datos).length)));
+    let campo = "";
+    if (p.tipo === "numero") campo = `<input type="number" min="0" step="any" id="ad-n" inputmode="decimal" aria-label="${E(texto(p))}"> <span>${E(unidad(p.unidad || ""))}</span>
+      <p><label><input type="checkbox" id="ad-a"> ${t("Es un aproximado")}</label></p><div class="ops"><button class="op sel" id="ad-ok">${t("Continuar")}</button></div>`;
+    else if (p.tipo === "sino") campo = `<div class="ops"><button class="op" data-v="true">${t("Sí")}</button><button class="op" data-v="false">${t("No")}</button></div>`;
+    else if (p.tipo === "escala") campo = `<div class="ops">${[1, 2, 3, 4, 5].map(i => `<button class="op" data-v="${i}">${i}</button>`).join("")}</div>`;
+    else if (p.tipo === "opcion") campo = `<div class="ops">${p.opciones.map(o => `<button class="op" data-v="${E(o)}">${E(opcion(o))}</button>`).join("")}</div>`;
+    else campo = `<div class="ops">${p.opciones.map(o => `<label class="sec"><input type="checkbox" value="${E(o)}"> ${E(opcion(o))}</label>`).join("")}</div>
+      <div class="ops"><button class="op sel" id="ad-ok">${t("Continuar")}</button></div>`;
+    caja.innerHTML = `<div class="barra"><i style="width:${pct}%"></i></div><div class="card"><div class="area">${E(area(p.area))}</div>
+      <h3>${E(texto(p))}</h3>${campo}<div class="pie"><span><a id="ad-atras">${t("← Atrás")}</a><a id="ad-ns">${t("No sé")}</a></span><a id="ad-ver">${t("Ver resultado con lo respondido")}</a></div></div>`;
+    document.getElementById("ad-atras").onclick = atras;
+    document.getElementById("ad-ns").onclick = () => responder(p, null);
+    document.getElementById("ad-ver").onclick = resultado;
+    caja.querySelectorAll("button[data-v]").forEach(b => b.onclick = () => {
+      const v = b.dataset.v;
+      responder(p, p.tipo === "sino" ? v === "true" : p.tipo === "escala" ? Number(v) : v, false);
+    });
+    const ok = document.getElementById("ad-ok");
+    if (ok && p.tipo === "numero") {
+      const inp = document.getElementById("ad-n"); inp.focus();
+      const enviar = () => { const v = Number(inp.value); if (inp.value === "" || !(v >= 0) || v >= 1e9) { inp.focus(); return; }
+        responder(p, v, document.getElementById("ad-a").checked); };
+      ok.onclick = enviar; inp.onkeydown = e => { if (e.key === "Enter") enviar(); };
+    } else if (ok) ok.onclick = () => {
+      const v = [...caja.querySelectorAll("input[type=checkbox]:checked")].map(x => x.value);
+      if (v.length) responder(p, v, false);
+    };
+  }
+
+  function bloque(o, cls) {
+    const mes = EN ? "/month" : "/mes";
+    const cifras = o.rango ? `${t("Ahorro esperado")} ${usd(o.rango[0])}–${usd(o.rango[1])} ${t("al mes")} · ${t("inversión")} ${usd(o.impl)}${o.mensual ? " + " + usd(o.mensual) + mes : ""}` +
+      (o.meses_retorno ? ` · ${t("se recupera en")} ${dec(o.meses_retorno)} ${t("meses")}` : "") : "";
+    return `<div class="op-r ${cls}"><b>${E(nombre(o))}</b><small>${E(cifras)}</small>${o.motivo ? `<small>${E(motivo(o.motivo))}</small>` : ""}</div>`;
+  }
+
+  // Gráfico: ahorro esperado (barra + línea de rango) frente a la mensualidad, por recomendación.
+  // Un solo eje en US$/mes; colores validados (verde #0E8C7E / ámbar #B7791F: CVD ΔE 11,3); valores escritos en tinta de texto.
+  function grafico(rec) {
+    if (!rec.length) return "";
+    const max = Math.max(...rec.map(o => Math.max(o.rango[1], o.mensual))) || 1;
+    const pct = x => (78 * x / max).toFixed(2) + "%";  // 78 %: deja aire a la derecha para la etiqueta del valor
+    // valor al final de la barra; si la barra es larga (> 55 %), dentro de ella, en blanco, para que nunca se salga
+    const etiqueta = (x, texto) => 78 * x / max > 55
+      ? `<span class="v in" style="right:calc(100% - ${pct(x)})">${texto}</span>`
+      : `<span class="v" style="left:${pct(x)}">${texto}</span>`;
+    const mes = EN ? "/mo" : "/mes";
+    const filas = rec.map(o => {
+      const partes = nombre(o).split(":"), corto = o.paquete === "A medida" && partes[1] ? partes[1].trim() : partes[0];
+      const nom = E(corto.charAt(0).toUpperCase() + corto.slice(1));
+      const cuota = o.mensual ? usd(o.mensual) : t("incluido en Care");
+      const tip = `${nom}: ${t("Ahorro esperado")} ${usd(o.rango[0])}–${usd(o.rango[1])}${mes} · ${t("Mensualidad")} ${o.mensual ? usd(o.mensual) + mes : t("incluido en Care")}`;
+      return `<div class="fila"><span class="nom">${nom}</span>
+        <div class="pista"><span class="b" tabindex="0" title="${tip}" aria-label="${tip}" style="width:${pct(o.ahorro_mes)};background:#0E8C7E"></span>
+          <span class="rg" style="left:${pct(o.rango[0])};width:calc(${pct(o.rango[1])} - ${pct(o.rango[0])})"></span>
+          ${etiqueta(o.ahorro_mes, usd(o.ahorro_mes))}</div>
+        <div class="pista"><span class="b" tabindex="0" title="${tip}" aria-label="${tip}" style="width:${pct(Math.max(o.mensual, max * 0.004))};background:#B7791F"></span>
+          ${etiqueta(o.mensual, cuota)}</div></div>`;
+    }).join("");
+    return `<div class="graf" role="figure" aria-label="${t("Ahorro esperado frente a la mensualidad")}">
+      <div class="ley"><span><i style="background:#0E8C7E"></i>${t("Ahorro esperado al mes (línea: rango)")}</span><span><i style="background:#B7791F"></i>${t("Mensualidad")}</span></div>
+      ${filas}<div class="nota">${t("La mensualidad nunca pasa del 40 % del ahorro: si pasara, no se la recomendamos.")}</div></div>`;
+  }
+
+  function resultado() {
+    const d = diagnosticar(datos), p = d.plan, por = e => d.oportunidades.filter(o => o.estado === e);
+    const rec = p.recomendadas.map(id => d.oportunidades.find(o => o.id === id));
+    const faltan = por("falta_dato").length + por("por_explorar").length;
+    const mes = EN ? "/month" : "/mes";
+    const resumen = rec.length ? `<div class="k"><span><b>${rec.length}</b> ${t("recomendadas")}</span><span>${t("Ahorro esperado")} <b>${usd(p.rango[0])}–${usd(p.rango[1])}</b> ${t("al mes")}</span>
+      <span>${t("Inversión")} ${usd(p.impl_total)} + ${usd(p.mensual_total)}${mes} (${t("incluye")} ${E(plan(p.care))})</span><span>${t("Retorno en")} <b>${p.meses_retorno === null ? "—" : dec(p.meses_retorno)}</b> ${t("meses")}</span></div>` :
+      faltan ? `<p>${t("Todavía <b>faltan datos</b> para recomendarle algo con números. Siga respondiendo: cada respuesta abre o descarta una posibilidad.")}</p>` :
+      `<p>${t("Con lo que respondió, <b>no encontramos una automatización que le convenga hoy</b>. Preferimos decírselo con claridad.")}</p>`;
+    const sup = [...new Set(rec.flatMap(o => o.supuestos))].map(supuesto);
+    caja.innerHTML = `<div class="card"><div class="area">${t("Su resultado")}</div><h3>${rec.length ? t("Esto es lo que conviene automatizar primero.") : t("Su resultado")}</h3>${resumen}
+      ${grafico(rec)}
+      ${p.central ? `<p>${t("Con 3 o más procesos se incluye <b>Kairos Central</b> para vigilarlos y coordinarlos.")}</p>` : ""}
+      ${rec.map(o => bloque(o, "")).join("")}
+      ${por("al_limite").length ? `<h4>${t("Al límite (se confirma en el diagnóstico)")}</h4>` + por("al_limite").map(o => bloque(o, "lim")).join("") : ""}
+      ${por("ordenar_primero").length ? `<h4>${t("Conviene ordenar antes de automatizar")}</h4>` + por("ordenar_primero").map(o => bloque(o, "ord")).join("") : ""}
+      ${por("no_conviene").length ? `<details><summary>${t("No le conviene hoy")} (${por("no_conviene").length})</summary>${por("no_conviene").map(o => bloque(o, "no")).join("")}</details>` : ""}
+      ${sup.length ? `<details><summary>${t("Supuestos usados")}</summary><ul>${sup.map(s => `<li>${E(s)}</li>`).join("")}</ul></details>` : ""}
+      ${faltan ? `<p class="aviso">${t("Quedaron")} ${faltan} ${t("posibilidades sin datos suficientes: el diagnóstico con su equipo las completa.")}</p>` : ""}
+      <div class="ops" style="margin-top:18px"><a class="btn btn-p" data-agenda href="${EN ? "en.html#contact" : "index.html#contacto"}">${t("Reservar el diagnóstico gratis")}</a>
+      <button class="op" id="ad-otra">${t("Volver a empezar")}</button>${historial.length ? `<button class="op" id="ad-seguir">${t("Seguir respondiendo")}</button>` : ""}</div>
+      <p class="aviso">${t("Estimación orientativa en USD sin ITBMS, con precios de la lista vigente y supuestos conservadores. Sus respuestas no se enviaron ni se guardaron.")}</p></div>`;
+    document.getElementById("ad-otra").onclick = inicio;
+    const s = document.getElementById("ad-seguir"); if (s) s.onclick = preguntar;
+    if (window.KAIROS_AGENDA) caja.querySelectorAll("a[data-agenda]").forEach(a => { a.href = window.KAIROS_AGENDA; a.target = "_blank"; a.rel = "noopener"; });
+  }
+
+  inicio();
+})();
+</script>
+<!--VX:PIE-->
+<style>
+.kpie{border-top:1px solid #D8CDB8;background:#F7F3EA;color:#5F6670;font:400 .9rem/1.6 "Inter Tight",system-ui,sans-serif;padding:56px 0 34px;margin-top:40px}
+.kpie .kw{max-width:1180px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+.kpie b{display:block;font:500 .7rem "Inter Tight",sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#7A5E2C;margin-bottom:12px}
+.kpie a{display:block;color:#2B3A52;text-decoration:none;margin-bottom:6px}.kpie a:hover{color:#7A5E2C}
+.kpie .km{font:600 1.4rem "Cormorant Garamond",Garamond,serif;letter-spacing:.18em;color:#0E1E36;margin-bottom:6px}
+.kpie .kl{font:italic 500 1.15rem "Cormorant Garamond",Garamond,serif;color:#7A5E2C}
+.kpie .kb{max-width:1180px;margin:34px auto 0;padding:18px 28px 0;border-top:1px solid #E5DCCB;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.8rem}
+@media(max-width:760px){.kpie .kw{grid-template-columns:1fr 1fr}}
+</style>
+<footer class="kpie"><div class="kw">
+  <div><div class="km">KAIROS</div><div class="kl">Processes that run themselves.</div><p style="margin-top:10px;max-width:280px">Process automation for companies in Panama. Anything uncertain is always reviewed by a person.</p></div>
+  <div><b>Solutions</b><a href="en.html#services">Services</a><a href="en-assessment.html">Self-assessment</a><a href="laboratorio.html">Lab (ES)</a><a href="productos.html">Products (ES)</a></div>
+  <div><b>Company</b><a href="en-pricing.html">Pricing</a><a href="en.html#security">Security</a><a href="en.html#faq">FAQ</a><a data-agenda href="https://calendar.app.google/kDueUtrgYfQMWu889" target="_blank" rel="noopener">Book a free assessment</a></div>
+  <div><b>Legal</b><a href="privacidad.html">Privacy (ES)</a><a href="terminos.html">Terms (ES)</a><a href="ia-responsable.html">Responsible AI (ES)</a></div>
+</div><div class="kb"><span>© 2026 Kairos · Kairos Group, S.A. (in formation) · Panama City</span><span><a href="index.html" style="display:inline">Español</a></span></div></footer>
+<!--/VX:PIE-->
+<!--VX:CF--><!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "57566581ada04beaa4677b902b4ea7d3"}'></script><!-- End Cloudflare Web Analytics --><!--/VX:CF-->
+<!--VX:COM-->
+<style>
+.vx-wa{position:fixed;right:20px;bottom:20px;z-index:200;display:flex;align-items:center;gap:10px;padding:13px 18px;border-radius:999px;background:#25D366;color:#06281a;font:600 .92rem "Inter Tight",system-ui,sans-serif;text-decoration:none;box-shadow:0 12px 30px -8px rgba(37,211,102,.6)}
+body{padding-bottom:76px}
+.vx-wa svg{width:22px;height:22px}@media(max-width:600px){.vx-wa span{display:none}.vx-wa{padding:14px}}
+.vx-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;padding:22px 16px;border-top:1px solid #D8CDB8;font:500 .88rem "Inter Tight",system-ui,sans-serif;color:#5F6670;background:#F7F3EA}
+.vx-bar a{color:#0E1E36;text-decoration:none;display:inline-block;padding:12px 4px}.vx-r{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:0;border:1px solid #D8CDB8;font-weight:700;font-size:.8rem}
+.vx-r:hover{border-color:#7A5E2C;color:#7A5E2C}
+</style>
+<a class="vx-wa" href="https://wa.me/573122561848?text=Hola%20Kairos%2C%20quiero%20agendar%20un%20Diagn%C3%B3stico." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="#06281a"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg><span>Chat on WhatsApp</span></a>
+<div class="vx-bar"><a href="mailto:contacto@kairosgrouppanama.com">contacto@kairosgrouppanama.com</a><a href="https://www.linkedin.com/company/kairosgrouppa" target="_blank" rel="noopener" aria-label="linkedin" class="vx-r">in</a><a href="https://www.instagram.com/kairos.ptty" target="_blank" rel="noopener" aria-label="instagram" class="vx-r">IG</a></div>
+<script>
+(function(){var WA="https://wa.me/573122561848?text=Hola%20Kairos%2C%20quiero%20agendar%20un%20Diagn%C3%B3stico.",DM="https://ig.me/m/kairos.ptty",MAIL="contacto@kairosgrouppanama.com";
+/* origen de la visita (utm_source/utm_campaign), sin cookies: solo en esta pestaña y solo viaja en el mensaje que el visitante decide enviar */
+var OR='';try{var q=new URLSearchParams(location.search),s=q.get('utm_source'),c=q.get('utm_campaign');if(s){OR=(s+(c?' / '+c:'')).replace(/[^\w\s\/.-]/g,'').slice(0,60);sessionStorage.setItem('kx_origen',OR)}else{OR=sessionStorage.getItem('kx_origen')||''}}catch(_){}
+if(OR)document.querySelectorAll('a[href*="wa.me/"]').forEach(function(a){try{var u=new URL(a.href),t=u.searchParams.get('text')||'';u.searchParams.set('text',t+' (ref: '+OR+')');a.href=u.toString()}catch(_){}});
+document.querySelectorAll('form#form, #contacto form, #contact form').forEach(function(f){var b0=f.querySelector('button');if(WA&&b0)b0.textContent="Send via WhatsApp \u2192";f.onsubmit=function(e){e.preventDefault();
+var v=[].map.call(f.querySelectorAll('input,select,textarea'),function(x){return (x.placeholder||x.name||'')+': '+x.value}).filter(function(s){return !/: $/.test(s)}).join('\n');
+var msg='Solicitud de Diagnóstico Kairos\n'+v+(OR?'\nOrigen: '+OR:'');
+var b=f.querySelector('button');
+if(WA){window.open(WA.split('?')[0]+'?text='+encodeURIComponent(msg),'_blank');if(b)b.textContent='Abriendo WhatsApp…';}
+else if(DM){try{navigator.clipboard.writeText(msg)}catch(_){}window.open(DM,'_blank');if(b)b.textContent='Mensaje copiado: péguelo en Instagram';}
+else if(MAIL){window.open('mailto:'+MAIL+'?subject='+encodeURIComponent('Diagnóstico Kairos')+'&body='+encodeURIComponent(msg),'_blank');if(b)b.textContent='Abriendo su correo…';}
+else{if(b){b.textContent='Canales de contacto en configuración: muy pronto';b.disabled=true;}}}});})();
+</script>
+<!--/VX:COM-->
+</body></html>

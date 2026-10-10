@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kairos Claims — Reclamos a aseguradoras en automático</title>
+<meta name="description" content="Kairos Claims presenta, registra y verifica automáticamente los reclamos de clínicas, hospitales y laboratorios ante las aseguradoras en Panamá.">
+<link rel="icon" href="assets/isotipo.svg">
+
+
+
+
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.pain2{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:50px}
+@media(max-width:960px){.pain2{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.pain2{grid-template-columns:1fr}}
+.pain2 .glass b{font-size:2.2rem;display:block;font-weight:400}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
+@media(max-width:960px){.feat{grid-template-columns:1fr}}
+.feat h3{font-size:1.15rem;margin-bottom:8px}.feat p{color:var(--mut);font-size:.95rem}
+.cmpt{width:100%;border-collapse:collapse;margin-top:44px;font-size:.95rem}
+.cmpt th,.cmpt td{padding:16px;border-bottom:1px solid var(--stroke);text-align:left}
+.cmpt th{color:var(--mut);font-weight:500}.cmpt td:last-child{color:var(--teal);font-weight:600}
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
+@media(max-width:960px){.pricing{grid-template-columns:1fr}}
+.price{font-size:2.6rem;font-weight:400;letter-spacing:-.03em;margin:12px 0 2px}
+.dash{border-radius:24px;border:1px solid var(--stroke);background:var(--bg2);overflow:hidden;margin-top:50px}
+.dash .top{display:flex;gap:12px;padding:16px 22px;border-bottom:1px solid var(--stroke);font-size:.82rem;color:var(--mut)}
+.dash .kpis{display:grid;grid-template-columns:repeat(4,1fr)}
+@media(max-width:700px){.dash .kpis{grid-template-columns:repeat(2,1fr)}}
+.dash .kpis div{padding:24px;border-right:1px solid var(--stroke);border-bottom:1px solid var(--stroke)}
+.dash .kpis b{font-size:1.9rem;display:block;font-weight:400}.dash .kpis span{font-size:.8rem;color:var(--mut)}
+.bars{display:flex;align-items:flex-end;gap:10px;height:180px;padding:24px}
+.bars i{flex:1;border-radius:6px 6px 0 0;background:var(--grad);opacity:.85}
+.ins{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;justify-content:center}
+</style>
+<!--VX:HEAD-->
+<link rel="canonical" href="https://kairosgrouppanama.com/claims.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Kairos">
+<meta property="og:locale" content="es_PA">
+<meta property="og:title" content="Kairos Claims — Reclamos a aseguradoras en automático">
+<meta property="og:description" content="Kairos Claims presenta, registra y verifica automáticamente los reclamos de clínicas, hospitales y laboratorios ante las aseguradoras en Panamá.">
+<meta property="og:url" content="https://kairosgrouppanama.com/claims.html">
+<meta property="og:image" content="https://kairosgrouppanama.com/assets/compartir.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F7F3EA">
+<!--/VX:HEAD-->
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo"><svg viewBox="0 0 32 32" fill="none"><path d="M8 5V27" stroke="#0B1320" stroke-width="3.6" stroke-linecap="round"/><path d="M25 5L18 12M18 20L25 27" stroke="#0B1320" stroke-width="3.6" stroke-linecap="round"/><circle cx="14.3" cy="16" r="2.7" fill="#0FA894"/></svg>KAIROS</a>
+  <div class="links"><a href="index.html#soluciones">Soluciones</a><a href="productos.html">Productos</a><a href="index.html#metodo">Cómo trabajamos</a><a href="precios.html">Precios</a><a href="laboratorio.html">Laboratorio</a><a href="nosotros.html">Nosotros</a></div>
+  <a href="index.html#contacto" class="btn btn-p">Solicitar demo</a>
+  <button class="burger" aria-label="Menú" onclick="this.closest('nav').classList.toggle('open')"></button>
+
+</nav>
+
+<header class="hero" style="min-height:88vh">
+  <div class="aurora"><span></span><span></span><span></span></div><div class="gridlines"></div>
+  <div class="wrap center" style="position:relative">
+    <span class="eyebrow">Kairos Claims · Para clínicas, hospitales y laboratorios</span>
+    <h1 style="margin-left:auto;margin-right:auto;max-width:980px">Sus reclamos a aseguradoras, <span class="grad">presentados mientras duerme.</span></h1>
+    <p style="margin:0 auto 38px">Kairos Claims lee cada expediente, aplica sus reglas, presenta el reclamo en el portal de la aseguradora, registra el número y verifica cada operación. Lo dudoso queda listo para su equipo.</p>
+    <div class="ctas" style="justify-content:center"><a href="index.html#contacto" class="btn btn-p">Agendar demo de 20 minutos →</a><a href="#como" class="btn btn-g">Cómo funciona</a></div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap center">
+    <span class="eyebrow">El costo invisible</span>
+    <h2>Cada reclamo manual es dinero que llega tarde.</h2>
+    <div class="pain2">
+      <div class="glass"><b class="grad">~2 min</b><p>por reclamo, digitado a mano en el portal</p></div>
+      <div class="glass"><b class="grad">Miles</b><p>de cuentas al mes por cada aseguradora</p></div>
+      <div class="glass"><b class="grad">Glosas</b><p>por errores de digitación, firmas o duplicados</p></div>
+      <div class="glass"><b class="grad">Días</b><p>de retraso en el cobro = flujo de caja atrapado</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="como">
+  <div class="wrap product">
+    <div><span class="eyebrow">Cómo funciona</span><h2>De expediente a reclamo verificado, solo.</h2><p class="lead">Se conecta a su sistema de cuentas o monitor de aseguradoras y trabaja en el horario que usted defina: de noche, los fines de semana o de forma continua.</p></div>
+    <div class="flow">
+      <div class="fstep"><span class="n">1</span><div><b>Toma las cuentas pendientes</b><span>Filtra por aseguradora, estado y fechas</span></div></div>
+      <div class="fstep"><span class="n">2</span><div><b>Lee el expediente completo</b><span>Formulario, factura, detalle de cargos, elegibilidad y receta (lectura automática)</span></div></div>
+      <div class="fstep"><span class="n">3</span><div><b>Aplica la matriz de su clínica</b><span>Tipo de servicio, monto, diagnóstico CIE-10/ICD-9, firmas, fechas</span></div></div>
+      <div class="fstep"><span class="n">4</span><div><b>Presenta en el portal</b><span>Busca al asegurado, completa el reclamo y adjunta el PDF</span></div></div>
+      <div class="fstep"><span class="n">5</span><div><b>Registra y verifica</b><span>Número de reclamo de vuelta en su sistema + auditoría</span></div></div>
+      <div class="fstep"><span class="n">6</span><div><b>Separa las excepciones</b><span>Sin firma, sin diagnóstico, duplicados, póliza inactiva</span></div><span class="badge">Humano</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="funciones">
+  <div class="wrap center">
+    <span class="eyebrow">Funciones</span><h2>Todo lo que un buen analista de reclamos haría.</h2>
+    <div class="feat" style="text-align:left">
+      <div class="glass"><h3>Lectura inteligente</h3><p>Extrae los datos de formularios, facturas y recetas escaneadas, incluso con letra manuscrita en la receta.</p></div>
+      <div class="glass"><h3>Codificación asistida</h3><p>Propone el diagnóstico CIE-10 y su equivalencia ICD-9 a partir del formulario o la receta.</p></div>
+      <div class="glass"><h3>✍Control documental</h3><p>Detecta la falta de firma del paciente o del médico, de sello y de cédula, y las fechas inconsistentes.</p></div>
+      <div class="glass"><h3>Antiduplicados</h3><p>Cruza facturas y reclamos existentes antes de presentar.</p></div>
+      <div class="glass"><h3>Búsqueda robusta</h3><p>Encuentra al asegurado con todas las combinaciones de póliza, certificado y nombre.</p></div>
+      <div class="glass"><h3>Verificación posterior</h3><p>Relee el portal y confirma el número de reclamo de cada operación.</p></div>
+      <div class="glass"><h3>Canario y alarmas</h3><p>Si el portal cambia o algo no cuadra, se detiene antes de cometer errores.</p></div>
+      <div class="glass"><h3>Horario automático</h3><p>Corre solo en el horario programado, con arranque de un clic.</p></div>
+      <div class="glass"><h3>Auditoría y reportes</h3><p>Informe diario: presentados, verificados, a revisión y motivos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="tablero">
+  <div class="wrap center">
+    <span class="eyebrow">Tablero de control</span><h2>Su cartera de reclamos, en tiempo real.</h2>
+    <p class="lead">Vista ilustrativa con datos ficticios.</p>
+    <div class="dash" style="text-align:left">
+      <div class="top mono"><span>Kairos Claims · Tablero</span><span style="margin-left:auto" class="ok">● sincronizado</span></div>
+      <div class="kpis"><div><b>1.284</b><span>presentados este mes</span></div><div><b class="ok">99,4 %</b><span>verificados</span></div><div><b class="rv">63</b><span>en revisión humana</span></div><div><b>18 s</b><span>tiempo medio por reclamo</span></div></div>
+      <div class="bars"><i style="height:40%"></i><i style="height:55%"></i><i style="height:48%"></i><i style="height:70%"></i><i style="height:62%"></i><i style="height:82%"></i><i style="height:76%"></i><i style="height:90%"></i><i style="height:68%"></i><i style="height:95%"></i><i style="height:88%"></i><i style="height:100%"></i></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap center">
+    <span class="eyebrow">Comparación</span><h2>Manual vs. Kairos Claims</h2>
+    <table class="cmpt"><tr><th></th><th>Proceso manual</th><th>Kairos Claims</th></tr>
+      <tr><td>Tiempo por reclamo</td><td>Minutos</td><td>Segundos</td></tr>
+      <tr><td>Horario</td><td>Jornada laboral</td><td>24/7 programable</td></tr>
+      <tr><td>Verificación</td><td>Por muestreo</td><td>100 % automática</td></tr>
+      <tr><td>Duplicados</td><td>Se detectan después</td><td>Se bloquean antes</td></tr>
+      <tr><td>Trazabilidad</td><td>Parcial</td><td>Cada acción auditada</td></tr>
+      <tr><td>Escalar volumen</td><td>Contratar</td><td>Sin costo marginal relevante</td></tr></table>
+    <p style="margin-top:30px;color:var(--mut)">Completó un piloto real con el portal de una aseguradora de salud. Cada aseguradora nueva se configura y se pilota antes de ponerse en marcha.</p>
+  </div>
+</section>
+
+<section id="precios">
+  <div class="wrap center">
+    <span class="eyebrow">Precios</span><h2>Pague por lo que se presenta.</h2>
+    <p class="lead">Precios de referencia en USD. La propuesta final se ajusta al volumen y al número de aseguradoras.</p>
+    <div class="pricing" style="text-align:left">
+      <div class="glass plan"><div class="tag">Piloto</div><h3>Starter</h3><div class="price">$1.500</div><p style="color:var(--mut)">implementación (incluye 30 días de piloto) + $250/mes</p><ul><li>1 aseguradora</li><li>Hasta 1.000 reclamos/mes</li><li>Matriz estándar</li><li>Reporte diario</li></ul></div>
+      <div class="glass plan hl"><h3>Pro</h3><div class="price">$0,40<span style="font-size:1rem;color:var(--mut)"> / reclamo</span></div><p style="color:var(--mut)">+ mínimo mensual de $300</p><ul><li>Hasta 3 aseguradoras</li><li>Matriz personalizada</li><li>Tablero + auditoría</li><li>Kairos Care incluido</li></ul></div>
+      <div class="glass plan"><div class="tag">Grupos hospitalarios</div><h3>Enterprise</h3><div class="price">A medida</div><p style="color:var(--mut)">volumen y SLA dedicados</p><ul><li>Aseguradoras ilimitadas</li><li>Integración con su HIS/ERP</li><li>Despliegue on-premise</li><li>SLA y soporte prioritario</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap"><div class="cta" style="grid-template-columns:1fr">
+    <div class="center"><span class="eyebrow">Demo</span><h2>Véalo trabajar con un expediente de prueba.</h2><p class="lead">20 minutos, datos ficticios, sin compromiso.</p><div class="ctas" style="justify-content:center;margin-top:28px"><a href="index.html#contacto" class="btn btn-p">Agendar demo →</a></div></div>
+  </div></div>
+</section>
+
+<!--VX:PIE-->
+<style>
+.kpie{border-top:1px solid #D8CDB8;background:#F7F3EA;color:#5F6670;font:400 .9rem/1.6 "Inter Tight",system-ui,sans-serif;padding:56px 0 34px;margin-top:40px}
+.kpie .kw{max-width:1180px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+.kpie b{display:block;font:500 .7rem "Inter Tight",sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#7A5E2C;margin-bottom:12px}
+.kpie a{display:block;color:#2B3A52;text-decoration:none;margin-bottom:6px}.kpie a:hover{color:#7A5E2C}
+.kpie .km{font:600 1.4rem "Cormorant Garamond",Garamond,serif;letter-spacing:.18em;color:#0E1E36;margin-bottom:6px}
+.kpie .kl{font:italic 500 1.15rem "Cormorant Garamond",Garamond,serif;color:#7A5E2C}
+.kpie .kb{max-width:1180px;margin:34px auto 0;padding:18px 28px 0;border-top:1px solid #E5DCCB;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.8rem}
+@media(max-width:760px){.kpie .kw{grid-template-columns:1fr 1fr}}
+</style>
+<footer class="kpie"><div class="kw">
+  <div><div class="km">KAIROS</div><div class="kl">Procesos que trabajan solos.</div><p style="margin-top:10px;max-width:280px">Automatización de procesos para empresas en Panamá. Lo dudoso siempre lo revisa una persona.</p></div>
+  <div><b>Soluciones</b><a href="productos.html">Productos</a><a href="laboratorio.html">Laboratorio</a><a href="autodiagnostico.html">Autodiagnóstico</a><a href="demo-agenda.html">Demo Agenda</a><a href="demo-monitor.html">Demo Monitor</a><a href="claims.html">Kairos Claims</a></div>
+  <div><b>Empresa</b><a href="index.html#metodo">Cómo trabajamos</a><a href="precios.html">Precios</a><a href="casos.html">Casos</a><a href="nosotros.html">Nosotros</a><a data-agenda href="https://calendar.app.google/kDueUtrgYfQMWu889" target="_blank" rel="noopener">Reservar Diagnóstico gratis</a></div>
+  <div><b>Industrias y legal</b><a href="industria-salud.html">Salud</a><a href="industria-logistica.html">Logística y Zona Libre</a><a href="industria-servicios.html">Servicios</a><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="seguridad.html">Seguridad</a><a href="ia-responsable.html">IA responsable</a></div>
+</div><div class="kb"><span>© 2026 Kairos · Kairos Group, S.A., en constitución · Ciudad de Panamá</span><span><a href="en.html" style="display:inline">English</a></span></div></footer>
+<!--/VX:PIE-->
+<!--VX:CF--><!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "57566581ada04beaa4677b902b4ea7d3"}'></script><!-- End Cloudflare Web Analytics --><!--/VX:CF-->
+<!--VX:COM-->
+<style>
+.vx-wa{position:fixed;right:20px;bottom:20px;z-index:200;display:flex;align-items:center;gap:10px;padding:13px 18px;border-radius:999px;background:#25D366;color:#06281a;font:600 .92rem "Inter Tight",system-ui,sans-serif;text-decoration:none;box-shadow:0 12px 30px -8px rgba(37,211,102,.6)}
+body{padding-bottom:76px}
+.vx-wa svg{width:22px;height:22px}@media(max-width:600px){.vx-wa span{display:none}.vx-wa{padding:14px}}
+.vx-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;padding:22px 16px;border-top:1px solid #D8CDB8;font:500 .88rem "Inter Tight",system-ui,sans-serif;color:#5F6670;background:#F7F3EA}
+.vx-bar a{color:#0E1E36;text-decoration:none;display:inline-block;padding:12px 4px}.vx-r{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:0;border:1px solid #D8CDB8;font-weight:700;font-size:.8rem}
+.vx-r:hover{border-color:#7A5E2C;color:#7A5E2C}
+</style>
+<a class="vx-wa" href="https://wa.me/573122561848?text=Hola%20Kairos%2C%20quiero%20agendar%20un%20Diagn%C3%B3stico." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="#06281a"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg><span>Escríbanos por WhatsApp</span></a>
+<div class="vx-bar"><a href="mailto:contacto@kairosgrouppanama.com">contacto@kairosgrouppanama.com</a><a href="https://www.linkedin.com/company/kairosgrouppa" target="_blank" rel="noopener" aria-label="linkedin" class="vx-r">in</a><a href="https://www.instagram.com/kairos.ptty" target="_blank" rel="noopener" aria-label="instagram" class="vx-r">IG</a></div>
+<script>
+(function(){var WA="https://wa.me/573122561848?text=Hola%20Kairos%2C%20quiero%20agendar%20un%20Diagn%C3%B3stico.",DM="https://ig.me/m/kairos.ptty",MAIL="contacto@kairosgrouppanama.com";
+/* origen de la visita (utm_source/utm_campaign), sin cookies: solo en esta pestaña y solo viaja en el mensaje que el visitante decide enviar */
+var OR='';try{var q=new URLSearchParams(location.search),s=q.get('utm_source'),c=q.get('utm_campaign');if(s){OR=(s+(c?' / '+c:'')).replace(/[^\w\s\/.-]/g,'').slice(0,60);sessionStorage.setItem('kx_origen',OR)}else{OR=sessionStorage.getItem('kx_origen')||''}}catch(_){}
+if(OR)document.querySelectorAll('a[href*="wa.me/"]').forEach(function(a){try{var u=new URL(a.href),t=u.searchParams.get('text')||'';u.searchParams.set('text',t+' (ref: '+OR+')');a.href=u.toString()}catch(_){}});
+document.querySelectorAll('form#form, #contacto form, #contact form').forEach(function(f){var b0=f.querySelector('button');if(WA&&b0)b0.textContent="Enviar por WhatsApp \u2192";f.onsubmit=function(e){e.preventDefault();
+var v=[].map.call(f.querySelectorAll('input,select,textarea'),function(x){return (x.placeholder||x.name||'')+': '+x.value}).filter(function(s){return !/: $/.test(s)}).join('\n');
+var msg='Solicitud de Diagnóstico Kairos\n'+v+(OR?'\nOrigen: '+OR:'');
+var b=f.querySelector('button');
+if(WA){window.open(WA.split('?')[0]+'?text='+encodeURIComponent(msg),'_blank');if(b)b.textContent='Abriendo WhatsApp…';}
+else if(DM){try{navigator.clipboard.writeText(msg)}catch(_){}window.open(DM,'_blank');if(b)b.textContent='Mensaje copiado: péguelo en Instagram';}
+else if(MAIL){window.open('mailto:'+MAIL+'?subject='+encodeURIComponent('Diagnóstico Kairos')+'&body='+encodeURIComponent(msg),'_blank');if(b)b.textContent='Abriendo su correo…';}
+else{if(b){b.textContent='Canales de contacto en configuración: muy pronto';b.disabled=true;}}}});})();
+</script>
+<!--/VX:COM-->
+</body></html>

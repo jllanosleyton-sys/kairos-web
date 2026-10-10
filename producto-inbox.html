@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kairos Inbox · Atención al cliente — Kairos</title>
+<meta name="description" content="Kairos Inbox: Clasifica el correo entrante, responde lo repetitivo con plantillas aprobadas y abre la solicitud al área correcta. Demo disponible. Precios en USD.">
+<link rel="icon" href="assets/isotipo.svg">
+
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.ph{padding:150px 0 70px;border-bottom:1px solid var(--stroke)}
+.ph h1{font-size:clamp(3rem,6vw,5rem);margin:16px 0 18px}
+.ph .lead{font-size:1.2rem}.ph .pill{margin-left:12px;vertical-align:middle}
+.ph .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.pg{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;margin-top:10px}
+.flujo{display:flex;flex-wrap:wrap;gap:0;align-items:stretch;margin:22px 0 10px;counter-reset:p}
+.flujo .n{position:relative;flex:1 1 150px;min-width:140px;background:var(--panel,#FFFDF8);border:1px solid var(--stroke);border-top:3px solid #0E8C7E;padding:14px 14px 16px;margin:0 22px 14px 0}
+.flujo .n::before{counter-increment:p;content:counter(p);display:block;font:500 1.5rem var(--serif);color:var(--gold-t,#7A5E2C);margin-bottom:4px}
+.flujo .n::after{content:"→";position:absolute;right:-19px;top:50%;transform:translateY(-50%);color:var(--mut);font-size:1.1rem}
+.flujo .n:last-child::after{content:none}
+.flujo .n small{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-top:8px}
+.desvio{display:flex;gap:14px;align-items:flex-start;border:1px dashed var(--gold-t,#7A5E2C);background:#FFF8EC;padding:14px 16px;margin-top:4px}
+.desvio b{white-space:nowrap;color:var(--gold-t,#7A5E2C)}
+@media(max-width:760px){.flujo{flex-direction:column}.flujo .n{display:flex;gap:12px;align-items:baseline;flex:none;min-width:0;padding:9px 12px;margin:0 0 16px;border-top-width:1px;border-left:3px solid #0E8C7E}
+.flujo .n::before{font-size:1.15rem;margin:0}.flujo .n small{display:none}.flujo .n::after{content:"↓";right:auto;left:20px;top:auto;bottom:-17px;transform:none;font-size:.9rem}}
+.pasos{list-style:none;border-top:1px solid var(--txt)}
+.pasos li{display:grid;grid-template-columns:52px 1fr;padding:18px 0;border-bottom:1px solid var(--stroke)}
+.pasos i{font-family:var(--serif);font-size:1.4rem;color:var(--gold)}
+.lista{list-style:none;display:grid;gap:8px}.lista li{padding:12px 14px;border:1px solid var(--stroke);background:var(--panel)}
+.lista li::before{content:"— ";color:var(--gold)}
+.dato{padding:22px 24px;border-left:2px solid var(--gold);background:var(--panel);margin-top:22px}
+.dato b{display:block;font-family:var(--serif);font-size:1.25rem;font-weight:500}
+.inv{margin-top:50px;background:var(--txt);color:var(--bg);padding:40px;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center}
+.inv small{color:var(--gold2);letter-spacing:.2em;text-transform:uppercase;font-size:.72rem}.inv b{display:block;font:500 clamp(1.5rem,3vw,2.2rem) var(--serif)}
+.inv .btn-p{background:var(--gold);border-color:var(--gold)}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--txt);margin-top:30px}
+.seg div{padding:18px 18px 0 0;font-size:.92rem;color:var(--ink2)}.seg i{font-family:var(--serif);color:var(--gold);display:block;font-size:1.2rem}
+.otros{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.otros a{border:1px solid var(--stroke);padding:9px 14px;font-size:.88rem}.otros a:hover{border-color:var(--gold)}
+@media(max-width:860px){.pg{grid-template-columns:1fr;gap:34px}.seg{grid-template-columns:1fr 1fr}.inv{padding:26px}}
+</style>
+<!--VX:HEAD-->
+<link rel="canonical" href="https://kairosgrouppanama.com/producto-inbox.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Kairos">
+<meta property="og:locale" content="es_PA">
+<meta property="og:title" content="Kairos Inbox · Atención al cliente — Kairos">
+<meta property="og:description" content="Kairos Inbox: Clasifica el correo entrante, responde lo repetitivo con plantillas aprobadas y abre la solicitud al área correcta. Demo disponible. Precios en USD.">
+<meta property="og:url" content="https://kairosgrouppanama.com/producto-inbox.html">
+<meta property="og:image" content="https://kairosgrouppanama.com/assets/compartir.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F7F3EA">
+<!--/VX:HEAD-->
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo"><svg viewBox="0 0 32 32" fill="none"><path d="M8 5V27" stroke="#0B1320" stroke-width="3.6" stroke-linecap="round"/><path d="M25 5L18 12M18 20L25 27" stroke="#0B1320" stroke-width="3.6" stroke-linecap="round"/><circle cx="14.3" cy="16" r="2.7" fill="#0FA894"/></svg>KAIROS</a>
+  <div class="links"><a href="index.html#soluciones">Soluciones</a><a href="productos.html">Productos</a><a href="index.html#metodo">Cómo trabajamos</a><a href="precios.html">Precios</a><a href="laboratorio.html">Laboratorio</a><a href="nosotros.html">Nosotros</a></div>
+  <a href="index.html#contacto" class="btn btn-p">Agendar diagnóstico</a>
+  <button class="burger" aria-label="Menú" onclick="this.closest('nav').classList.toggle('open')"></button>
+</nav>
+<header class="ph"><div class="wrap">
+  <span class="eyebrow">Kairos Cliente · Atención al cliente · Back-office</span>
+  <h1>Kairos Inbox</h1>
+  <p class="lead"><b>El problema:</b> Bandeja de correo imposible de responder a tiempo.<br>Clasifica el correo entrante, responde lo repetitivo con plantillas aprobadas y abre la solicitud al área correcta. <span class="pill p-beta">Demo disponible</span></p>
+  <div class="ctas"><a href="laboratorio.html#inbox" class="btn btn-p">Ver la demostración</a><a href="index.html#contacto" class="btn btn-g">Conversarlo 30 minutos</a></div>
+</div></header>
+
+<section><div class="wrap"><span class="eyebrow">Cómo funciona</span><h2>Paso a <em>paso.</em></h2><div class="flujo" role="list" aria-label="Pasos automáticos"><div class="n" role="listitem">Lee el correo<small>Automático</small></div><div class="n" role="listitem">Lo clasifica por categoría<small>Automático</small></div><div class="n" role="listitem">Responde con plantilla o abre la solicitud<small>Automático</small></div><div class="n" role="listitem">Verifica el envío<small>Automático</small></div></div><div class="desvio"><b>Si hay duda →</b><span>Reclamos y ambiguos, a una persona</span></div></div></section>
+
+<section style="padding-top:0"><div class="wrap pg">
+  <div><span class="eyebrow">Funciones</span><h2>Qué <em>incluye.</em></h2><ul class="lista"><li>Categorías configurables</li><li>Plantillas aprobadas por usted</li><li>Reclamos y ambiguos a una persona</li><li>Registro de cada respuesta</li></ul></div>
+  <div><span class="eyebrow">En su empresa</span><h2>Cómo se <em>integra.</em></h2>
+    <div class="dato"><b>Se conecta con</b>En la implementación: su buzón (IMAP o Microsoft 365)</div>
+    <div class="dato"><b>Qué se mide</b>Tiempo de primera respuesta</div>
+    <div class="dato"><b>Ante la duda</b>El sistema no decide: el caso pasa a una persona de su equipo, con el motivo anotado.</div></div>
+</div>
+<div class="wrap">
+  <div class="seg"><div><i>i.</i>Corre en su infraestructura</div><div><i>ii.</i>Ley 81 de 2019 · confidencialidad y acuerdo de datos</div><div><i>iii.</i>Lo dudoso lo revisa una persona</div><div><i>iv.</i>Cada operación queda registrada</div></div>
+  <div class="inv"><div><small>Inversión de referencia</small><b>$600 + $90/mes por buzón</b><span style="font-size:.85rem;color:#C9CED8">USD sin ITBMS · piloto de 30 días sin permanencia · 20 % de descuento para los 3 primeros clientes</span></div>
+    <a data-agenda href="https://calendar.app.google/kDueUtrgYfQMWu889" target="_blank" rel="noopener" class="btn btn-p">Agendar Diagnóstico Express</a></div>
+  <p style="margin-top:40px;color:var(--mut)">Otros productos del paquete Kairos Cliente:</p><div class="otros"><a href="producto-agenda.html">Kairos Agenda</a><a href="producto-crm.html">Kairos CRM</a><a href="producto-voice.html">Kairos Voice</a><a href="productos.html">Todos los productos →</a></div>
+</div></section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Kairos Inbox", "description": "Clasifica el correo entrante, responde lo repetitivo con plantillas aprobadas y abre la solicitud al área correcta.", "provider": {"@type": "Organization", "name": "Kairos", "url": "https://kairosgrouppanama.com"}, "areaServed": "PA", "serviceType": "Automatización de procesos"}</script>
+<!--VX:PIE-->
+<style>
+.kpie{border-top:1px solid #D8CDB8;background:#F7F3EA;color:#5F6670;font:400 .9rem/1.6 "Inter Tight",system-ui,sans-serif;padding:56px 0 34px;margin-top:40px}
+.kpie .kw{max-width:1180px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+.kpie b{display:block;font:500 .7rem "Inter Tight",sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#7A5E2C;margin-bottom:12px}
+.kpie a{display:block;color:#2B3A52;text-decoration:none;margin-bottom:6px}.kpie a:hover{color:#7A5E2C}
+.kpie .km{font:600 1.4rem "Cormorant Garamond",Garamond,serif;letter-spacing:.18em;color:#0E1E36;margin-bottom:6px}
+.kpie .kl{font:italic 500 1.15rem "Cormorant Garamond",Garamond,serif;color:#7A5E2C}
+.kpie .kb{max-width:1180px;margin:34px auto 0;padding:18px 28px 0;border-top:1px solid #E5DCCB;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.8rem}
+@media(max-width:760px){.kpie .kw{grid-template-columns:1fr 1fr}}
+</style>
+<footer class="kpie"><div class="kw">
+  <div><div class="km">KAIROS</div><div class="kl">Procesos que trabajan solos.</div><p style="margin-top:10px;max-width:280px">Automatización de procesos para empresas en Panamá. Lo dudoso siempre lo revisa una persona.</p></div>
+  <div><b>Soluciones</b><a href="productos.html">Productos</a><a href="laboratorio.html">Laboratorio</a><a href="autodiagnostico.html">Autodiagnóstico</a><a href="demo-agenda.html">Demo Agenda</a><a href="demo-monitor.html">Demo Monitor</a><a href="claims.html">Kairos Claims</a></div>
+  <div><b>Empresa</b><a href="index.html#metodo">Cómo trabajamos</a><a href="precios.html">Precios</a><a href="casos.html">Casos</a><a href="nosotros.html">Nosotros</a><a data-agenda href="https://calendar.app.google/kDueUtrgYfQMWu889" target="_blank" rel="noopener">Reservar Diagnóstico gratis</a></div>
+  <div><b>Industrias y legal</b><a href="industria-salud.html">Salud</a><a href="industria-logistica.html">Logística y Zona Libre</a><a href="industria-servicios.html">Servicios</a><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="seguridad.html">Seguridad</a><a href="ia-responsable.html">IA responsable</a></div>
+</div><div class="kb"><span>© 2026 Kairos · Kairos Group, S.A., en constitución · Ciudad de Panamá</span><span><a href="en.html" style="display:inline">English</a></span></div></footer>
+<!--/VX:PIE-->
+<!--VX:CF--><!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "57566581ada04beaa4677b902b4ea7d3"}'></script><!-- End Cloudflare Web Analytics --><!--/VX:CF-->
+<!--VX:COM-->
+<style>
+.vx-wa{position:fixed;right:20px;bottom:20px;z-index:200;display:flex;align-items:center;gap:10px;padding:13px 18px;border-radius:999px;background:#25D366;color:#06281a;font:600 .92rem "Inter Tight",system-ui,sans-serif;text-decoration:none;box-shadow:0 12px 30px -8px rgba(37,211,102,.6)}
+body{padding-bottom:76px}
+.vx-wa svg{width:22px;height:22px}@media(max-width:600px){.vx-wa span{display:none}.vx-wa{padding:14px}}
+.vx-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;padding:22px 16px;border-top:1px solid #D8CDB8;font:500 .88rem "Inter Tight",system-ui,sans-serif;color:#5F6670;background:#F7F3EA}
+.vx-bar a{color:#0E1E36;text-decoration:none;display:inline-block;padding:12px 4px}.vx-r{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:0;border:1px solid #D8CDB8;font-weight:700;font-size:.8rem}
+.vx-r:hover{border-color:#7A5E2C;color:#7A5E2C}
+</style>
+<a class="vx-wa" href="https://wa.me/573122561848?text=Hola%20Kairos%2C%20quiero%20agendar%20un%20Diagn%C3%B3stico." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="#06281a"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg><span>Escríbanos por WhatsApp</span></a>
+<div class="vx-bar"><a href="mailto:contacto@kairosgrouppanama.com">contacto@kairosgrouppanama.com</a><a href="https://www.linkedin.com/company/kairosgrouppa" target="_blank" rel="noopener" aria-label="linkedin" class="vx-r">in</a><a href="https://www.instagram.com/kairos.ptty" target="_blank" rel="noopener" aria-label="instagram" class="vx-r">IG</a></div>
+<script>
+(function(){var WA="https://wa.me/573122561848?text=Hola%20Kairos%2C%20quiero%20agendar%20un%20Diagn%C3%B3stico.",DM="https://ig.me/m/kairos.ptty",MAIL="contacto@kairosgrouppanama.com";
+/* origen de la visita (utm_source/utm_campaign), sin cookies: solo en esta pestaña y solo viaja en el mensaje que el visitante decide enviar */
+var OR='';try{var q=new URLSearchParams(location.search),s=q.get('utm_source'),c=q.get('utm_campaign');if(s){OR=(s+(c?' / '+c:'')).replace(/[^\w\s\/.-]/g,'').slice(0,60);sessionStorage.setItem('kx_origen',OR)}else{OR=sessionStorage.getItem('kx_origen')||''}}catch(_){}
+if(OR)document.querySelectorAll('a[href*="wa.me/"]').forEach(function(a){try{var u=new URL(a.href),t=u.searchParams.get('text')||'';u.searchParams.set('text',t+' (ref: '+OR+')');a.href=u.toString()}catch(_){}});
+document.querySelectorAll('form#form, #contacto form, #contact form').forEach(function(f){var b0=f.querySelector('button');if(WA&&b0)b0.textContent="Enviar por WhatsApp \u2192";f.onsubmit=function(e){e.preventDefault();
+var v=[].map.call(f.querySelectorAll('input,select,textarea'),function(x){return (x.placeholder||x.name||'')+': '+x.value}).filter(function(s){return !/: $/.test(s)}).join('\n');
+var msg='Solicitud de Diagnóstico Kairos\n'+v+(OR?'\nOrigen: '+OR:'');
+var b=f.querySelector('button');
+if(WA){window.open(WA.split('?')[0]+'?text='+encodeURIComponent(msg),'_blank');if(b)b.textContent='Abriendo WhatsApp…';}
+else if(DM){try{navigator.clipboard.writeText(msg)}catch(_){}window.open(DM,'_blank');if(b)b.textContent='Mensaje copiado: péguelo en Instagram';}
+else if(MAIL){window.open('mailto:'+MAIL+'?subject='+encodeURIComponent('Diagnóstico Kairos')+'&body='+encodeURIComponent(msg),'_blank');if(b)b.textContent='Abriendo su correo…';}
+else{if(b){b.textContent='Canales de contacto en configuración: muy pronto';b.disabled=true;}}}});})();
+</script>
+<!--/VX:COM-->
+</body></html>

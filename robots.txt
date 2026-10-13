@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kairosgrouppanama.com/sitemap.xml

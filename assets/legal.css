@@ -1,0 +1,47 @@
+@import url("fuentes.css");
+:root{--bg:#F3EFE6;--bg2:#ECE6DA;--stroke:#D9D2C3;--txt:#0B1320;--mut:#5B6472;--teal:#0FA894;--grad:linear-gradient(120deg,#0FA894,#0FA894)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Inter Tight",system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--teal)}
+header{position:sticky;top:0;background:rgba(243,239,230,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--stroke);z-index:10}
+header .w{max-width:900px;margin:0 auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;letter-spacing:.3em;color:var(--txt);text-decoration:none}
+header nav a{color:var(--mut);text-decoration:none;font-size:.9rem;margin-left:22px}
+header nav a:hover{color:var(--txt)}
+main{max-width:900px;margin:0 auto;padding:72px 24px 100px}
+.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);font-weight:600}
+h1{font-size:clamp(2.2rem,5vw,3.4rem);letter-spacing:-.035em;line-height:1.08;margin:14px 0 10px}
+.meta{color:var(--mut);font-size:.9rem;margin-bottom:44px}
+h2{font-size:1.35rem;letter-spacing:-.02em;margin:46px 0 12px;padding-top:24px;border-top:1px solid var(--stroke)}
+h3{font-size:1.05rem;margin:22px 0 8px}
+p,li{color:#c5cddc;font-size:1rem}
+ul,ol{padding-left:22px;margin:10px 0;display:grid;gap:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.92rem}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--stroke);vertical-align:top}
+th{color:var(--txt);font-weight:600;background:rgba(255,255,255,.03)}
+td{color:#c5cddc}
+.box{padding:22px 24px;border-radius:16px;border:1px solid rgba(25,227,201,.3);background:rgba(25,227,201,.06);margin:24px 0}
+.toc{padding:22px 26px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid var(--stroke)}
+.toc a{color:var(--txt);text-decoration:none}
+footer{border-top:1px solid var(--stroke);padding:30px 24px;text-align:center;color:#56627a;font-size:.82rem}
+@media(max-width:600px){header nav{display:none}table{font-size:.85rem}th,td{padding:8px}}
+
+
+
+/* Estilo Clásico (07-10-2026): mismos tonos que site.css; texto oscuro legible sobre marfil */
+:root{--bg:#F7F3EA;--bg2:#EFE8DA;--stroke:#D8CDB8;--txt:#0E1E36;--mut:#5F6670;--teal:#0E8C7E;--gold:#9C7A3C}
+body{background:var(--bg);color:var(--txt)}
+a{color:var(--gold)}
+header{background:rgba(247,243,234,.95)}
+.logo{font-family:"Cormorant Garamond",Garamond,serif;font-weight:600;letter-spacing:.18em;font-size:1.35rem}
+h1,h2,h3{font-family:"Cormorant Garamond",Garamond,serif;font-weight:500;letter-spacing:-.01em}
+h1{font-size:clamp(2.6rem,5.5vw,3.8rem)}h2{font-size:1.8rem}h3{font-size:1.3rem}
+.eyebrow{color:var(--gold);letter-spacing:.24em}
+p,li,td{color:#2B3A52}
+th{background:var(--bg2)}
+.box{border-radius:0;border-color:var(--gold);background:#FFFDF8}
+.toc{border-radius:0;background:#FFFDF8}
+footer{color:var(--mut)}
+
+/* Accesibilidad (08-10-2026): mismos tonos que site.css, legibles en texto pequeño */
+:root{--gold:#7A5E2C;--teal:#0B6E62}

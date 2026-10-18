@@ -312,3 +312,6 @@ footer a:hover{color:var(--gold)}
 .btn-p:hover{background:var(--gold-t);border-color:var(--gold-t)}
 h1.t2{font-size:clamp(2.1rem,4vw,3.4rem);margin:20px 0 18px}
 .chip{color:var(--mut)!important}  /* gris muy claro (1,8) → gris legible */
+
+/* ícono del menú en celular (las páginas con el botón vacío) */
+.burger:empty::before{content:"\2630";font-size:1.25rem;line-height:1}

@@ -455,15 +455,15 @@ var linea=$("linea");
 function avanzar(){var ds=linea.querySelectorAll(":scope > div");[].forEach.call(ds,function(d,j){setTimeout(function(){d.classList.add("on")},RM?0:j*420)});$("prog").style.width="100%"}
 
 /* Portafolio con fichas en ventana (precios = comercial/lista_precios.md) */
-var PRO={cliente:[["Agenda","demo","Asistente de WhatsApp que agenda, confirma y recuerda citas.","Desde US$500 + US$120 al mes por sede","demo-agenda.html","Clínicas, consultorios, servicios"],
-  ["Inbox","demo","Clasifica correos, responde lo repetitivo y abre solicitudes.","US$600 + US$90/mes por buzón","laboratorio.html#inbox","Atención al cliente, back-office"],
-  ["Voice","demo","Llamadas automáticas de confirmación con guion aprobado.","US$1.000 + US$0,12 por minuto (mín. US$200/mes)","laboratorio.html#voice","Clínicas, cobranza"],
-  ["CRM","demo","Embudo de ventas con la tarea del día para cada vendedor.","Desde US$1.500 + US$90 al mes (hasta 5 usuarios; +US$15 por usuario adicional)","laboratorio.html#crm","Pymes de servicios"]],
- dinero:[["Claims","live","Presenta y verifica reclamos en el portal de la aseguradora.","Desde US$1.500 + US$250/mes · Pro: US$0,40 por reclamo (mín. US$300/mes)","claims.html","Clínicas, hospitales, laboratorios"],
+var PRO={cliente:[["Agenda","demo","Asistente de WhatsApp que agenda, confirma y recuerda citas.","Desde US$500 + US$150/mes (WhatsApp incluido)","demo-agenda.html","Clínicas, consultorios, servicios"],
+  ["Inbox","demo","Clasifica correos, responde lo repetitivo y abre solicitudes.","US$600 + US$120/mes (todo incluido)","laboratorio.html#inbox","Atención al cliente, back-office"],
+  ["Voice","demo","Llamadas automáticas de confirmación con guion aprobado.","US$1.000 + US$200/mes (hasta 1.500 minutos)","laboratorio.html#voice","Clínicas, cobranza"],
+  ["CRM","demo","Embudo de ventas con la tarea del día para cada vendedor.","Desde US$1.500 + US$90/mes (hasta 5 usuarios)","laboratorio.html#crm","Pymes de servicios"]],
+ dinero:[["Claims","live","Presenta y verifica reclamos en el portal de la aseguradora.","Desde US$1.500 + US$250/mes · Pro: desde US$300/mes","claims.html","Clínicas, hospitales, laboratorios"],
   ["Cobra","demo","Recordatorios de facturas vencidas que respetan acuerdos.","US$800 + US$300/mes","laboratorio.html#cobra","Toda empresa con cartera"],
   ["Monitor","demo","Tablero de cartera por aseguradora con alertas.","US$800 + US$120/mes","demo-monitor.html","Clínicas, grupos hospitalarios"]],
- documentos:[["Docs","demo","Lee facturas y B/L y los carga a su sistema.","US$1.200 + US$0,07 por documento (mín. US$100/mes)","laboratorio.html#docs","Logística, Zona Libre, contabilidad"],
-  ["DocCheck","demo","Revisa que cada documento esté completo antes de enviarlo.","US$1.000 + US$0,06 por documento (mín. US$100/mes)","laboratorio.html#doccheck","Salud, seguros, banca"],
+ documentos:[["Docs","demo","Lee facturas y B/L y los carga a su sistema.","US$1.200 + US$100/mes (hasta 1.500 documentos)","laboratorio.html#docs","Logística, Zona Libre, contabilidad"],
+  ["DocCheck","demo","Revisa que cada documento esté completo antes de enviarlo.","US$1.000 + US$100/mes (hasta 2.000 documentos)","laboratorio.html#doccheck","Salud, seguros, banca"],
   ["Assist","demo","Responde a su equipo citando los manuales de la empresa.","US$1.200 + US$120/mes (hasta 50 usuarios)","laboratorio.html#assist","Empresas medianas y grandes"]]};
 var AREA={cliente:"Cliente",dinero:"Dinero",documentos:"Documentos"};
 var dlg=$("dlg"),ficha=$("ficha");

@@ -1,0 +1,47 @@
+/* Kairos — movimiento común (tiempos, curvas y piezas reutilizables).
+   Adaptado de Transitions.dev (licencia: uso comercial permitido; se conserva
+   la mención en cada pieza). Estilo clásico: movimientos cortos, sin rebotes
+   llamativos ni brillos. Todo se apaga con "reducir movimiento". */
+
+:root{
+  --dur-rapida:200ms;
+  --dur:350ms;
+  --dur-lenta:600ms;
+  --curva:cubic-bezier(0.22,1,0.36,1);
+  --escalon:70ms;
+}
+
+/* Entrada escalonada al cargar (Transitions.dev — Texts reveal).
+   Sin JS: si el script falla, el texto igual aparece.
+   Uso: class="t-sube" style="--i:2" (el número fija el orden). */
+@keyframes t-sube{from{opacity:0;transform:translateY(12px)}}
+.t-sube{animation:t-sube var(--dur-lenta) var(--curva) both;animation-delay:calc(var(--i,0) * var(--escalon))}
+.t-linea{display:block}
+
+/* Cifras que aparecen dígito a dígito (Transitions.dev — Number pop-in).
+   El script envuelve cada dígito en .t-dig y agrega .t-pop al contenedor. */
+@keyframes t-dig{from{opacity:0;transform:translateY(6px)}}
+.t-pop .t-dig{display:inline-block;animation:t-dig 420ms var(--curva) both;animation-delay:calc(var(--d,0) * 40ms)}
+
+/* Flecha que avanza al pasar el ratón (Transitions.dev — Learn more hover). */
+.t-flecha{display:inline-block;transition:transform var(--dur) var(--curva)}
+a:hover .t-flecha,button:hover .t-flecha,a:focus-visible .t-flecha{transform:translateX(3px)}
+
+/* Indicador deslizante bajo pestañas (Transitions.dev — Tabs sliding).
+   El script fija su posición y ancho; aquí solo se anima. */
+.t-ind{position:absolute;left:0;top:0;height:2px;width:0;background:var(--gold,#7A5E2C);pointer-events:none;z-index:2;
+  transition:transform var(--dur) var(--curva),width var(--dur) var(--curva)}
+
+/* Preguntas que abren con altura animada (Transitions.dev — Accordion).
+   Solo en navegadores que lo soportan; en los demás abre sin animación. */
+@supports selector(::details-content){
+  :root{interpolate-size:allow-keywords}
+  .faq details::details-content{block-size:0;overflow:hidden;opacity:0;
+    transition:block-size var(--dur) var(--curva),opacity var(--dur) var(--curva),content-visibility var(--dur) allow-discrete}
+  .faq details[open]::details-content{block-size:auto;opacity:1}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .t-sube,.t-pop .t-dig{animation:none!important}
+  .t-flecha,.t-ind,.faq details::details-content{transition:none!important}
+}

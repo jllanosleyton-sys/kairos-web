@@ -6,6 +6,7 @@
 <link rel="icon" href="assets/isotipo.svg">
 
 <link rel="stylesheet" href="assets/fuentes.css">
+<link rel="stylesheet" href="assets/movimiento.css">
 <style>
 :root{
   --paper:#F7F3EA;--paper2:#EFE8DA;--card:#FFFDF8;--rule:#D8CDB8;--rule2:#C4B596;
@@ -67,7 +68,7 @@ nav .btn{padding:11px 20px;font-size:.88rem;white-space:nowrap}
 .libro td{padding:11px 4px;border-bottom:1px solid var(--paper2)}
 .libro td:first-child{color:var(--mut);width:64px;font-variant-numeric:tabular-nums}
 .libro td:last-child{text-align:right;font-family:var(--serif);font-style:italic;font-size:1.05rem}
-.libro tr{animation:in .6s ease both}@keyframes in{from{opacity:0}}
+.libro tr{animation:in var(--dur-lenta) var(--curva) both}@keyframes in{from{opacity:0;transform:translateY(-4px)}}
 .v{color:var(--teal)}.p{color:var(--warn)}
 .libro .pie{display:flex;justify-content:space-between;margin-top:18px;font-size:.8rem;color:var(--mut)}
 .libro .pie b{font-family:var(--serif);font-size:1.6rem;color:var(--ink);font-weight:500;margin-right:6px}
@@ -96,7 +97,7 @@ nav .btn{padding:11px 20px;font-size:.88rem;white-space:nowrap}
 .tareas a:hover,.tareas a:focus-visible{border-color:var(--gold2);outline:none}
 .tareas b{display:block;font-size:1.02rem;color:var(--ink)}.tareas span{display:block;font-size:.86rem;color:var(--mut);margin-top:4px}
 @media(max-width:900px){.tareas{grid-template-columns:1fr 1fr}}
-.pest{display:flex;gap:4px;flex-wrap:wrap;padding-left:14px}
+.pest{display:flex;gap:4px;flex-wrap:wrap;padding-left:14px;position:relative}
 .pest button{all:unset;cursor:pointer;padding:12px 20px 10px;background:var(--paper2);border:1px solid var(--rule);border-bottom:0;font-size:.88rem;color:var(--ink2);position:relative;top:1px;transition:background .2s}
 .pest button:hover{background:#E8DFCC}
 .pest button[aria-selected=true]{background:var(--card);color:var(--ink);font-weight:600}
@@ -108,7 +109,7 @@ nav .btn{padding:11px 20px;font-size:.88rem;white-space:nowrap}
 .estado{display:inline-block;margin-top:16px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border:1px solid currentColor}
 .e-live{color:var(--teal)}.e-demo{color:var(--gold)}
 .folio ol{list-style:none;counter-reset:r}
-.folio li{counter-increment:r;display:grid;grid-template-columns:48px 1fr;gap:10px;padding:14px 0;border-bottom:1px solid var(--paper2);opacity:0;transform:translateX(8px);transition:opacity .45s,transform .45s}
+.folio li{counter-increment:r;display:grid;grid-template-columns:48px 1fr;gap:10px;padding:14px 0;border-bottom:1px solid var(--paper2);opacity:0;transform:translateX(8px);transition:opacity var(--dur) var(--curva),transform var(--dur) var(--curva)}
 .folio li.on{opacity:1;transform:none}
 .folio li::before{content:counter(r,upper-roman);font-family:var(--serif);font-size:1.35rem;color:var(--gold);font-style:italic}
 .folio li b{display:block;font-weight:600}.folio li span{color:var(--mut);font-size:.9rem}
@@ -192,12 +193,20 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 .garant b{display:block;font-family:var(--serif);font-size:1.35rem;font-weight:500}.garant span{color:var(--ink2);font-size:.94rem}
 @media(max-width:900px){.datos-g{grid-template-columns:1fr;gap:40px}.comp div{grid-template-columns:1fr;gap:4px}}
 
+/* herramientas */
+.usa{list-style:none;margin-top:46px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
+.usa li{padding:22px 24px 22px 0;border-bottom:1px solid var(--rule);display:flex;flex-direction:column;gap:4px}
+.usa li:not(:nth-child(3n+1)){padding-left:24px;border-left:1px solid var(--rule)}
+.usa b{font-family:var(--serif);font-size:1.45rem;font-weight:500}.usa span{font-size:.9rem;color:var(--mut)}
+.nota-usa{margin-top:16px;font-size:.9rem;color:var(--mut)}
+@media(max-width:900px){.usa{grid-template-columns:1fr 1fr}.usa li:not(:nth-child(3n+1)){padding-left:0;border-left:0}.usa li:nth-child(2n){padding-left:20px;border-left:1px solid var(--rule)}}
+@media(max-width:560px){.usa{grid-template-columns:1fr}.usa li:nth-child(2n){padding-left:0;border-left:0}}
 /* preguntas */
 .faq{margin-top:46px;border-top:1px solid var(--ink);max-width:900px}
 .faq details{border-bottom:1px solid var(--rule)}
 .faq summary{cursor:pointer;list-style:none;padding:22px 0;font-family:var(--serif);font-size:1.45rem;display:flex;justify-content:space-between;gap:20px}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";color:var(--gold);font-size:1.6rem;line-height:1;transition:transform .25s}.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary::after{content:"+";color:var(--gold);font-size:1.6rem;line-height:1;transition:transform var(--dur) var(--curva)}.faq details[open] summary::after{transform:rotate(45deg)}
 .faq p{padding:0 0 22px;color:var(--ink2);max-width:760px}
 
 /* contacto */
@@ -214,7 +223,7 @@ footer{padding:50px 0 40px;font-size:.86rem;color:var(--mut);border-top:1px soli
 footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}footer a:hover{color:var(--ink)}
 
 .vx-bar{background:var(--paper)!important;color:var(--mut)!important;border-top:1px solid var(--rule)!important}.vx-bar a{color:var(--ink)!important}.vx-r{border-radius:0!important;border-color:var(--rule)!important}
-.rv{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}.rv.vis{opacity:1;transform:none}
+.rv{opacity:0;transform:translateY(14px);transition:opacity var(--dur-lenta) var(--curva),transform var(--dur-lenta) var(--curva)}.rv.vis{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.folio li{opacity:1;transform:none}}
 
 /* Kairos Central: franja que conecta los tres paquetes (las tres columnas del portafolio) */
@@ -251,11 +260,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
 
 <header class="hero"><div class="wrap hero-g">
   <div>
-    <span class="sc">Automatización de procesos · Panamá</span>
-    <h1>Procesos que<br><em>trabajan solos.</em></h1>
-    <p class="lead">Su equipo deja el trabajo repetitivo. Cada operación se hace a su hora y queda verificada; lo dudoso siempre lo revisa una persona, y sus datos no salen de su empresa.</p>
-    <div class="ctas"><a data-agenda href="https://calendar.app.google/kDueUtrgYfQMWu889" target="_blank" rel="noopener" class="btn btn-p">Elegir fecha y hora (30 min)</a><a href="autodiagnostico.html" class="btn btn-g">Hacer el autodiagnóstico (10 min)</a></div>
-    <div class="firmas">
+    <span class="sc t-sube" style="--i:0">Automatización de procesos · Panamá</span>
+    <h1><span class="t-linea t-sube" style="--i:1">Procesos que</span><span class="t-linea t-sube" style="--i:2"><em>trabajan solos.</em></span></h1>
+    <p class="lead t-sube" style="--i:4">Su equipo deja el trabajo repetitivo. Cada operación se hace a su hora y queda verificada; lo dudoso siempre lo revisa una persona, y sus datos no salen de su empresa.</p>
+    <div class="ctas t-sube" style="--i:5"><a data-agenda href="https://calendar.app.google/kDueUtrgYfQMWu889" target="_blank" rel="noopener" class="btn btn-p">Elegir fecha y hora (30 min)</a><a href="autodiagnostico.html" class="btn btn-g">Hacer el autodiagnóstico (10 min)</a></div>
+    <div class="firmas t-sube" style="--i:6">
       <div><b>30 días</b>de piloto supervisado, sin permanencia</div>
       <div><b>Siempre</b>una persona revisa los casos dudosos</div>
       <div><b>Ley 81</b>de 2019, firmada antes de empezar</div>
@@ -315,6 +324,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
     <div><span class="n">IV</span><small>Mes a mes</small><h3>Operación</h3><p>Vigilancia diaria, ajustes e informe mensual de valor con Kairos Care.</p></div>
   </div>
   <div class="cita rv"><span class="k">“</span><div><q>Preferimos decirle que no conviene automatizar algo, antes que venderle un proyecto que no se paga solo.</q><span>Equipo Kairos</span></div></div>
+</div></section>
+
+<section id="herramientas" style="padding-bottom:0"><div class="wrap">
+  <div class="rv" style="max-width:780px"><span class="sc">Sin cambiar de sistemas</span><h2>Trabaja sobre <em>lo que ya usa.</em></h2>
+  <p class="lead">Kairos opera en los mismos programas y portales que su equipo, como lo haría un analista más. No hay que migrar nada ni aprender otra herramienta.</p></div>
+  <ul class="usa rv" aria-label="Sistemas sobre los que trabaja Kairos">
+    <li><b>Correo</b><span>Gmail, Outlook</span></li>
+    <li><b>Mensajería</b><span>WhatsApp Business (API oficial de Meta)</span></li>
+    <li><b>Agenda</b><span>Google Calendar, Outlook</span></li>
+    <li><b>Hojas de cálculo</b><span>Excel, Google Sheets</span></li>
+    <li><b>Portales web</b><span>Aseguradoras, bancos y entidades públicas</span></li>
+    <li><b>Su sistema interno</b><span>ERP, sistema clínico o de gestión</span></li>
+  </ul>
+  <p class="nota-usa">Cada conexión se define y se prueba en el Diagnóstico, con sus accesos y bajo sus reglas.</p>
 </div></section>
 
 <section id="portafolio"><div class="wrap">
@@ -500,6 +523,29 @@ if("IntersectionObserver" in window&&!RM){var io=new IntersectionObserver(functi
 else{[].forEach.call(document.querySelectorAll(".rv"),function(e){e.classList.add("vis")});avanzar()}
 })();
 </script>
+<script>
+/* movimiento: pestañas, cifras de la calculadora y flechas (ver assets/movimiento.css) */
+(function(){
+var pest=document.getElementById("pest");
+if(pest){var ind=document.createElement("span");ind.className="t-ind";ind.setAttribute("aria-hidden","true");pest.appendChild(ind);
+  var mover=function(sin){var b=pest.querySelector('[aria-selected="true"]');if(!b)return;
+    if(sin)ind.style.transition="none";
+    ind.style.transform="translate("+b.offsetLeft+"px,"+b.offsetTop+"px)";ind.style.width=b.offsetWidth+"px";
+    if(sin){ind.offsetWidth;ind.style.transition=""}};
+  pest.addEventListener("click",function(){mover(false)});
+  [].forEach.call(document.querySelectorAll(".tareas a"),function(a){a.addEventListener("click",function(){mover(false)})});
+  addEventListener("resize",function(){mover(true)});mover(true);
+  if(document.fonts)document.fonts.ready.then(function(){mover(true)})}
+var pop=function(el){var t=el.textContent,n=0;el.classList.remove("t-pop");
+  el.innerHTML=t.replace(/[&<>]/g,"").replace(/\d/g,function(d){return'<span class="t-dig" style="--d:'+(n++)+'">'+d+"</span>"});
+  el.offsetWidth;el.classList.add("t-pop")};
+["ops","min","cost"].forEach(function(k){var r=document.getElementById(k);if(r)r.addEventListener("change",function(){
+  ["hHoy","hAuto","hrs","usd"].forEach(function(id){var e=document.getElementById(id);if(e)pop(e)})})});
+[].forEach.call(document.querySelectorAll("a,button"),function(a){var u=a.lastChild;
+  if(u&&u.nodeType===3&&/→\s*$/.test(u.nodeValue)){u.nodeValue=u.nodeValue.replace(/→\s*$/,"");
+    var f=document.createElement("span");f.className="t-flecha";f.setAttribute("aria-hidden","true");f.textContent="→";a.appendChild(f)}});
+})();
+</script>
 <!--VX:PIE-->
 <style>
 .kpie{border-top:1px solid #D8CDB8;background:#F7F3EA;color:#5F6670;font:400 .9rem/1.6 "Inter Tight",system-ui,sans-serif;padding:56px 0 34px;margin-top:40px}
@@ -527,6 +573,13 @@ body{padding-bottom:76px}
 .vx-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;padding:22px 16px;border-top:1px solid #D8CDB8;font:500 .88rem "Inter Tight",system-ui,sans-serif;color:#5F6670;background:#F7F3EA}
 .vx-bar a{color:#0E1E36;text-decoration:none;display:inline-block;padding:12px 4px}.vx-r{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:0;border:1px solid #D8CDB8;font-weight:700;font-size:.8rem}
 .vx-r:hover{border-color:#7A5E2C;color:#7A5E2C}
+/* Check de envío (Transitions.dev — Success check): círculo y visto que se dibujan una vez */
+.vx-ok{display:inline-block;width:1.15em;height:1.15em;vertical-align:-.2em;margin-right:8px}
+.vx-ok circle,.vx-ok path{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.vx-ok circle{stroke-dasharray:63;stroke-dashoffset:63;animation:vx-ok var(--dur-lenta,600ms) var(--curva,ease-out) forwards}
+.vx-ok path{stroke-dasharray:15;stroke-dashoffset:15;animation:vx-ok var(--dur,350ms) var(--curva,ease-out) .3s forwards}
+@keyframes vx-ok{to{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){.vx-ok circle,.vx-ok path{animation:none;stroke-dashoffset:0}}
 </style>
 <a class="vx-wa" href="https://wa.me/573122561845?text=Hola%20Kairos%2C%20quiero%20agendar%20el%20Diagn%C3%B3stico%20Express%20gratuito%20para%20mi%20empresa." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="#06281a"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg><span>Escríbanos por WhatsApp</span></a>
 <div class="vx-bar"><a href="mailto:contacto@kairosgrouppanama.com">contacto@kairosgrouppanama.com</a><a href="https://www.linkedin.com/company/kairosgrouppa" target="_blank" rel="noopener" aria-label="linkedin" class="vx-r">in</a><a href="https://www.instagram.com/kairos.ptty" target="_blank" rel="noopener" aria-label="instagram" class="vx-r">IG</a><a href="https://www.facebook.com/kairosgrouppa.1" target="_blank" rel="noopener" aria-label="facebook" class="vx-r">f</a></div>
@@ -539,10 +592,17 @@ document.querySelectorAll('form#form, #contacto form, #contact form').forEach(fu
 var v=[].map.call(f.querySelectorAll('input,select,textarea'),function(x){return (x.placeholder||x.name||'')+': '+x.value}).filter(function(s){return !/: $/.test(s)}).join('\n');
 var msg='Solicitud de Diagnóstico Kairos\n'+v+(OR?'\nOrigen: '+OR:'');
 var b=f.querySelector('button');
-if(WA){window.open(WA.split('?')[0]+'?text='+encodeURIComponent(msg),'_blank');if(b)b.textContent='Abriendo WhatsApp…';}
-else if(DM){try{navigator.clipboard.writeText(msg)}catch(_){}window.open(DM,'_blank');if(b)b.textContent='Mensaje copiado: péguelo en Instagram';}
-else if(MAIL){window.open('mailto:'+MAIL+'?subject='+encodeURIComponent('Diagnóstico Kairos')+'&body='+encodeURIComponent(msg),'_blank');if(b)b.textContent='Abriendo su correo…';}
+var ok=function(x){if(!b)return;b.innerHTML='<svg class="vx-ok" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>';b.appendChild(document.createTextNode(x))};
+if(WA){window.open(WA.split('?')[0]+'?text='+encodeURIComponent(msg),'_blank');ok('Abriendo WhatsApp…');}
+else if(DM){try{navigator.clipboard.writeText(msg)}catch(_){}window.open(DM,'_blank');ok('Mensaje copiado: péguelo en Instagram');}
+else if(MAIL){window.open('mailto:'+MAIL+'?subject='+encodeURIComponent('Diagnóstico Kairos')+'&body='+encodeURIComponent(msg),'_blank');ok('Abriendo su correo…');}
 else{if(b){b.textContent='Canales de contacto en configuración: muy pronto';b.disabled=true;}}}});})();
 </script>
 <!--/VX:COM-->
+<!--VX:MOV--><script>
+/* Flecha que avanza al pasar el ratón (Transitions.dev — Learn more hover): el → final de enlaces y botones pasa a .t-flecha */
+[].forEach.call(document.querySelectorAll("a,button"),function(a){var u=a.lastChild;
+  if(u&&u.nodeType===3&&/→\s*$/.test(u.nodeValue)){u.nodeValue=u.nodeValue.replace(/→\s*$/,"");
+    var f=document.createElement("span");f.className="t-flecha";f.setAttribute("aria-hidden","true");f.textContent="→";a.appendChild(f)}});
+</script><!--/VX:MOV-->
 </body></html>

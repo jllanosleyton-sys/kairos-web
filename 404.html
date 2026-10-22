@@ -3,52 +3,46 @@
 <title>Página no encontrada — Kairos</title>
 <meta name="description" content="La página que busca no existe. Vuelva al inicio de Kairos.">
 <meta name="robots" content="noindex">
+<!--VX:CSS--><link rel="preload" href="/assets/fuentes/inter-tight-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/kairos.css?v=k4f723e2b"><!--/VX:CSS-->
 <link rel="icon" href="/assets/isotipo.svg">
-<link rel="stylesheet" href="/assets/site.css">
-<style>.nf{min-height:72vh;display:grid;place-items:center;text-align:center;padding:120px 24px}.nf .n{font:italic 500 7rem/1 var(--serif);color:var(--gold)}.nf h1{font-size:clamp(2.2rem,5vw,3.4rem);margin:10px 0 14px}.nf p{color:var(--ink2);max-width:520px;margin:0 auto}.nf .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}</style>
-<!--VX:MOV--><link rel="stylesheet" href="/assets/movimiento.css"><!--/VX:MOV-->
-</head><body>
-<main class="nf"><div>
+
+</head><body class="p-404">
+<!--VX:NAV-->
+<a class="salta" href="#contenido">Saltar al contenido</a>
+<nav class="kmenu" aria-label="Índice de folios"><div class="wrap">
+  <a href="/index.html" class="logo" aria-label="Kairos, inicio"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M8 5V27" stroke="#0E1E36" stroke-width="3.2" stroke-linecap="round"/><path d="M25 5L18 12M18 20L25 27" stroke="#0E1E36" stroke-width="3.2" stroke-linecap="round"/><circle cx="14.3" cy="16" r="2.6" fill="#9C7A3C"/></svg>KAIROS</a>
+  <ol class="ktabs" id="kmenu-links"><li><a href="/index.html" data-r="I"><i>I</i><span>Qué hacemos</span></a></li><li><a href="/productos.html" data-r="II"><i>II</i><span>Soluciones</span></a></li><li><a href="/laboratorio.html" data-r="III"><i>III</i><span>Véalo funcionar</span></a></li><li><a href="/precios.html" data-r="IV"><i>IV</i><span>Precios y ruta</span></a></li><li><a href="/autodiagnostico.html" data-r="V"><i>V</i><span>Contacto</span></a></li></ol>
+  <div class="kacc"><div class="idioma" role="group" aria-label="Idioma"><a href="/404.html" hreflang="es" lang="es" aria-current="true">ES</a><span aria-hidden="true">|</span><a href="/en.html" hreflang="en" lang="en">EN</a></div><a href="/index.html#contacto" class="btn btn-p">Conversemos</a><button class="burger" type="button" aria-label="Abrir el índice" aria-controls="kfull" aria-expanded="false"><span></span></button></div>
+</div></nav>
+<div class="kfull" id="kfull" role="dialog" aria-modal="true" aria-label="Índice de folios" hidden>
+  <div class="kfull-c"><a href="/index.html" class="logo" aria-label="Kairos, inicio"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M8 5V27" stroke="#0E1E36" stroke-width="3.2" stroke-linecap="round"/><path d="M25 5L18 12M18 20L25 27" stroke="#0E1E36" stroke-width="3.2" stroke-linecap="round"/><circle cx="14.3" cy="16" r="2.6" fill="#9C7A3C"/></svg>KAIROS</a><button class="kfull-x" type="button" aria-label="Cerrar el índice">✕</button></div>
+  <div class="kfull-l"><a href="/index.html"><i>I</i>Qué hacemos</a><a href="/productos.html"><i>II</i>Soluciones</a><a href="/laboratorio.html"><i>III</i>Véalo funcionar</a><a href="/precios.html"><i>IV</i>Precios y ruta</a><a href="/autodiagnostico.html"><i>V</i>Contacto</a></div>
+  <div class="kfull-a"><a class="btn btn-p" href="/index.html#contacto">Conversemos</a><div class="idioma" role="group" aria-label="Idioma"><a href="/404.html" hreflang="es" lang="es" aria-current="true">ES</a><span aria-hidden="true">|</span><a href="/en.html" hreflang="en" lang="en">EN</a></div></div>
+  <div class="kfull-n"><b>Anexos</b><a href="/privacidad.html"><i>A</i>Privacidad</a><a href="/terminos.html"><i>B</i>Términos</a><a href="/seguridad.html"><i>C</i>Seguridad</a><a href="/ia-responsable.html"><i>D</i>IA responsable</a></div>
+</div><script>(function(){var b=document.querySelector('nav.kmenu .burger'),m=document.getElementById('kfull');if(!b||!m)return;
+var x=m.querySelector('.kfull-x');function abrir(v){m.hidden=!v;document.body.classList.toggle('kfull-abierto',v);b.setAttribute('aria-expanded',v?'true':'false');(v?x:b).focus()}
+b.addEventListener('click',function(){abrir(m.hidden)});x.addEventListener('click',function(){abrir(false)});
+m.addEventListener('click',function(e){if(e.target.closest('a'))abrir(false)});
+m.addEventListener('keydown',function(e){if(e.key==='Escape'){abrir(false);return}if(e.key!=='Tab')return;
+var q=[].slice.call(m.querySelectorAll('a[href],button')),p=q[0],u=q[q.length-1];
+if(e.shiftKey&&document.activeElement===p){e.preventDefault();u.focus()}else if(!e.shiftKey&&document.activeElement===u){e.preventDefault();p.focus()}});
+matchMedia('(min-width:1061px)').addEventListener('change',function(e){if(e.matches&&!m.hidden)abrir(false)})})()</script>
+<!--/VX:NAV-->
+<main id="contenido" class="nf"><div>
   <div class="n">404</div>
   <h1 class="t-sube" style="--i:0">Esta página <em>no existe.</em></h1>
   <p class="t-sube" style="--i:1">Puede que el enlace haya cambiado. Desde el inicio encuentra todas nuestras soluciones, demostraciones y precios.</p>
   <div class="t-sube ctas" style="--i:2"><a class="btn btn-p" href="/index.html">Volver al inicio</a><a class="btn btn-g" href="/laboratorio.html">Ver el Laboratorio</a></div>
 </div></main>
 <!--VX:PIE-->
-<style>
-.kpie{border-top:1px solid #D8CDB8;background:#F7F3EA;color:#5F6670;font:400 .9rem/1.6 "Inter Tight",system-ui,sans-serif;padding:56px 0 34px;margin-top:40px}
-.kpie .kw{max-width:1180px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
-.kpie b{display:block;font:500 .7rem "Inter Tight",sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#7A5E2C;margin-bottom:12px}
-.kpie a{display:block;color:#2B3A52;text-decoration:none;margin-bottom:6px}.kpie a:hover{color:#7A5E2C}
-.kpie .km{font:600 1.4rem "Cormorant Garamond",Garamond,serif;letter-spacing:.18em;color:#0E1E36;margin-bottom:6px}
-.kpie .kl{font:italic 500 1.15rem "Cormorant Garamond",Garamond,serif;color:#7A5E2C}
-.kpie .kb{max-width:1180px;margin:34px auto 0;padding:18px 28px 0;border-top:1px solid #E5DCCB;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.8rem}
-@media(max-width:760px){.kpie .kw{grid-template-columns:1fr 1fr}}
-</style>
 <footer class="kpie"><div class="kw">
-  <div><div class="km">KAIROS</div><div class="kl">Procesos que trabajan solos.</div><p style="margin-top:10px;max-width:280px">Automatización de procesos para empresas en Panamá. Lo dudoso siempre lo revisa una persona.</p></div>
-  <div><b>Soluciones</b><a href="productos.html">Productos</a><a href="laboratorio.html">Laboratorio</a><a href="autodiagnostico.html">Autodiagnóstico</a><a href="demo-agenda.html">Demo Agenda</a><a href="demo-monitor.html">Demo Monitor</a><a href="claims.html">Kairos Claims</a></div>
-  <div><b>Empresa</b><a href="ruta.html">Cómo trabajamos</a><a href="precios.html">Precios</a><a href="casos.html">Casos</a><a href="nosotros.html">Nosotros</a><a data-agenda href="https://calendar.app.google/kDueUtrgYfQMWu889" target="_blank" rel="noopener">Reservar Diagnóstico gratis</a></div>
-  <div><b>Industrias y legal</b><a href="industria-salud.html">Salud</a><a href="industria-logistica.html">Logística y Zona Libre</a><a href="industria-servicios.html">Servicios</a><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="seguridad.html">Seguridad</a><a href="ia-responsable.html">IA responsable</a></div>
-</div><div class="kb"><span>© 2026 Kairos · Kairos Group, S.A., en constitución · Ciudad de Panamá</span><span><a href="en.html" style="display:inline">English</a></span></div></footer>
+  <div><div class="km">KAIROS</div><div class="kl">Procesos que trabajan solos.</div><p>Automatización de procesos para empresas en Panamá. Lo dudoso siempre lo revisa una persona.</p></div>
+  <div><b>I · Qué hacemos</b><a href="/index.html">Inicio</a><a href="/nosotros.html">Nosotros</a></div><div><b>II · Soluciones</b><a href="/productos.html">Todas las soluciones</a><a href="/claims.html">Kairos Claims</a><a href="/productos.html#industrias">Industrias</a></div><div><b>III · Véalo funcionar</b><a href="/laboratorio.html">Demos</a><a href="/demo-claims.html">Demo Claims</a><a href="/demo-agenda.html">Demo Agenda</a><a href="/demo-monitor.html">Demo Monitor</a></div><div><b>IV · Precios y ruta</b><a href="/precios.html">Precios y ruta</a></div><div><b>V · Contacto</b><a href="/autodiagnostico.html">Autodiagnóstico</a><a href="/index.html#contacto" data-agenda>Conversemos</a></div>
+</div><div class="kb"><span>© 2026 Kairos · Kairos Group, S.A., en constitución · Ciudad de Panamá</span><span class="kax">Anexos: <a href="/privacidad.html">A · Privacidad</a> · <a href="/terminos.html">B · Términos</a> · <a href="/seguridad.html">C · Seguridad</a> · <a href="/ia-responsable.html">D · IA responsable</a></span><a href="/en.html">English</a><span class="kfol"></span></div></footer>
+
 <!--/VX:PIE-->
 <!--VX:CF--><!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "57566581ada04beaa4677b902b4ea7d3"}'></script><!-- End Cloudflare Web Analytics --><!--/VX:CF-->
 <!--VX:COM-->
-<style>
-.vx-wa{position:fixed;right:20px;bottom:20px;z-index:200;display:flex;align-items:center;gap:10px;padding:13px 18px;border-radius:999px;background:#25D366;color:#06281a;font:600 .92rem "Inter Tight",system-ui,sans-serif;text-decoration:none;box-shadow:0 12px 30px -8px rgba(37,211,102,.6)}
-body{padding-bottom:76px}
-.vx-wa svg{width:22px;height:22px}@media(max-width:600px){.vx-wa span{display:none}.vx-wa{padding:14px}}
-.vx-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;padding:22px 16px;border-top:1px solid #D8CDB8;font:500 .88rem "Inter Tight",system-ui,sans-serif;color:#5F6670;background:#F7F3EA}
-.vx-bar a{color:#0E1E36;text-decoration:none;display:inline-block;padding:12px 4px}.vx-r{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:0;border:1px solid #D8CDB8;font-weight:700;font-size:.8rem}
-.vx-r:hover{border-color:#7A5E2C;color:#7A5E2C}
-/* Check de envío (Transitions.dev — Success check): círculo y visto que se dibujan una vez */
-.vx-ok{display:inline-block;width:1.15em;height:1.15em;vertical-align:-.2em;margin-right:8px}
-.vx-ok circle,.vx-ok path{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.vx-ok circle{stroke-dasharray:63;stroke-dashoffset:63;animation:vx-ok var(--dur-lenta,600ms) var(--curva,ease-out) forwards}
-.vx-ok path{stroke-dasharray:15;stroke-dashoffset:15;animation:vx-ok var(--dur,350ms) var(--curva,ease-out) .3s forwards}
-@keyframes vx-ok{to{stroke-dashoffset:0}}
-@media(prefers-reduced-motion:reduce){.vx-ok circle,.vx-ok path{animation:none;stroke-dashoffset:0}}
-</style>
 <a class="vx-wa" href="https://wa.me/573122561845?text=Hola%20Kairos%2C%20quiero%20agendar%20el%20Diagn%C3%B3stico%20Express%20gratuito%20para%20mi%20empresa." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="#06281a"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg><span>Escríbanos por WhatsApp</span></a>
 <div class="vx-bar"><a href="mailto:contacto@kairosgrouppanama.com">contacto@kairosgrouppanama.com</a><a href="https://www.linkedin.com/company/kairosgrouppa" target="_blank" rel="noopener" aria-label="linkedin" class="vx-r">in</a><a href="https://www.instagram.com/kairos.ptty" target="_blank" rel="noopener" aria-label="instagram" class="vx-r">IG</a><a href="https://www.facebook.com/kairosgrouppa.1" target="_blank" rel="noopener" aria-label="facebook" class="vx-r">f</a></div>
 <script>

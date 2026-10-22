@@ -752,6 +752,14 @@ body.p-index{font-family:"Inter Tight",system-ui,sans-serif;background:var(--pap
 .p-index .tit-sel{margin-top:44px}
 .p-index .nota-lab{margin-top:22px;color:var(--mut);font-size:.92rem}
 @media(max-width:860px){.p-index .anim .intro .sel span{flex-basis:100%}}
+.p-index .sel span{color:var(--mut)}
+.p-index .sel button{border-color:var(--ink);color:var(--ink)}
+.p-index .sel button:hover,.p-index .sel button:focus-visible{border-color:var(--gold)}
+.p-index .sel button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.p-index .intro h1{font-size:clamp(2.6rem,6.2vw,5.4rem);max-width:100%}
+.p-index .intro .wrap{width:100%}
+@media(min-width:1061px){.p-index .intro .wrap>*{max-width:calc(76vw - 194px - max(28px,(100vw - 1180px)/2 + 28px))}}
+@media(max-width:1060px) and (min-width:861px){.p-index .obj{display:none}}
 /* ── p-laboratorio.css ── */
 .p-laboratorio .cab .lead{margin-top:22px}
 .p-laboratorio .flujo{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);margin-top:46px;border-top:2px solid var(--txt)}

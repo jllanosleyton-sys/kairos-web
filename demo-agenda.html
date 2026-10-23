@@ -61,7 +61,7 @@ matchMedia('(min-width:1061px)').addEventListener('change',function(e){if(e.matc
 </div>
 <script>
 const M=document.getElementById('msgs'),T=document.getElementById('t');
-const st={step:null,esp:null,dia:null,hora:null,nombre:null,cita:null};
+const st={step:null,esp:null,dia:null,hora:null,nombre:null,cita:null,cambio:false,prop:null};
 const ESP=['Medicina general','Pediatría','Ginecología','Laboratorio'];
 const PREC={'Medicina general':'$35','Pediatría':'$45','Ginecología':'$55','Laboratorio':'desde $12'};
 const now=()=>new Date().toTimeString().slice(0,5);
@@ -71,7 +71,7 @@ function opts(list){const o=document.createElement('div');o.className='opts';lis
 function bot(txt,list,delay=700){const ty=document.createElement('div');ty.className='typing';ty.innerHTML='<i></i><i></i><i></i>';M.appendChild(ty);M.scrollTop=1e6;
   setTimeout(()=>{ty.remove();add(txt,'bot');if(list)opts(list)},delay)}
 function menu(){bot('¿En qué le puedo ayudar?',['📅 Agendar cita','🔁 Cambiar mi cita','🕒 Horarios y ubicación','💲 Precios','👩‍⚕️ Hablar con una persona'])}
-function agenda(){const a=document.getElementById('agenda');a.innerHTML=st.cita?`<tr><td>${st.cita.dia} · ${st.cita.hora}</td><td>${st.cita.esp}</td><td>${st.cita.nombre} <span style="color:#0FA894">● confirmada</span></td></tr>`:'<tr><td colspan="3" style="color:#8B97AD">Sin citas.</td></tr>'}
+function agenda(){const a=document.getElementById('agenda');a.innerHTML=st.cita?`<tr><td>${st.cita.dia} · ${st.cita.hora}</td><td>${st.cita.esp}</td><td>${st.cita.nombre} <span style="color:#0FA894">● confirmada</span></td></tr>`+(st.prop?`<tr><td><s>${st.cita.dia} · ${st.cita.hora}</s> → <b>${st.prop.dia} · ${st.prop.hora}</b></td><td>${st.cita.esp}</td><td><span style="color:#9A5B16">● esperando OK del paciente</span></td></tr>`:''):'<tr><td colspan="3" style="color:#8B97AD">Sin citas.</td></tr>'}
 function norm(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}
 function user(txt){add(txt,'me');T.value='';route(txt)}
 function route(txt){const s=norm(txt);
@@ -79,10 +79,14 @@ function route(txt){const s=norm(txt);
     bot(`✅ ¡Listo, ${st.nombre}! Su cita quedó confirmada:\n\n*${st.esp}*\n📅 ${st.dia} · 🕒 ${st.hora}\n📍 Clínica Demo, Calle 50\n\nLe enviaré un recordatorio 24 horas antes. Si necesita cambiarla, solo escríbame.`,null,1000);setTimeout(()=>bot('⏰ *(Simulación del recordatorio de 24 h antes)*\nHola '+st.nombre+', le recordamos su cita de '+st.esp+' mañana a las '+st.hora+'. ¿La confirma?',['✅ Confirmo','🔁 Cambiar'],900),3200);return}
   if(st.step==='esp'&&ESP.some(e=>norm(e)===s)){st.esp=txt;st.step='dia';return bot(`Perfecto, *${txt}*. ¿Qué día le conviene?`,dias())}
   if(st.step==='dia'){st.dia=txt;st.step='hora';const hs=['8:00 a.m.','9:30 a.m.','11:00 a.m.','2:30 p.m.','4:00 p.m.'].filter(()=>Math.random()>.25).slice(0,4);return bot(`Para el *${txt}* tengo estos horarios disponibles:`,hs.length?hs:['10:00 a.m.','3:00 p.m.'])}
+  if(st.step==='hora'&&st.cambio){st.prop={dia:st.dia,hora:txt};st.step='ok';agenda();return bot(`Le propongo este cambio:\n\nAntes: *${st.cita.dia} · ${st.cita.hora}*\nDespués: *${st.dia} · ${txt}*\n\nNo muevo nada hasta que usted lo confirme. ¿Confirma el cambio?`,['Sí, confirmo','No, déjela como está'])}
   if(st.step==='hora'){st.hora=txt;st.step='nombre';return bot('Excelente. Para reservar, ¿me indica su nombre? (es una demo: use un nombre inventado 🙂)')}
+  if(st.step==='ok'){if(s.startsWith('si')||s.includes('confirmo')){st.cita.dia=st.prop.dia;st.cita.hora=st.prop.hora;st.prop=null;st.step=null;st.cambio=false;agenda();return bot(`✅ Listo: el horario anterior quedó libre para otro paciente y su cita ahora es el *${st.cita.dia} a las ${st.cita.hora}*`)}
+    if(s.startsWith('no')){st.prop=null;st.step=null;st.cambio=false;agenda();return bot(`Entendido, no cambié nada: su cita sigue el *${st.cita.dia} a las ${st.cita.hora}*`)}
+    return bot('Para mover la cita necesito su OK. ¿Confirma el cambio?',['Sí, confirmo','No, déjela como está'])}
   if(s.includes('confirmo'))return bot('¡Gracias! Le esperamos. 💙',null);
   if(s.includes('agendar')||s.includes('cita')&&!s.includes('cambiar')||s.includes('reservar')){st.step='esp';return bot('¡Con gusto! ¿Para qué especialidad?',ESP)}
-  if(s.includes('cambiar')||s.includes('reprogramar')){if(!st.cita)return bot('No encuentro una cita a su nombre en esta demo. ¿Desea agendar una?',['📅 Agendar cita']);st.esp=st.cita.esp;st.step='dia';return bot(`Su cita actual es el *${st.cita.dia} a las ${st.cita.hora}*. ¿A qué día la movemos?`,dias())}
+  if(s.includes('cambiar')||s.includes('reprogramar')){if(!st.cita)return bot('No encuentro una cita a su nombre en esta demo. ¿Desea agendar una?',['📅 Agendar cita']);st.esp=st.cita.esp;st.cambio=true;st.step='dia';return bot(`Su cita actual es el *${st.cita.dia} a las ${st.cita.hora}*. ¿A qué día la movemos?`,dias())}
   if(s.includes('cancel')){if(!st.cita)return bot('No tiene citas activas en esta demo.');st.cita=null;agenda();return bot('Su cita fue cancelada y el espacio quedó liberado. ¿Desea agendar otra?',['📅 Agendar cita','No, gracias'])}
   if(s.includes('horario')||s.includes('ubicacion')||s.includes('donde'))return bot('🕒 *Horario:* lunes a viernes de 7:00 a.m. a 7:00 p.m., sábados de 8:00 a.m. a 12:00 m.\n📍 Calle 50, Ciudad de Panamá (dirección ficticia).\n🚗 Estacionamiento gratuito.',['📅 Agendar cita','💲 Precios'])
   if(s.includes('precio')||s.includes('cuesta')||s.includes('costo'))return bot('💲 *Precios de referencia (demo):*\n'+ESP.map(e=>`• ${e}: ${PREC[e]}`).join('\n')+'\n\nAceptamos las principales aseguradoras.',['📅 Agendar cita','🛡️ ¿Aceptan mi seguro?'])

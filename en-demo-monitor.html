@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Demo Monitor — Kairos</title>
 <meta name="description" content="Kairos Monitor demo: insurer receivables dashboard with fictitious data.">
-<!--VX:CSS--><link rel="preload" href="assets/fuentes/inter-tight-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="assets/kairos.css?v=k4d640af9"><!--/VX:CSS-->
+<!--VX:CSS--><link rel="preload" href="assets/fuentes/inter-tight-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="assets/kairos.css?v=kb036f759"><!--/VX:CSS-->
 <link rel="icon" href="assets/isotipo.svg">
 <!--VX:HEAD-->
 <link rel="canonical" href="https://kairosgrouppanama.com/en-demo-monitor.html">
@@ -96,10 +96,10 @@ draw();
 /* origen de la visita (utm_source/utm_campaign), sin cookies: solo en esta pestaña y solo viaja en el mensaje que el visitante decide enviar */
 var OR='';try{var q=new URLSearchParams(location.search),s=q.get('utm_source'),c=q.get('utm_campaign');if(s){OR=(s+(c?' / '+c:'')).replace(/[^\w\s\/.-]/g,'').slice(0,60);sessionStorage.setItem('kx_origen',OR)}else{OR=sessionStorage.getItem('kx_origen')||''}}catch(_){}
 if(OR)document.querySelectorAll('a[href*="wa.me/"]').forEach(function(a){try{var u=new URL(a.href),t=u.searchParams.get('text')||'';var R=OR.split(' / '),N={ig:'Instagram',instagram:'Instagram',fb:'Facebook',facebook:'Facebook',li:'LinkedIn',linkedin:'LinkedIn',tt:'TikTok',tiktok:'TikTok',yt:'YouTube',youtube:'YouTube',wa:'WhatsApp',whatsapp:'WhatsApp',x:'X',google:'Google',email:'correo',mail:'correo'}[R[0].toLowerCase()]||R[0],F=' Los vi en '+N+'.'+(R[1]?' ('+R[1]+')':'');u.searchParams.set('text',t+F);a.href=u.toString()}catch(_){}});
-document.querySelectorAll('form#form, #contacto form, #contact form').forEach(function(f){var b0=f.querySelector('button');if(WA&&b0)b0.textContent="Send via WhatsApp \u2192";f.onsubmit=function(e){e.preventDefault();
-var v=[].map.call(f.querySelectorAll('input,select,textarea'),function(x){return (x.placeholder||x.name||'')+': '+x.value}).filter(function(s){return !/: $/.test(s)}).join('\n');
+document.querySelectorAll('form#form, #contacto form, #contact form').forEach(function(f){var b0=f.querySelector('button[type=submit]')||f.querySelector('button');if(WA&&b0)b0.textContent="Send via WhatsApp \u2192";f.onsubmit=function(e){e.preventDefault();
+var v=[].map.call(f.querySelectorAll('input:not([type=radio]):not([type=checkbox]),select,textarea'),function(x){return (x.placeholder||x.name||'')+': '+x.value}).filter(function(s){return !/: $/.test(s)}).join('\n');
 var msg='Solicitud de Diagnóstico Kairos\n'+v+(OR?'\nOrigen: '+OR:'');
-var b=f.querySelector('button');
+var b=b0;
 var ok=function(x){if(!b)return;b.innerHTML='<svg class="vx-ok" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>';b.appendChild(document.createTextNode(x))};
 if(WA){window.open(WA.split('?')[0]+'?text='+encodeURIComponent(msg),'_blank');ok('Abriendo WhatsApp…');}
 else if(DM){try{navigator.clipboard.writeText(msg)}catch(_){}window.open(DM,'_blank');ok('Mensaje copiado: péguelo en Instagram');}

@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Kairos — Processes that run themselves</title>
 <meta name="description" content="Kairos — Process automation in Panama: the problem, the method and the solutions, with your data under your control and a person reviewing anything doubtful.">
-<!--VX:CSS--><link rel="preload" href="assets/fuentes/inter-tight-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="assets/kairos.css?v=k4d640af9"><!--/VX:CSS-->
+<!--VX:CSS--><link rel="preload" href="assets/fuentes/inter-tight-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="assets/kairos.css?v=kb036f759"><!--/VX:CSS-->
 <link rel="icon" href="assets/isotipo.svg">
 <!--VX:HEAD-->
 <link rel="canonical" href="https://kairosgrouppanama.com/en.html">
@@ -48,35 +48,33 @@ matchMedia('(min-width:1061px)').addEventListener('change',function(e){if(e.matc
     <span class="sc">Process automation · Panama</span>
     <h1 class="t-sube" style="--i:0">Processes that <em>run themselves.</em></h1>
     <p class="t-sube lead" style="--i:1">Your team stops doing repetitive work. Every task is done on time and verified; anything doubtful is reviewed by a person.</p>
-    <div class="pt-ctas"><a data-agenda href="https://calendar.app.google/kDueUtrgYfQMWu889" target="_blank" rel="noopener" class="btn btn-p">Book a free assessment · 30 min</a><a href="en-assessment.html" class="pt-lk">Take the self-assessment →</a></div>
-  </div>
-  <div class="pt-demo" aria-label="Interactive example with fictitious data">
-    <p class="pt-demo-h">Try it: what takes up your time?</p>
-    <div class="pt-tabs" role="tablist" aria-label="Try it: what takes up your time?"><button type="button" role="tab" id="pt-t-agendar" aria-controls="pt-panel" aria-selected="true" tabindex="0" data-caso="agendar" class="pt-c-g"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15"/><path d="M3.5 9.5h17M8 3v4M16 3v4M8.5 14.5l2.2 2.2 4.8-4.8"/></svg>Scheduling</button><button type="button" role="tab" id="pt-t-atender" aria-controls="pt-panel" aria-selected="false" tabindex="-1" data-caso="atender" class="pt-c-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>Customer service</button><button type="button" role="tab" id="pt-t-cobrar" aria-controls="pt-panel" aria-selected="false" tabindex="-1" data-caso="cobrar" class="pt-c-c"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3 -2l-3 2l-3 -2l-3 2z"/><path d="M9 8h6M9 11.5h6M9 15h3"/></svg>Collections</button><button type="button" role="tab" id="pt-t-documentos" aria-controls="pt-panel" aria-selected="false" tabindex="-1" data-caso="documentos" class="pt-c-a"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 13l2 2 4-4"/></svg>Documents</button></div>
-    <div class="pt-panel" id="pt-panel" role="tabpanel" aria-labelledby="pt-t-agendar">
-      <div class="pt-in"><small id="pt-in-h">9:40 p.m. · incoming message</small><p id="pt-in-t">“Good evening, do you have room tomorrow morning?”</p></div>
-      <p class="pt-dia">This is how your day would look</p>
-      <ol class="pt-log" id="reg"></ol>
-      <div class="pt-tot"><span class="pt-v"><b id="nV">0</b> verified</span><span class="pt-p"><b id="nP">0</b> to a person</span></div>
+    <div class="pt-ctas">
+      <a data-agenda href="https://calendar.app.google/kDueUtrgYfQMWu889" target="_blank" rel="noopener" class="pt-cta pt-cta-p"><span class="pt-cta-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15"/><path d="M3.5 9.5h17M8 3v4M16 3v4M8.5 14.5l2.2 2.2 4.8-4.8"/></svg></span><span class="pt-cta-t"><b>Book a free diagnosis</b><small>30 min · Google Meet · no commitment</small></span><span class="pt-cta-f"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a href="en-assessment.html" class="pt-cta pt-cta-s"><span class="pt-cta-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></svg></span><span class="pt-cta-t"><b>Take the self-assessment</b><small>3 questions · instant result</small></span><span class="pt-cta-f"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     </div>
-    <small class="pt-nota">Fictitious data · fills itself</small>
+  </div>
+  <div class="pt-flujo" role="img" aria-label="Illustration of a case's journey: it comes in, is checked against your rules and leaves verified or goes to a person">
+    <p class="pt-demo-h">How a process runs on its own</p>
+    <div class="pt-fcols"><div class="pt-fcol pt-fcol0"><span class="pt-fcol-h">In</span><ol id="pt-f0"></ol></div><div class="pt-fcol pt-fcol1"><span class="pt-fcol-h">Your rules</span><ol id="pt-f1"></ol></div><div class="pt-fcol pt-fcol2"><span class="pt-fcol-h">Out</span><ol id="pt-f2"></ol></div></div>
+    <div class="pt-tot"><span class="pt-v"><b id="nV">0</b> Verified</span><span class="pt-p"><b id="nP">0</b> To a person</span></div>
+    <p class="pt-flujo-pie"><small>Illustrative · what any given day looks like</small><a href="en-demos.html#probar" class="pt-lk">See it work with test data →</a></p>
   </div>
 </div></header>
 
 <section class="pt-met" id="como"><div class="wrap">
   <span class="sc">The method</span>
   <h2>Four problems, <em>one method.</em></h2>
-  <p class="lead">Whatever the process, we work the same way: first we understand it, then we test it with your team, and only then does it run on its own.</p>
-  <ul class="pt-prob"><li class="pt-c-t"><a href="en-solutions.html"><span class="pt-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span><b>Replies</b><span>Emails and messages answered or routed</span></a></li><li class="pt-c-g"><a href="en-solutions.html"><span class="pt-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15"/><path d="M3.5 9.5h17M8 3v4M16 3v4M8.5 14.5l2.2 2.2 4.8-4.8"/></svg></span><b>Scheduling</b><span>Appointments confirmed and rescheduled</span></a></li><li class="pt-c-c"><a href="en-solutions.html"><span class="pt-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3 -2l-3 2l-3 -2l-3 2z"/><path d="M9 8h6M9 11.5h6M9 15h3"/></svg></span><b>Collections</b><span>Reminders and receivables follow-up</span></a></li><li class="pt-c-a"><a href="en-solutions.html"><span class="pt-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 13l2 2 4-4"/></svg></span><b>Document review</b><span>Files complete before they are sent</span></a></li></ul>
+  <p class="lead">Almost all of a company's repetitive work falls into four families. Each has its own solutions, and all are launched the same way: first we understand it, then we test it with your team, and only then does it run on its own.</p>
+  <ul class="pt-prob"><li class="pt-c-t"><div class="pt-prob-h"><span class="pt-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span><h3>Customer service</h3></div><dl><dt>Today</dt><dd>Emails and messages that wait for hours or get lost at night and on weekends.</dd><dt>With Kairos</dt><dd>Every message is answered or routed to the right person, with templates you approved.</dd></dl><p class="pt-sol"><b>Solutions</b><a href="en-solutions.html#inbox">Inbox</a><a href="en-solutions.html#assist">Assist</a><a href="en-solutions.html#crm">CRM</a></p></li><li class="pt-c-g"><div class="pt-prob-h"><span class="pt-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15"/><path d="M3.5 9.5h17M8 3v4M16 3v4M8.5 14.5l2.2 2.2 4.8-4.8"/></svg></span><h3>Scheduling</h3></div><dl><dt>Today</dt><dd>Hours spent confirming, rescheduling and reminding appointments by phone and WhatsApp.</dd><dt>With Kairos</dt><dd>Appointments confirmed, rescheduled and reminded at any hour, with your real schedule.</dd></dl><p class="pt-sol"><b>Solutions</b><a href="en-solutions.html#agenda">Agenda</a><a href="en-solutions.html#voice">Voice</a></p></li><li class="pt-c-c"><div class="pt-prob-h"><span class="pt-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3 -2l-3 2l-3 -2l-3 2z"/><path d="M9 8h6M9 11.5h6M9 15h3"/></svg></span><h3>Collections</h3></div><dl><dt>Today</dt><dd>Overdue invoices nobody chases and claims that come back over a detail.</dd><dt>With Kairos</dt><dd>Reminders on time, claims submitted and verified, and a clear receivables view every day.</dd></dl><p class="pt-sol"><b>Solutions</b><a href="en-solutions.html#cobra">Cobra</a><a href="en-solutions.html#claims">Claims</a><a href="en-solutions.html#monitor">Monitor</a></p></li><li class="pt-c-a"><div class="pt-prob-h"><span class="pt-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 13l2 2 4-4"/></svg></span><h3>Documents</h3></div><dl><dt>Today</dt><dd>Invoices and files copied by hand, with errors discovered too late.</dd><dt>With Kairos</dt><dd>Data is read and loaded on its own; anything incomplete is stopped before it is sent.</dd></dl><p class="pt-sol"><b>Solutions</b><a href="en-solutions.html#docs">Docs</a><a href="en-solutions.html#doccheck">DocCheck</a></p></li></ul>
   <div class="pt-une" aria-hidden="true"><span></span></div>
-  <ol class="pt-pasos"><li><span class="pt-n">01</span><h3>Conversation</h3><p>30 minutes to understand your process. Free.</p></li><li><span class="pt-n">02</span><h3>Proposal with your numbers</h3><p>What gets automated, how much you save and what it costs, in writing.</p></li><li><span class="pt-n">03</span><h3>Supervised pilot</h3><p>Runs with your team alongside and is measured against a written criterion.</p></li><li><span class="pt-n">04</span><h3>Month-to-month operation</h3><p>Fixed price and a daily log. No lock-in.</p></li></ol>
-  <p class="pt-met-cta"><a href="en-pricing.html" class="btn pt-btn-cl">See pricing and roadmap →</a></p>
+  <h3 class="pt-pasos-h">How it gets started</h3>
+  <ol class="pt-pasos"><li><span class="pt-n">01</span><small class="pt-tag">Free · 30 min</small><h3>Conversation</h3><p>We review one process with you and tell you honestly whether it is worth automating.</p><p class="pt-rec"><b>You receive</b>A clear verdict: worth it or not.</p></li><li><span class="pt-n">02</span><small class="pt-tag">No cost</small><h3>Proposal with your numbers</h3><p>What gets automated, how much you save and what it costs, with a demo using sample data.</p><p class="pt-rec"><b>You receive</b>The written proposal, with the return calculation.</p></li><li><span class="pt-n">03</span><small class="pt-tag">No lock-in</small><h3>Supervised pilot</h3><p>It runs with your team alongside and is measured against a written success criterion.</p><p class="pt-rec"><b>You receive</b>A report of what was measured against what was agreed.</p></li><li><span class="pt-n">04</span><small class="pt-tag">Fixed price</small><h3>Month-to-month operation</h3><p>Daily monitoring, adjustments and a log of every operation.</p><p class="pt-rec"><b>You receive</b>A monthly value report.</p></li></ol>
+  <p class="pt-met-cta"><a href="en-pricing.html" class="btn pt-btn-cl">See pricing and route →</a><a href="en-solutions.html" class="pt-lk pt-lk-cl">See the solutions</a></p>
 </div></section>
 
 <section class="pt-reg"><div class="wrap">
-  <span class="sc">Guarantees</span>
-  <h2>Three rules <em>we never bend.</em></h2>
-  <ol class="pt-reglas"><li class="pt-r1"><span class="pt-rn">1</span><i>First,</i><h3>your rules</h3><p>We write every rule of the process with your team. The system does nothing you have not approved.</p><p class="pt-pr"><b>How you can check</b>You sign the list of rules before we start.</p></li><li class="pt-r2"><span class="pt-rn">2</span><i>Always,</i><h3>a person</h3><p>When in doubt, the system does not decide: it sets the case aside, notes why and hands it to someone on your team.</p><p class="pt-pr"><b>How you can check</b>Every case set aside stays in the log, with who resolved it.</p></li><li class="pt-r3"><span class="pt-rn">3</span><i>Never,</i><h3>your data outside</h3><p>Everything runs inside your company. Your data is not used for anything else.</p><p class="pt-pr"><b>How you can check</b>Confidentiality and data processing (Panama Law 81 of 2019) signed before we start.</p></li></ol>
+  <h2>Three non-negotiable rules</h2>
+  <ul class="pt-reglas"><li><span class="pt-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5z"/><path d="M8.5 9h7M8.5 12.5h7M8.5 16h4"/></svg></span><div><h3>Your rules first</h3><p>The system does nothing you have not approved in writing.</p></div></li><li><span class="pt-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.8-4 3.8-6 7.5-6s6.7 2 7.5 6"/></svg></span><div><h3>When in doubt, a person</h3><p>Anything doubtful is set aside with its reason and resolved by someone on your team.</p></div></li><li><span class="pt-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3M12 14.5v2.5"/></svg></span><div><h3>Your data stays in</h3><p>Everything runs inside your company, with signed confidentiality (Law 81 of 2019).</p></div></li></ul>
 </div></section>
 
 <section id="contacto" class="pt-cont"><div class="wrap">
@@ -96,37 +94,50 @@ matchMedia('(min-width:1061px)').addEventListener('change',function(e){if(e.matc
       </div>
     </div>
     <form id="form" class="pt-form">
-      <h3>Prefer to write?</h3><p class="pt-f-p">Only what we need to reply.</p>
-      <label>Name<input type="text" placeholder="Full name" required autocomplete="name"></label><label>Company<input type="text" placeholder="Company" required autocomplete="organization"></label><label>Email<input type="email" placeholder="Work email" required autocomplete="email"></label>
-      <label>Industry<select required name="Industria"><option value="">—</option><option>Healthcare</option><option>Insurance</option><option>Banking and finance</option><option>Logistics / Free Zone</option><option>Commerce and retail</option><option>Professional services</option><option>Other</option></select></label>
-      <label>Which process would you like to automate?<textarea name="¿Qué proceso quiere automatizar?" placeholder="No third-party personal data" rows="3"></textarea></label>
-      <button class="btn btn-p">Send request</button>
-      <span class="pt-f-n">By submitting you accept our <a class="lk" href="en-privacy.html">Privacy Policy</a>.</span>
+      <h3>Prefer to write?</h3><p class="pt-f-p">Three steps, under a minute.</p>
+      <div class="pt-f-bar" aria-hidden="true"><i></i></div>
+      <fieldset class="pt-paso" data-paso="1"><legend><span>1 of 3</span>What takes up most of your time?</legend>
+        <div class="pt-ops"><button type="button" class="pt-op" data-campo="p" aria-pressed="false">Customer service</button><button type="button" class="pt-op" data-campo="p" aria-pressed="false">Scheduling</button><button type="button" class="pt-op" data-campo="p" aria-pressed="false">Collections</button><button type="button" class="pt-op" data-campo="p" aria-pressed="false">Documents</button><button type="button" class="pt-op" data-campo="p" aria-pressed="false">Other</button></div><input type="hidden" name="Proceso" id="pt-c-p"></fieldset>
+      <fieldset class="pt-paso" data-paso="2"><legend><span>2 of 3</span>What industry are you in?</legend>
+        <div class="pt-ops"><button type="button" class="pt-op" data-campo="i" aria-pressed="false">Healthcare</button><button type="button" class="pt-op" data-campo="i" aria-pressed="false">Insurance</button><button type="button" class="pt-op" data-campo="i" aria-pressed="false">Banking and finance</button><button type="button" class="pt-op" data-campo="i" aria-pressed="false">Logistics / Free Zone</button><button type="button" class="pt-op" data-campo="i" aria-pressed="false">Commerce and retail</button><button type="button" class="pt-op" data-campo="i" aria-pressed="false">Professional services</button><button type="button" class="pt-op" data-campo="i" aria-pressed="false">Other</button></div><input type="hidden" name="Industria" id="pt-c-i"></fieldset>
+      <fieldset class="pt-paso" data-paso="3"><legend><span>3 of 3</span>How should we reply?</legend>
+        <label>Name<input type="text" placeholder="Full name" required autocomplete="name"></label><label>Company<input type="text" placeholder="Company" required autocomplete="organization"></label><label>Email<input type="email" placeholder="Work email" required autocomplete="email"></label>
+        <label>Details (optional)<textarea name="Detalle (opcional)" placeholder="No third-party personal data" rows="2"></textarea></label>
+        <div class="pt-f-acc"><button type="button" class="pt-atras" id="pt-atras">← Back</button><button type="submit" class="btn btn-p">Send request</button></div>
+        <span class="pt-f-n">By submitting you accept our <a class="lk" href="en-privacy.html">Privacy Policy</a>.</span></fieldset>
     </form>
   </div>
 </div></section>
 
 
 <script>
-/* Portada: ejemplo interactivo (datos ficticios) y agenda embebida que se carga solo si el visitante la pide */
+/* Portada: flujo ilustrativo de un caso (entra → sus reglas → sale), formulario de tres pasos y agenda embebida a pedido */
 (function(){
 "use strict";
-var X={"casos":{"agendar":["9:40 p.m. · incoming message","“Good evening, do you have an opening tomorrow morning?”",[["Appointment","confirmed"],["Appointment","rescheduled"],["Reminder","sent"],["Message","answered"]],["asked to talk to someone","time not available","missing information"]],"atender":["9:40 p.m. · incoming email","“Good evening, could you quote 40 boxes for Thursday?”",[["Email","answered"],["Quote","sent"],["Request","open"],["Email","classified"]],["customer complaint","unclear email","asked to talk to someone"]],"cobrar":["5:10 p.m. · receivables","Invoice 90412 overdue, no open dispute.",[["Reminder","sent"],["Invoice","up to date"],["Payment promise","noted"],["Payment","recorded"]],["open dispute","asked to talk to someone","payment plan"]],"documentos":["4:50 p.m. · incoming file","File 90412 with 6 supplier documents.",[["Invoice","loaded"],["Document","complete"],["Shipment","matched"],["File","reviewed"]],["missing signature","total does not match","expired document"]]},"ok":"verified","rev":"to a person"},$=function(i){return document.getElementById(i)},RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
-var caso="agendar",reg=$("reg"),nV=0,nP=0,id=90412,t,k=0,tabs=[].slice.call(document.querySelectorAll(".pt-tabs [role=tab]"));
-function fila(anim){var C=X.casos[caso],dud=k%5===3,ti=C[2][k%C[2].length],hh=t.toTimeString().slice(0,5);k++;t=new Date(t.getTime()+(4+(k*7)%9)*60000);
-  var li=document.createElement("li");if(anim&&!RM)li.className="pt-nuevo";
-  li.innerHTML="<time>"+hh+"</time><span>"+ti[0]+" "+(id++)+" · "+(dud?C[3][k%3]:ti[1])+"</span><em class=\""+(dud?"pt-p\">"+X.rev:"pt-v\">"+X.ok)+"</em>";
-  reg.prepend(li);if(reg.children.length>5)reg.lastChild.remove();dud?nP++:nV++;$("nV").textContent=nV;$("nP").textContent=nP}
-function reiniciar(){reg.innerHTML="";nV=0;nP=0;id=90412;k=0;t=new Date();t.setHours(7,2,0);for(var i=0;i<5;i++)fila(false)}
-function elegir(b,foco){caso=b.dataset.caso;tabs.forEach(function(x){var s=x===b;x.setAttribute("aria-selected",s);x.tabIndex=s?0:-1});
-  $("pt-panel").setAttribute("aria-labelledby",b.id);$("pt-in-h").textContent=X.casos[caso][0];$("pt-in-t").textContent=X.casos[caso][1];
-  $("pt-panel").dataset.c=b.className.slice(-1);if(foco)b.focus();reiniciar()}
-tabs.forEach(function(b,i){b.addEventListener("click",function(){elegir(b)});
-  b.addEventListener("keydown",function(e){var d={ArrowRight:1,ArrowLeft:-1}[e.key];if(d){e.preventDefault();elegir(tabs[(i+d+tabs.length)%tabs.length],true)}})});
-reiniciar();if(!RM)setInterval(function(){if(!document.hidden)fila(true)},2600);
+var X={"flujo":{"agendar":[["Mensaje · 9:40 p.m.","Is a slot available?"],["Pide reprogramar","Is the slot still free?"],["Tomorrow's appointment","Reminder sent?"]],"atender":[["Email · quote","Is there an approved template?"],["Pregunta frecuente","Does the manual cover it?"],["Customer complaint","Should a person see it?"]],"cobrar":[["Factura vencida","Is there an open dispute?"],["Payment promise","Is the date respected?"],["Reclamo a aseguradora","Is the file complete?"]],"documentos":[["Supplier invoice","Does the total add up?"],["Expediente nuevo","Is it signed?"],["Shipping B/L","Does it match the invoice?"]]},"col":{"atender":"t","agendar":"g","cobrar":"c","documentos":"a"},"ok":"Verified","per":"To a person"},I={"atender":"<path d=\"M4 5h16v11H9l-5 4z\"/><path d=\"M8 9.5h8M8 12.5h5\"/>","agendar":"<rect x=\"3.5\" y=\"5\" width=\"17\" height=\"15\"/><path d=\"M3.5 9.5h17M8 3v4M16 3v4M8.5 14.5l2.2 2.2 4.8-4.8\"/>","cobrar":"<path d=\"M6 3h12v18l-3 -2l-3 2l-3 -2l-3 2z\"/><path d=\"M9 8h6M9 11.5h6M9 15h3\"/>","documentos":"<path d=\"M6 3h8l4 4v14H6z\"/><path d=\"M14 3v4h4M9 13l2 2 4-4\"/>"},$=function(i){return document.getElementById(i)},RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+var col=[$("pt-f0"),$("pt-f1"),$("pt-f2")],nV=0,nP=0,k=0,areas=Object.keys(X.flujo);
+function nuevo(){var a=areas[k%areas.length],c=X.flujo[a][Math.floor(k/areas.length)%3],dud=k%4===3;k++;
+  var li=document.createElement("li");li.className="pt-c-"+X.col[a];li.dataset.dud=dud?"1":"";li.dataset.r=c[1];li.dataset.l=c[0];
+  li.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true">'+I[a]+'</svg><span>'+c[0]+'</span>';return li}
+function poner(ol,li){if(!RM)li.classList.add("pt-nuevo");ol.prepend(li);while(ol.children.length>3)ol.lastChild.remove()}
+function paso(){var r=col[1].firstChild;
+  if(r){var dud=r.dataset.dud,s=document.createElement("li");s.className=r.className.split(" ")[0]+(dud?" pt-sale-p":" pt-sale-v");
+    s.innerHTML=r.querySelector("svg").outerHTML+'<span>'+r.dataset.l+'</span><em>'+(dud?X.per:X.ok)+'</em>';
+    poner(col[2],s);r.remove();dud?nP++:nV++;$("nV").textContent=nV;$("nP").textContent=nP}
+  var e=col[0].children.length>2&&col[0].lastChild;if(e){var q=e.cloneNode(true);q.querySelector("span").textContent=e.dataset.r;q.classList.add("pt-regla");poner(col[1],q);e.remove()}
+  poner(col[0],nuevo())}
+for(var i=0;i<9;i++)paso();if(!RM)setInterval(function(){if(!document.hidden)paso()},2200);
+
+var f=$("form");if(f){f.classList.add("pt-js");var ir=function(n){f.dataset.p=n;[].forEach.call(f.querySelectorAll(".pt-paso"),function(p){p.hidden=+p.dataset.paso!==n});
+  f.querySelector(".pt-f-bar i").style.width=(n*100/3)+"%";var q=f.querySelector('.pt-paso[data-paso="'+n+'"] button, .pt-paso[data-paso="'+n+'"] input:not([type=hidden])');if(q&&f.dataset.t)q.focus()};
+  [].forEach.call(f.querySelectorAll(".pt-op"),function(b){b.addEventListener("click",function(){var c=b.dataset.campo;
+    [].forEach.call(f.querySelectorAll('.pt-op[data-campo="'+c+'"]'),function(o){o.setAttribute("aria-pressed",o===b)});$("pt-c-"+c).value=b.textContent;f.dataset.t=1;ir(c==="p"?2:3)})});
+  $("pt-atras").addEventListener("click",function(){f.dataset.t=1;ir(+f.dataset.p-1||1)});
+  [].forEach.call(f.querySelectorAll(".pt-paso legend"),function(l){l.addEventListener("click",function(){var n=+l.parentNode.dataset.paso;if(n<+f.dataset.p)ir(n)})});ir(1)}
+
 var cal=$("pt-cal"),cb=$("pt-cal-b");
-if(cal&&cb){if(!cal.dataset.src)cb.remove();else cb.addEventListener("click",function(){var f=document.createElement("iframe");f.src=cal.dataset.src;f.title=cal.dataset.txt;f.loading="lazy";
-  cal.innerHTML="";cal.appendChild(f);cal.classList.add("pt-cal-on");f.focus()})}
+if(cal&&cb){if(!cal.dataset.src)cb.remove();else cb.addEventListener("click",function(){var fr=document.createElement("iframe");fr.src=cal.dataset.src;fr.title=cal.dataset.txt;fr.loading="lazy";
+  cal.innerHTML="";cal.appendChild(fr);cal.classList.add("pt-cal-on");fr.focus()})}
 })();
 </script>
 </main>
@@ -147,10 +158,10 @@ if(cal&&cb){if(!cal.dataset.src)cb.remove();else cb.addEventListener("click",fun
 /* origen de la visita (utm_source/utm_campaign), sin cookies: solo en esta pestaña y solo viaja en el mensaje que el visitante decide enviar */
 var OR='';try{var q=new URLSearchParams(location.search),s=q.get('utm_source'),c=q.get('utm_campaign');if(s){OR=(s+(c?' / '+c:'')).replace(/[^\w\s\/.-]/g,'').slice(0,60);sessionStorage.setItem('kx_origen',OR)}else{OR=sessionStorage.getItem('kx_origen')||''}}catch(_){}
 if(OR)document.querySelectorAll('a[href*="wa.me/"]').forEach(function(a){try{var u=new URL(a.href),t=u.searchParams.get('text')||'';var R=OR.split(' / '),N={ig:'Instagram',instagram:'Instagram',fb:'Facebook',facebook:'Facebook',li:'LinkedIn',linkedin:'LinkedIn',tt:'TikTok',tiktok:'TikTok',yt:'YouTube',youtube:'YouTube',wa:'WhatsApp',whatsapp:'WhatsApp',x:'X',google:'Google',email:'correo',mail:'correo'}[R[0].toLowerCase()]||R[0],F=' Los vi en '+N+'.'+(R[1]?' ('+R[1]+')':'');u.searchParams.set('text',t+F);a.href=u.toString()}catch(_){}});
-document.querySelectorAll('form#form, #contacto form, #contact form').forEach(function(f){var b0=f.querySelector('button');if(WA&&b0)b0.textContent="Send via WhatsApp \u2192";f.onsubmit=function(e){e.preventDefault();
-var v=[].map.call(f.querySelectorAll('input,select,textarea'),function(x){return (x.placeholder||x.name||'')+': '+x.value}).filter(function(s){return !/: $/.test(s)}).join('\n');
+document.querySelectorAll('form#form, #contacto form, #contact form').forEach(function(f){var b0=f.querySelector('button[type=submit]')||f.querySelector('button');if(WA&&b0)b0.textContent="Send via WhatsApp \u2192";f.onsubmit=function(e){e.preventDefault();
+var v=[].map.call(f.querySelectorAll('input:not([type=radio]):not([type=checkbox]),select,textarea'),function(x){return (x.placeholder||x.name||'')+': '+x.value}).filter(function(s){return !/: $/.test(s)}).join('\n');
 var msg='Solicitud de Diagnóstico Kairos\n'+v+(OR?'\nOrigen: '+OR:'');
-var b=f.querySelector('button');
+var b=b0;
 var ok=function(x){if(!b)return;b.innerHTML='<svg class="vx-ok" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>';b.appendChild(document.createTextNode(x))};
 if(WA){window.open(WA.split('?')[0]+'?text='+encodeURIComponent(msg),'_blank');ok('Abriendo WhatsApp…');}
 else if(DM){try{navigator.clipboard.writeText(msg)}catch(_){}window.open(DM,'_blank');ok('Mensaje copiado: péguelo en Instagram');}

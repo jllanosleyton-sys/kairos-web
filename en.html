@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Kairos — Processes that run themselves</title>
 <meta name="description" content="Kairos — Process automation in Panama: the problem, the method and the solutions, with your data under your control and a person reviewing anything doubtful.">
-<!--VX:CSS--><link rel="preload" href="assets/fuentes/inter-tight-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="assets/kairos.css?v=k9dec4eb9"><!--/VX:CSS-->
+<!--VX:CSS--><link rel="preload" href="assets/fuentes/inter-tight-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="assets/kairos.css?v=k26f233a2"><!--/VX:CSS-->
 <link rel="icon" href="assets/isotipo.svg">
 <!--VX:HEAD-->
 <link rel="canonical" href="https://kairosgrouppanama.com/en.html">
@@ -48,17 +48,19 @@ matchMedia('(min-width:1061px)').addEventListener('change',function(e){if(e.matc
     <span class="sc">Process automation · Panama</span>
     <h1 class="t-sube" style="--i:0">Processes that <em>run themselves.</em></h1>
     <p class="t-sube lead" style="--i:1">Your team stops doing repetitive work. Every task is done on time and verified; anything doubtful is reviewed by a person.</p>
-    <p class="pt-vivo"><span class="pt-vivo-p" aria-hidden="true"></span>While you read this, a process like this could be <span class="pt-vivo-w"><span class="pt-vivo-l"><span>confirming tomorrow’s appointment</span><span>answering a quote request at 11 p.m.</span><span>reminding a client of an overdue invoice</span><span>matching an invoice against its purchase order</span><span>filing a claim with the complete file</span></span></span></p>
+    <p class="pt-vivo"><span class="pt-vivo-p" aria-hidden="true"></span>While you read this, a process like this could be</p>
+    <p class="pt-vivo-l" id="pt-vivo" aria-live="off"><span class="pt-on">confirming tomorrow’s appointment</span><span>answering a quote request at 11 p.m.</span><span>reminding a client of an overdue invoice</span><span>matching an invoice against its purchase order</span><span>filing a claim with the complete file</span></p>
     <div class="pt-ctas">
       <a data-agenda href="https://calendar.app.google/kDueUtrgYfQMWu889" target="_blank" rel="noopener" class="pt-cta pt-cta-p"><span class="pt-cta-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15"/><path d="M3.5 9.5h17M8 3v4M16 3v4M8.5 14.5l2.2 2.2 4.8-4.8"/></svg></span><span class="pt-cta-t"><b>Book a free diagnosis</b><small>30 min · Google Meet · no commitment</small></span><span class="pt-cta-f"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
       <a href="en-assessment.html" class="pt-cta pt-cta-s"><span class="pt-cta-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></svg></span><span class="pt-cta-t"><b>Take the self-assessment</b><small>3 questions · instant result</small></span><span class="pt-cta-f"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     </div>
   </div>
-  <div class="pt-flujo" role="img" aria-label="Illustration of a case's journey: it comes in, is checked against your rules and leaves verified or goes to a person">
-    <p class="pt-demo-h">How a process runs on its own</p>
-    <div class="pt-fcols"><div class="pt-fcol pt-fcol0"><span class="pt-fcol-h">In</span><ol id="pt-f0"></ol></div><div class="pt-fcol pt-fcol1"><span class="pt-fcol-h">Your rules</span><ol id="pt-f1"></ol></div><div class="pt-fcol pt-fcol2"><span class="pt-fcol-h">Out</span><ol id="pt-f2"></ol></div></div>
-    <div class="pt-tot"><span class="pt-v"><b id="nV">0</b> Verified</span><span class="pt-p"><b id="nP">0</b> To a person</span></div>
-    <p class="pt-flujo-pie"><small>Illustrative · what any given day looks like</small><a href="en-demos.html#probar" class="pt-lk">See it work with test data →</a></p>
+  <div class="pt-noche" role="img" aria-label="Illustration of a night of work: each case is checked against your rules and is either verified or waits for a person with its reason">
+    <div class="pt-n-cab"><span class="pt-n-sc">While your office rests</span><span class="pt-n-reloj" id="pt-reloj">9:40 p.m.</span></div>
+    <div class="pt-n-caso" id="pt-caso"></div>
+    <div class="pt-n-linea"><div class="pt-n-eje" id="pt-eje"></div><div class="pt-n-horas"><span style="left:0%">6 p.m.</span><span style="left:42.86%">12 a.m.</span><span style="left:71.43%">4 a.m.</span><span style="left:100%">8 a.m.</span></div></div>
+    <div class="pt-n-tot"><span class="pt-v"><b id="nV">0</b> verified</span><span class="pt-p"><b id="nP">0</b> waiting for a person</span></div>
+    <p class="pt-n-pie"><small>Illustrative · fictitious data</small><a href="en-demos.html#probar" class="pt-lk">See it work with test data →</a></p>
   </div>
 </div></header>
 
@@ -112,22 +114,29 @@ matchMedia('(min-width:1061px)').addEventListener('change',function(e){if(e.matc
 
 
 <script>
-/* Portada: flujo ilustrativo de un caso (entra → sus reglas → sale), formulario de tres pasos y agenda embebida a pedido */
+/* Portada: noche ilustrativa, frase viva, formulario de tres pasos y agenda embebida a pedido */
 (function(){
 "use strict";
-var X={"flujo":{"agendar":[["Mensaje · 9:40 p.m.","Is a slot available?"],["Pide reprogramar","Is the slot still free?"],["Tomorrow's appointment","Reminder sent?"]],"atender":[["Email · quote","Is there an approved template?"],["Pregunta frecuente","Does the manual cover it?"],["Customer complaint","Should a person see it?"]],"cobrar":[["Factura vencida","Is there an open dispute?"],["Payment promise","Is the date respected?"],["Reclamo a aseguradora","Is the file complete?"]],"documentos":[["Supplier invoice","Does the total add up?"],["Expediente nuevo","Is it signed?"],["Shipping B/L","Does it match the invoice?"]]},"col":{"atender":"t","agendar":"g","cobrar":"c","documentos":"a"},"ok":"Verified","per":"To a person"},I={"atender":"<path d=\"M4 5h16v11H9l-5 4z\"/><path d=\"M8 9.5h8M8 12.5h5\"/>","agendar":"<rect x=\"3.5\" y=\"5\" width=\"17\" height=\"15\"/><path d=\"M3.5 9.5h17M8 3v4M16 3v4M8.5 14.5l2.2 2.2 4.8-4.8\"/>","cobrar":"<path d=\"M6 3h12v18l-3 -2l-3 2l-3 -2l-3 2z\"/><path d=\"M9 8h6M9 11.5h6M9 15h3\"/>","documentos":"<path d=\"M6 3h8l4 4v14H6z\"/><path d=\"M14 3v4h4M9 13l2 2 4-4\"/>"},$=function(i){return document.getElementById(i)},RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
-var col=[$("pt-f0"),$("pt-f1"),$("pt-f2")],nV=0,nP=0,k=0,areas=Object.keys(X.flujo);
-function nuevo(){var a=areas[k%areas.length],c=X.flujo[a][Math.floor(k/areas.length)%3],dud=k%4===3;k++;
-  var li=document.createElement("li");li.className="pt-c-"+X.col[a];li.dataset.dud=dud?"1":"";li.dataset.r=c[1];li.dataset.l=c[0];
-  li.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true">'+I[a]+'</svg><span>'+c[0]+'</span>';return li}
-function poner(ol,li){if(!RM)li.classList.add("pt-nuevo");ol.prepend(li);while(ol.children.length>3)ol.lastChild.remove()}
-function paso(){var r=col[1].firstChild;
-  if(r){var dud=r.dataset.dud,s=document.createElement("li");s.className=r.className.split(" ")[0]+(dud?" pt-sale-p":" pt-sale-v");
-    s.innerHTML=r.querySelector("svg").outerHTML+'<span>'+r.dataset.l+'</span><em>'+(dud?X.per:X.ok)+'</em>';
-    poner(col[2],s);r.remove();dud?nP++:nV++;$("nV").textContent=nV;$("nP").textContent=nP}
-  var e=col[0].children.length>2&&col[0].lastChild;if(e){var q=e.cloneNode(true);q.querySelector("span").textContent=e.dataset.r;q.classList.add("pt-regla");poner(col[1],q);e.remove()}
-  poner(col[0],nuevo())}
-for(var i=0;i<9;i++)paso();if(!RM)setInterval(function(){if(!document.hidden)paso()},2200);
+var X={"noche":[["9:40 p.m.",220,"agendar","Appointment request for tomorrow",[["Is a slot free?","8:30 a.m.",1],["Complete details?","Yes",1],["Service to book?","General consultation",1]],"Appointment confirmed"],["11:05 p.m.",305,"atender","A quote requested by email",[["Is there an approved template?","Yes",1],["Current price?","Yes",1],["Customer with an open balance?","No",1]],"Quote sent"],["12:30 a.m.",390,"agendar","Asked to move Thursday’s appointment",[["Is the new slot still free?","Yes",1],["With the same person?","Yes",1]],"Appointment rescheduled"],["1:15 a.m.",435,"atender","An upset customer writes in",[["Does the manual cover it?","No",0]],"needs judgment"],["2:10 a.m.",490,"documentos","A supplier invoice arrives",[["Does it match the order?","Yes",1],["Does the total add up?","Off by US$40",0]],"the total does not add up"],["4:40 a.m.",640,"cobrar","Claim ready to submit",[["Is the file complete?","Yes",1],["Is the form signed?","Yes",1],["Within the deadline?","Yes",1]],"Claim submitted"],["5:20 a.m.",680,"documentos","A new customer file",[["Is it signed?","Yes",1],["Are all attachments there?","Yes",1]],"Loaded into your system"],["6:00 a.m.",720,"cobrar","An invoice is due today",[["Is there an open dispute?","No",1],["Valid contact?","Yes",1]],"Reminder sent"]],"flu_fam":{"atender":"Customer service","agendar":"Scheduling","cobrar":"Collections","documentos":"Documents"},"flu_pasa":"Goes to a person","flu_fin":["8:00 a.m. · your team arrives","The night’s work <em>is already done.</em>","verified and logged","waiting with their reason"],"col":{"atender":"t","agendar":"g","cobrar":"c","documentos":"a"}},I={"atender":"<path d=\"M4 5h16v11H9l-5 4z\"/><path d=\"M8 9.5h8M8 12.5h5\"/>","agendar":"<rect x=\"3.5\" y=\"5\" width=\"17\" height=\"15\"/><path d=\"M3.5 9.5h17M8 3v4M16 3v4M8.5 14.5l2.2 2.2 4.8-4.8\"/>","cobrar":"<path d=\"M6 3h12v18l-3 -2l-3 2l-3 -2l-3 2z\"/><path d=\"M9 8h6M9 11.5h6M9 15h3\"/>","documentos":"<path d=\"M6 3h8l4 4v14H6z\"/><path d=\"M14 3v4h4M9 13l2 2 4-4\"/>"},$=function(i){return document.getElementById(i)},RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+/* Clases que arma el JS (E037): pt-on pt-si pt-no pt-n-res pt-n-fin pt-n-fam pt-n-caso pt-c-t pt-c-g pt-c-c pt-c-a
+   Noche ilustrativa: el reloj avanza, cada caso revisa sus reglas una por una y cae en la línea de la noche; a las 8 a.m. el resumen */
+var N=X.noche,caso=$("pt-caso"),eje=$("pt-eje"),reloj=$("pt-reloj"),k=0,nV=0,nP=0,tt=[];
+function ic(a){return '<svg viewBox="0 0 24 24" aria-hidden="true">'+I[a]+'</svg>'}
+function luego(fn,ms){RM?fn():tt.push(setTimeout(fn,ms))}
+function cuenta(){$("nV").textContent=nV;$("nP").textContent=nP}
+function uno(c){var ok=c[4].every(function(r){return r[2]}),C="pt-c-"+X.col[c[2]];reloj.textContent=c[0];
+  caso.className="pt-n-caso "+C;caso.innerHTML='<span class="pt-n-fam">'+ic(c[2])+X.flu_fam[c[2]]+'</span><h3>'+c[3]+'</h3><ol>'+c[4].map(function(r){
+    return '<li><span>'+r[0]+'</span><b class="'+(r[2]?"pt-si":"pt-no")+'">'+r[1]+'</b></li>'}).join("")+'</ol><p class="pt-n-res"></p>';
+  var li=caso.querySelectorAll("li"),res=caso.querySelector(".pt-n-res");
+  [].forEach.call(li,function(l,i){luego(function(){l.classList.add("pt-on")},500+i*550)});
+  luego(function(){res.className="pt-n-res pt-on "+(ok?"pt-si":"pt-no");res.innerHTML=ok?"✓ "+c[5]:X.flu_pasa+" · "+c[5];
+    var d=document.createElement("i");d.className=C+(ok?"":" pt-no");d.style.left=(c[1]/840*100)+"%";eje.appendChild(d);ok?nV++:nP++;cuenta()},500+li.length*550+250)}
+function fin(){var f=X.flu_fin;reloj.textContent=f[0].split(" · ")[0];caso.className="pt-n-caso pt-n-fin";
+  caso.innerHTML='<span class="pt-n-fam">'+f[0]+'</span><h3>'+f[1]+'</h3><p class="pt-n-res pt-on pt-si"><b>'+nV+'</b> '+f[2]+'</p><p class="pt-n-res pt-on pt-no"><b>'+nP+'</b> '+f[3]+'</p>'}
+function sigue(){if(document.hidden){luego(sigue,1000);return}
+  if(k<N.length){uno(N[k++]);luego(sigue,4200)}else{fin();luego(function(){k=nV=nP=0;eje.innerHTML="";cuenta();sigue()},6500)}}
+if(RM){N.forEach(function(c){uno(c)});fin()}else sigue();
+var vv=$("pt-vivo");if(vv&&!RM){var fr=vv.children,vi=0;setInterval(function(){if(document.hidden)return;fr[vi].classList.remove("pt-on");vi=(vi+1)%fr.length;fr[vi].classList.add("pt-on")},3200)}
 
 var f=$("form");if(f){f.classList.add("pt-js");var ir=function(n){f.dataset.p=n;[].forEach.call(f.querySelectorAll(".pt-paso"),function(p){p.hidden=+p.dataset.paso!==n});
   f.querySelector(".pt-f-bar i").style.width=(n*100/3)+"%";var q=f.querySelector('.pt-paso[data-paso="'+n+'"] button, .pt-paso[data-paso="'+n+'"] input:not([type=hidden])');if(q&&f.dataset.t)q.focus()};

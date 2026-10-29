@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>See it work — Kairos</title>
 <meta name="description" content="See it work: try in your browser how Claims, Agenda, Monitor, CRM, Docs, Assist, Inbox, Voice, Cobra and DocCheck decide.">
-<!--VX:CSS--><link rel="preload" href="assets/fuentes/inter-tight-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="assets/kairos.css?v=k26f233a2"><!--/VX:CSS-->
+<!--VX:CSS--><link rel="preload" href="assets/fuentes/inter-tight-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="assets/kairos.css?v=kf01a6fb9"><!--/VX:CSS-->
 <link rel="icon" href="assets/isotipo.svg">
 <!--VX:HEAD-->
 <link rel="canonical" href="https://kairosgrouppanama.com/en-demos.html">
@@ -46,9 +46,13 @@ matchMedia('(min-width:1061px)').addEventListener('change',function(e){if(e.matc
 <header class="cab"><div class="wrap">
   <span class="eyebrow">Folio III</span>
   <h1 class="t-sube" style="--i:0">See it <em>work</em>.</h1>
-  <p class="t-sube lead" style="--i:1">The same engines and the same rules we install in a company run here, in your browser. Change the data and watch what the process does, which rule it applies and what goes to a person. What you type never leaves this page. The sample cases and their rules are in Spanish, as they would be at a company in Panama; the interface and explanations are in English.</p>
-  <ol class="flujo" aria-label="How each process works">
-    <li><b>01</b>Reads the case</li><li><b>02</b>Applies your rules</li><li><b>03</b>Decides or hands over to a person</li><li><b>04</b>Verifies what it did</li>
+  <p class="t-sube lead" style="--i:1">Try the products here, with made-up data. What you type never leaves this page. The sample cases are in Spanish, as they would be at a company in Panama.</p>
+  <ol class="viaje" id="viaje" aria-label="How each process works">
+    <li><button type="button" aria-pressed="true"><b>Receives</b><span>A case arrives: an email, an invoice, an appointment.</span></button></li>
+    <li><button type="button" aria-pressed="false"><b>Checks</b><span>Compares it with your company’s rules.</span></button></li>
+    <li><button type="button" aria-pressed="false"><b>Decides or hands it to a person</b><span>What is clear, it resolves. What is doubtful goes to someone on your team.</span></button></li>
+    <li><button type="button" aria-pressed="false"><b>Keeps a record</b><span>Notes what it did and why.</span></button></li>
+    <li class="viaje-caso" aria-hidden="true">Case 90412</li>
   </ol>
 </div></header>
 
@@ -60,6 +64,12 @@ matchMedia('(min-width:1061px)').addEventListener('change',function(e){if(e.matc
     <button type="button" role="tab" id="pbt-atender" aria-controls="pb-atender" aria-selected="false" tabindex="-1" class="pt-c-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><b>Respond</b><small>Emails and messages</small></button>
     <button type="button" role="tab" id="pbt-cobrar" aria-controls="pb-cobrar" aria-selected="false" tabindex="-1" class="pt-c-c"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3 -2l-3 2l-3 -2l-3 2z"/><path d="M9 8h6M9 11.5h6M9 15h3"/></svg><b>Collect</b><small>Overdue receivables</small></button>
     <button type="button" role="tab" id="pbt-documentos" aria-controls="pb-documentos" aria-selected="false" tabindex="-1" class="pt-c-a"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 13l2 2 4-4"/></svg><b>Documents</b><small>Complete files</small></button>
+  </div>
+  <div class="pb-ads">
+    <div class="pb-ad pt-c-g" id="pb-ad-agendar"><div class="pb-ad-a"><small>Today</small><ol><li style="--i:0">Read the WhatsApp</li><li style="--i:1">Find a slot in the notebook</li><li style="--i:2">Reply and confirm</li><li style="--i:3">Call to remind</li></ol><b>4 steps by hand</b></div><span class="pb-ad-f" aria-hidden="true">→</span><div class="pb-ad-d"><small>With Kairos</small><ol><li style="--i:0">The message arrives</li><li style="--i:1">Appointment booked and reminder set</li></ol><b>2 steps, on their own</b></div><a class="pb-ad-btn" href="#agenda-940">See Kairos Agenda in the lab →</a></div>
+    <div class="pb-ad pt-c-t" id="pb-ad-atender" hidden><div class="pb-ad-a"><small>Today</small><ol><li style="--i:0">Open every email</li><li style="--i:1">Look up the answer</li><li style="--i:2">Copy and paste</li><li style="--i:3">Forward the odd ones</li></ol><b>4 steps by hand</b></div><span class="pb-ad-f" aria-hidden="true">→</span><div class="pb-ad-d"><small>With Kairos</small><ol><li style="--i:0">Answers the usual</li><li style="--i:1">The odd ones go to a person</li></ol><b>2 steps, on their own</b></div><a class="pb-ad-btn" href="#inbox">See Kairos Inbox in the lab →</a></div>
+    <div class="pb-ad pt-c-c" id="pb-ad-cobrar" hidden><div class="pb-ad-a"><small>Today</small><ol><li style="--i:0">Check receivables</li><li style="--i:1">Write the reminder</li><li style="--i:2">Log the promise</li><li style="--i:3">Check again</li></ol><b>4 steps by hand</b></div><span class="pb-ad-f" aria-hidden="true">→</span><div class="pb-ad-d"><small>With Kairos</small><ol><li style="--i:0">Friendly reminder</li><li style="--i:1">Payment logged; disputes go to a person</li></ol><b>2 steps, on their own</b></div><a class="pb-ad-btn" href="#cobra">See Kairos Cobra in the lab →</a></div>
+    <div class="pb-ad pt-c-a" id="pb-ad-documentos" hidden><div class="pb-ad-a"><small>Today</small><ol><li style="--i:0">Open the file</li><li style="--i:1">Check field by field</li><li style="--i:2">Send back what is incomplete</li><li style="--i:3">Upload it</li></ol><b>4 steps by hand</b></div><span class="pb-ad-f" aria-hidden="true">→</span><div class="pb-ad-d"><small>With Kairos</small><ol><li style="--i:0">Checks the 5 fields</li><li style="--i:1">Complete: uploaded · if something is missing, to a person</li></ol><b>2 steps, on their own</b></div><a class="pb-ad-btn" href="#doccheck">See Kairos DocCheck in the lab →</a></div>
   </div>
   <div class="pb-esc">
     <div class="pb-p pt-c-g" id="pb-agendar" role="tabpanel" aria-labelledby="pbt-agendar">
@@ -104,86 +114,24 @@ matchMedia('(min-width:1061px)').addEventListener('change',function(e){if(e.matc
   </div>
 </div></section>
 
-<section class="lab"><div class="wrap">
-  <div class="tabs" role="tablist">
-    <button role="tab" id="crm" data-t="crm" aria-selected="true"><b>CRM</b><span>Sales funnel</span></button>
-    <button role="tab" id="docs" data-t="docs"><b>Docs</b><span>Invoices and bills of lading</span></button>
-    <button role="tab" id="assist" data-t="assist"><b>Assist</b><span>Internal manual</span></button>
-    <button role="tab" id="inbox" data-t="inbox"><b>Inbox</b><span>Incoming email</span></button>
-    <button role="tab" id="voice" data-t="voice"><b>Voice</b><span>Confirmation calls</span></button>
-    <button role="tab" id="cobra" data-t="cobra"><b>Cobra</b><span>Overdue invoices</span></button>
-    <button role="tab" id="doccheck" data-t="doccheck"><b>DocCheck</b><span>Complete document</span></button>
+<section class="lab" id="lab"><div class="wrap">
+  <span class="eyebrow">The products inside</span><h2>Use them as if <em>they were yours.</em></h2>
+  <div class="lab-tabs" role="tablist" aria-label="Pick a product">
+    <button type="button" role="tab" id="crm" data-t="crm" aria-controls="p-crm" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="5" height="16"/><rect x="10" y="4" width="5" height="11"/><rect x="17" y="4" width="4" height="7"/></svg><b>CRM</b><span>Sales funnel</span></button>
+    <button type="button" role="tab" id="docs" data-t="docs" aria-controls="p-docs" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 11h6M9 14h6M9 17h3"/></svg><b>Docs</b><span>Invoices and bills of lading</span></button>
+    <button type="button" role="tab" id="assist" data-t="assist" aria-controls="p-assist" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12h-9l-5 4v-4H4z"/><path d="M9 9h6M9 12h4"/></svg><b>Assist</b><span>Internal manual</span></button>
+    <button type="button" role="tab" id="inbox" data-t="inbox" aria-controls="p-inbox" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13l3-8h12l3 8v6H3z"/><path d="M3 13h5l1 2h6l1-2h5"/></svg><b>Inbox</b><span>Incoming email</span></button>
+    <button type="button" role="tab" id="voice" data-t="voice" aria-controls="p-voice" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h4l1.5 5-2.5 1.5a11 11 0 0 0 5.5 5.5L16 12.5l5 1.5v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/></svg><b>Voice</b><span>Confirm appointments</span></button>
+    <button type="button" role="tab" id="cobra" data-t="cobra" aria-controls="p-cobra" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 11.5h6M9 15h3"/></svg><b>Cobra</b><span>Overdue invoices</span></button>
+    <button type="button" role="tab" id="doccheck" data-t="doccheck" aria-controls="p-doccheck" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6v3H9z"/><path d="M7 5H5v16h14V5h-2"/><path d="M8.5 14l2.5 2.5 4.5-5"/></svg><b>DocCheck</b><span>Complete document</span></button>
   </div>
-
-  <div class="panel" id="p-crm">
-    <div class="intro"><h2>Kairos CRM</h2><p>Every morning it reviews the funnel and gives each salesperson their task of the day. Change an opportunity’s stage or days without contact.</p></div>
-    <div class="lab-estado" aria-live="polite"></div>
-    <div class="kanban" id="crm-k"></div>
-    <div class="traza" id="crm-t"></div>
-    <details class="hist-w"><summary>What you have tried <span class="hist-n">0</span></summary><ol class="hist"></ol></details>
-  </div>
-
-  <div class="panel" id="p-docs" hidden>
-    <div class="intro"><h2>Kairos Docs</h2><p>Reads the document, extracts the fields, checks that the total adds up and loads it into your system. Pick an example or edit the text.</p></div>
-    <div class="lab-estado" aria-live="polite"></div>
-    <div class="g2">
-      <div><div class="chips" id="docs-ej"></div><textarea id="docs-txt" spellcheck="false" aria-label="Document text"></textarea></div>
-      <div><table class="campos" id="docs-c"></table><div class="traza" id="docs-t"></div></div>
-    </div>
-    <details class="hist-w"><summary>What you have tried <span class="hist-n">0</span></summary><ol class="hist"></ol></details>
-  </div>
-
-  <div class="panel" id="p-assist" hidden>
-    <div class="intro"><h2>Kairos Assist</h2><p>Answers your team citing the company manual. If the manual does not cover it or the topic is sensitive, it does not make things up: it hands over to the responsible person.</p></div>
-    <div class="lab-estado" aria-live="polite"></div>
-    <div class="g2">
-      <div><div class="chips" id="assist-ej"></div><input id="assist-q" placeholder="Type a question (the demo manual is in Spanish), for example: ¿cuál es el horario del viernes?" aria-label="Question">
-        <details class="man"><summary>View the manual</summary><dl id="assist-m"></dl></details></div>
-      <div><div class="resp" id="assist-r"></div><div class="traza" id="assist-t"></div></div>
-    </div>
-    <details class="hist-w"><summary>What you have tried <span class="hist-n">0</span></summary><ol class="hist"></ol></details>
-  </div>
-
-  <div class="panel" id="p-inbox" hidden>
-    <div class="intro"><h2>Kairos Inbox</h2><p>Classifies each email, answers the repetitive with approved templates and opens tickets. Complaints and anything ambiguous go to a person.</p></div>
-    <div class="lab-estado" aria-live="polite"></div>
-    <div class="g2">
-      <div><div class="chips" id="inbox-ej"></div><input id="inbox-a" placeholder="Subject" aria-label="Subject"><textarea id="inbox-c" placeholder="Email body" aria-label="Email body"></textarea></div>
-      <div><div class="resp" id="inbox-r"></div><div class="traza" id="inbox-t"></div></div>
-    </div>
-    <details class="hist-w"><summary>What you have tried <span class="hist-n">0</span></summary><ol class="hist"></ol></details>
-  </div>
-
-  <div class="panel" id="p-voice" hidden>
-    <div class="intro"><h2>Kairos Voice</h2><p>Calls to confirm appointments with an approved script. Respects consent, schedule and a maximum of 3 attempts. Pick an appointment and answer the call yourself.</p></div>
-    <div class="lab-estado" aria-live="polite"></div>
-    <div class="g2">
-      <div><table class="campos" id="voice-l"></table></div>
-      <div><div class="llamada" id="voice-c"></div><div class="traza" id="voice-t"></div></div>
-    </div>
-    <details class="hist-w"><summary>What you have tried <span class="hist-n">0</span></summary><ol class="hist"></ol></details>
-  </div>
-
-  <div class="panel" id="p-cobra" hidden>
-    <div class="intro"><h2>Kairos Cobra</h2><p>Sends overdue-invoice reminders on WhatsApp: friendly at first, firm later. Disputes and payment promises are respected; after 3 reminders a person calls.</p></div>
-    <div class="lab-estado" aria-live="polite"></div>
-    <div class="g2">
-      <div><table class="campos" id="cobra-l"></table></div>
-      <div><div class="resp" id="cobra-r"></div><div class="traza" id="cobra-t"></div></div>
-    </div>
-    <details class="hist-w"><summary>What you have tried <span class="hist-n">0</span></summary><ol class="hist"></ol></details>
-  </div>
-
-  <div class="panel" id="p-doccheck" hidden>
-    <div class="intro"><h2>Kairos DocCheck</h2><p>Checks that a document is complete before it is sent: required fields, format, validity and signature. Change the form data.</p></div>
-    <div class="lab-estado" aria-live="polite"></div>
-    <div class="g2">
-      <div><div class="chips" id="dc-ej"></div><div class="edit" id="dc-f"></div></div>
-      <div><div class="resp" id="dc-r"></div></div>
-    </div>
-    <details class="hist-w"><summary>What you have tried <span class="hist-n">0</span></summary><ol class="hist"></ol></details>
-  </div>
-
+  <div class="panel" id="p-crm" role="tabpanel" aria-labelledby="crm" data-nombre="CRM"><p class="intro">Move opportunities between stages and see the next action for each one.</p></div>
+  <div class="panel" id="p-docs" role="tabpanel" aria-labelledby="docs" data-nombre="Docs" hidden><p class="intro">Fill in the template and watch the document being read and checked.</p></div>
+  <div class="panel" id="p-assist" role="tabpanel" aria-labelledby="assist" data-nombre="Assist" hidden><p class="intro">Ask the company handbook. Anything sensitive goes to a person.</p></div>
+  <div class="panel" id="p-inbox" role="tabpanel" aria-labelledby="inbox" data-nombre="Inbox" hidden><p class="intro">Sort the inbox and see what gets answered on its own and what does not.</p></div>
+  <div class="panel" id="p-voice" role="tabpanel" aria-labelledby="voice" data-nombre="Voice" hidden><p class="intro">Take the call yourself and answer like a patient.</p></div>
+  <div class="panel" id="p-cobra" role="tabpanel" aria-labelledby="cobra" data-nombre="Cobra" hidden><p class="intro">Walk through the receivables: a message per invoice and a total that goes down.</p></div>
+  <div class="panel" id="p-doccheck" role="tabpanel" aria-labelledby="doccheck" data-nombre="DocCheck" hidden><p class="intro">Fix the file and watch the verdict change.</p></div>
   <div class="ctas"><a href="en.html#contacto" class="btn btn-p">I want to try it with my process →</a><a href="en-solutions.html" class="btn btn-g">See all products</a></div>
 </div></section>
 
@@ -282,10 +230,17 @@ function revisar(doc,chk,hoy){hoy=hoy||HOY;var f=chk.obligatorios.filter(functio
   if(chk.firma_requerida&&!firmado(doc.firma_presente))f.push("SIN_FIRMA");return[f.length?"revision":"completo",f]}
 if(typeof module!=="undefined")module.exports={interpretar:interpretar,clasificar:clasificar,crearManual:crearManual,buscarManual:buscarManual,esSensible:esSensible,leerDoc:leerDoc,aNumero:aNumero,revisar:revisar};
 
+/* Laboratorio: siete productos con su propia interfaz, datos ficticios (IDs 9xxxx) y los motores reales de motores.js
+   y de las matrices de core/bots (LAB, incrustado por generar.py). Nada sale del navegador.
+   Textos bilingües con L(es,en): la página inglesa (en-demos.html) lleva lang="en". */
+var HOY=new Date("2026-10-06");  // DocCheck: fecha fija de la demo (revisar en motores.js)
 (function(){
 "use strict";
 var $=function(id){return document.getElementById(id)};
+var EN=document.documentElement.lang==="en",L=function(a,b){return EN?b:a};
 var esc=function(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+var usd=function(n){return"US$"+Number(n).toLocaleString(EN?"en-US":"es-PA",{maximumFractionDigits:2})};
 /* Motor de reglas: misma semántica que kairos_core/reglas.py (primera regla que cumple; si ninguna, revisión). */
 var OPS={"==":function(a,b){return a===b},"!=":function(a,b){return a!==b},
 ">":function(a,b){return a!=null&&a>b},">=":function(a,b){return a!=null&&a>=b},"<":function(a,b){return a!=null&&a<b},"<=":function(a,b){return a!=null&&a<=b},
@@ -296,151 +251,264 @@ function decidir(reglas,caso){
   for(var i=0;i<reglas.length;i++){var r=reglas[i];
     if(r.si.every(function(c){var v=caso[c[0]];try{return OPS[c[1]](v===undefined?null:v,c[2])}catch(e){return false}}))
       return{decision:r.decision,regla:r.id,motivo:r.motivo||"",valores:r.valores||{},i:i};}
-  return{decision:"revision",regla:"DEFECTO",motivo:"no rule applies",valores:{},i:-1};
+  return{decision:"revision",regla:"DEFECTO",motivo:L("no rule applies","no rule applies"),valores:{},i:-1};
 }
-var NOMBRE={ejecutar:"Runs",revision:"Goes to a person",no_aplica:"Does not apply"};
-function traza(el,reglas,d,extra){
-  var h='<h4><span>RULES · FIRST ONE THAT MATCHES</span><span>'+reglas.length+' rules</span></h4>';
-  reglas.forEach(function(r,i){h+='<div class="r'+(i===d.i?' hit':'')+'"><span>'+esc(r.id)+'</span><span>'+esc(r.motivo||texto(r.valores))+'</span><i>'+(i===d.i?'◀':(d.i<0||i<d.i?'·':''))+'</i></div>'});
-  if(d.i<0)h+='<div class="r hit"><span>—</span><span>No rule applies: when in doubt, a person</span><i>◀</i></div>';
-  h+='<div class="dec"><span class="b b-'+d.decision+'">'+NOMBRE[d.decision]+'</span><span>'+esc(extra||d.motivo||texto(d.valores))+'</span></div>';
-  el.innerHTML=h;
-  resumen(el,reglas.length,d,extra||d.motivo||texto(d.valores));
-}
-/* Resumen del panel: los cuatro pasos de la decisión, sus cifras y lo que el visitante ha probado (sin repetir el mismo caso).
-   Insignias: lb-ejecutar, lb-revision, lb-no_aplica (nombradas aquí para que la poda de la hoja no las quite). */
-var RM=matchMedia("(prefers-reduced-motion: reduce)").matches,HIS={};
-function resumen(el,n,d,txt){var p=el.closest(".panel"),s=p&&p.querySelector(".lab-estado");if(!s)return;
-  var H=HIS[p.id]=HIS[p.id]||{n:0,per:0,ult:""},rev=d.i<0?n:d.i+1,clave=d.regla+"|"+txt;
-  if(clave!==H.ult){H.ult=clave;H.n++;if(d.decision==="revision")H.per++;
-    var li=document.createElement("li"),hh=new Date().toTimeString().slice(0,8);
-    li.innerHTML='<time>'+hh+'</time><code>'+esc(d.regla)+'</code><span class="lb lb-'+d.decision+'">'+NOMBRE[d.decision]+'</span><span>'+esc(txt)+'</span>';
-    var ol=p.querySelector(".hist");ol.prepend(li);while(ol.children.length>6)ol.lastChild.remove();p.querySelector(".hist-n").textContent=H.n}
-  s.innerHTML='<ol class="est-pasos'+(RM?'':' corre')+'"><li>Reads the case</li><li>Checks '+rev+' of '+n+' rules</li><li>'+NOMBRE[d.decision]+'</li><li>'+(d.decision==="ejecutar"?"Verifies and logs":"Notes the reason")+'</li></ol>'+
-    '<dl class="est-kpi"><div><dt>Decision</dt><dd><span class="lb lb-'+d.decision+'">'+NOMBRE[d.decision]+'</span></dd></div><div><dt>Rule applied</dt><dd>'+esc(d.regla)+'</dd></div>'+
-    '<div><dt>Cases tried</dt><dd>'+H.n+'</dd></div><div><dt>To a person</dt><dd>'+H.per+' of '+H.n+'</dd></div></dl>';}
-function texto(v){return Object.keys(v||{}).map(function(k){return String(VAL[v[k]]||v[k]).replace(/_/g," ")}).join(" · ")}
-function chips(el,items,fn){el.innerHTML="";Object.keys(items).forEach(function(k,ix){var b=document.createElement("button");b.textContent=k;
-  b.onclick=function(){[].forEach.call(el.children,function(x){x.classList.remove("on")});b.classList.add("on");fn(k)};el.appendChild(b);if(!ix)b.classList.add("on")});}
 var M=LAB.matrices;var ETN={nuevo:"new",contactado:"contacted",diagnostico:"assessment",propuesta:"proposal",negociacion:"negotiation",ganado:"won",perdido:"lost"},CAM={numero:"number",fecha:"date",proveedor:"supplier",subtotal:"subtotal",impuesto:"tax",total:"total",embarcador:"shipper",consignatario:"consignee",origen:"origin",destino:"destination",contenedor:"container"},CAT={cotizacion:"quote",estado_pedido:"order status",factura:"invoice",reclamo:"complaint",ninguna:"none"},DCF={numero_formulario:"form number",fecha:"date",total:"total"},VAL={ticket_ventas:"sales ticket",ticket_contabilidad:"accounting ticket",acuse_cotizacion:"quote acknowledgment",acuse_factura:"invoice acknowledgment",responder:"reply",estado_pedido:"order status",cita_seccion:"cite the section",confirmacion_cita:"appointment confirmation",saldo_reclamo:"balance claim",cobro_amable:"friendly collection",cobro_firme:"firm collection",erp:"ERP"},PLN={acuse_cotizacion:"quote acknowledgment",estado_pedido:"order status",acuse_factura:"invoice acknowledgment"};
+/* Insignias: lb-ejecutar, lb-revision, lb-no_aplica (nombradas aquí para que la poda de la hoja no las quite). */
+var NOMBRE={ejecutar:L("Lo hace","Done"),revision:L("A una persona","To a person"),no_aplica:L("No aplica","Not applicable")};
+function insignia(d){return'<span class="lb lb-'+d+'">'+NOMBRE[d]+'</span>'}
+function texto(v){return Object.keys(v||{}).map(function(k){return String(VAL[v[k]]||v[k]).replace(/_/g," ")}).join(" · ")}
+/* «Por qué»: la regla que aplicó y, al abrirlo, la lista completa en orden */
+function porque(reglas,d){
+  var h='<details class="pq"><summary>'+L("Por qué: regla ","Why: rule ")+'<code>'+esc(d.regla)+'</code>'+(d.motivo?' · '+esc(d.motivo):'')+'</summary><ol>';
+  reglas.forEach(function(r,i){h+='<li'+(i===d.i?' class="hit"':'')+'><code>'+esc(r.id)+'</code><span>'+esc(r.motivo||texto(r.valores))+'</span></li>'});
+  if(d.i<0)h+='<li class="hit"><code>—</code><span>'+L("No rule applies: when in doubt, a person","No rule applies: when in doubt, a person")+'</span></li>';
+  return h+'</ol></details>'}
+/* Marco de cada producto: barra, cuerpo y registro de lo hecho */
+var REG={};
+function marco(id,sub){var p=$("p-"+id),a=document.createElement("div");a.className="app app-"+id;
+  a.innerHTML='<div class="app-bar"><b>Kairos '+p.dataset.nombre+'</b><span>'+sub+'</span>'+
+    '<button type="button" class="otro">'+L("Otro caso","Another case")+'</button></div><div class="app-c"></div>'+
+    '<aside class="app-reg" aria-live="polite"><h3>'+L("Registro","Log")+' <span>0</span></h3><ol></ol><p class="vacio">'+L("Aquí queda lo que hace el proceso.","What the process does is logged here.")+'</p></aside>';
+  p.appendChild(a);return a}
+function registro(id,regla,dec,txt){var a=document.querySelector(".app-"+id),ol=a.querySelector(".app-reg ol"),li=document.createElement("li");
+  REG[id]=(REG[id]||0)+1;a.querySelector(".app-reg h3 span").textContent=REG[id];a.querySelector(".app-reg .vacio").hidden=true;
+  li.innerHTML='<time>'+new Date().toTimeString().slice(0,5)+'</time><code>'+esc(regla)+'</code>'+insignia(dec)+'<span>'+esc(txt)+'</span>';
+  ol.prepend(li);while(ol.children.length>7)ol.lastChild.remove()}
+function pulso(el){if(!RM&&el){el.classList.remove("pulso");void el.offsetWidth;el.classList.add("pulso")}}
+var sig=function(n){return n+1+Math.floor(Math.random()*7)};
 
-/* Pestañas */
-var tabs=document.querySelectorAll(".tabs button");
-[].forEach.call(tabs,function(b){b.onclick=function(){
-  [].forEach.call(tabs,function(x){x.setAttribute("aria-selected",x===b)});
-  document.querySelectorAll(".panel").forEach(function(p){p.hidden=p.id!=="p-"+b.dataset.t});
-  try{history.replaceState(null,"","#"+b.dataset.t)}catch(e){}
-}});
-var h0=location.hash.slice(1);[].forEach.call(tabs,function(b){if(b.dataset.t===h0)b.click()});
+/* Recorrido de los 4 pasos (cabecera): avanza solo y se puede tocar */
+(function(){var v=$("viaje");if(!v)return;var bs=[].slice.call(v.querySelectorAll("button")),k=0,quieto=RM;
+  function ir(i){k=i;v.style.setProperty("--i",i);bs.forEach(function(b,j){b.setAttribute("aria-pressed",j===i);b.parentNode.classList.toggle("on",j===i);b.parentNode.classList.toggle("ya",j<i)})}
+  bs.forEach(function(b,i){b.onclick=function(){quieto=true;ir(i)}});ir(0);
+  if(!RM)setInterval(function(){if(!quieto&&!document.hidden)ir((k+1)%bs.length)},2600)})();
 
-/* CRM */
-var crm=JSON.parse(JSON.stringify(LAB.crm)),sel=null,COLS=["nuevo","contactado","diagnostico","propuesta","negociacion"];
-function pintaCRM(){
-  var k=$("crm-k");k.innerHTML="";
-  COLS.forEach(function(c){var col=document.createElement("div");col.className="col";
-    var ids=Object.keys(crm).filter(function(i){return crm[i].etapa===c});
-    col.innerHTML='<h5><span>'+(ETN[c]||c)+'</span><span>'+ids.length+'</span></h5>';
-    ids.forEach(function(i){var d=decidir(M.crm,crm[i]),o=crm[i];var t=d.decision==="ejecutar"?texto(d.valores):d.decision==="revision"?"→ salesperson":"no task";
-      var e=document.createElement("div");e.className="card"+(i===sel?" sel":"");
-      e.innerHTML='<b>#'+i+'</b> · $'+o.valor.toLocaleString("en-US")+'<br>'+o.dias_sin_contacto+(o.dias_sin_contacto===1?' day':' days')+' without contact'+(o.molesto?' · upset':'')+'<span class="t '+d.decision+'">'+esc(t)+'</span>';
-      e.onclick=function(){sel=i;pintaCRM()};col.appendChild(e)});
-    k.appendChild(col)});
-  var cerr=Object.keys(crm).filter(function(i){return COLS.indexOf(crm[i].etapa)<0}).length;
-  if(!sel)sel=Object.keys(crm)[0];
-  var o=crm[sel];
-  if(COLS.indexOf(o.etapa)<0){$("crm-t").innerHTML='<div class="dec">#'+sel+' is closed ('+o.etapa+'): outside the active funnel. '+cerr+' closed.</div>';return}
-  var d=decidir(M.crm,o);traza($("crm-t"),M.crm,d,"#"+sel+": "+(d.decision==="ejecutar"?texto(d.valores):d.motivo));
-  var ed=document.createElement("div");ed.className="edit";
-  ed.innerHTML='<b style="align-self:center">#'+sel+'</b><label>Stage<select id="crm-e">'+LAB.etapas.map(function(e){return'<option value="'+e+'"'+(e===o.etapa?' selected':'')+'>'+(ETN[e]||e)+'</option>'}).join("")+'</select></label>'+
-    '<label>Days without contact<input id="crm-d" type="number" min="0" max="120" value="'+o.dias_sin_contacto+'"></label><label><span>Upset customer</span><input id="crm-m" type="checkbox"'+(o.molesto?' checked':'')+'></label>';
-  $("crm-t").prepend(ed);
-  $("crm-e").onchange=function(){o.etapa=this.value;pintaCRM()};
-  $("crm-d").oninput=function(){o.dias_sin_contacto=Math.max(0,+this.value||0);pintaCRM();$("crm-d").focus()};
-  $("crm-m").onchange=function(){o.molesto=this.checked;pintaCRM()};
-}
-pintaCRM();
+/* Selector de productos: pestañas con icono (flechas, Inicio y Fin) */
+var tabs=[].slice.call(document.querySelectorAll(".lab-tabs [role=tab]"));
+function elegir(b,foco){tabs.forEach(function(x){var s=x===b;x.setAttribute("aria-selected",s);x.tabIndex=s?0:-1;$("p-"+x.dataset.t).hidden=!s});
+  if(foco)b.focus();try{history.replaceState(null,"","#"+b.dataset.t)}catch(e){}}
+tabs.forEach(function(b,i){b.onclick=function(){elegir(b)};
+  b.onkeydown=function(e){var n={ArrowRight:i+1,ArrowLeft:i-1,Home:0,End:tabs.length-1}[e.key];if(n!=null){e.preventDefault();elegir(tabs[(n+tabs.length)%tabs.length],true)}}});
+var h0=location.hash.slice(1);elegir(tabs.filter(function(b){return b.dataset.t===h0})[0]||tabs[0]);
+window.addEventListener("hashchange",function(){var b=tabs.filter(function(x){return x.dataset.t===location.hash.slice(1)})[0];if(b){elegir(b);$("lab").scrollIntoView({behavior:RM?"auto":"smooth",block:"start"})}});
 
-/* Docs: extracción + cuadre, como bot_docs.leer_documento */
-var docTipo="factura";
-function tipoDe(t){return /bill of lading|b\/l no/i.test(t)?"bl":"factura"}
-function pintaDocs(){var t=$("docs-txt").value;docTipo=tipoDe(t);var c=leerDoc(t,docTipo);
-  var h='<tr><th>Field ('+(docTipo==="bl"?"B/L":"invoice")+')</th><th>Value read</th></tr>';
-  Object.keys(c.valores).forEach(function(k){h+='<tr><td>'+(CAM[k]||k)+'</td><td'+(c.valores[k]?'':' class="no"')+'>'+esc(c.valores[k]||"— missing")+'</td></tr>'});
-  if(docTipo==="factura"&&c.total_cuadra!==null)h+='<tr><td>subtotal + tax = total</td><td'+(c.total_cuadra?'>✓ adds up':' class="no">✗ does not add up')+'</td></tr>';
-  $("docs-c").innerHTML=h;var d=decidir(M.docs,c);
-  traza($("docs-t"),M.docs,d,d.decision==="ejecutar"?"Loaded into the ERP and verified":(c.faltan.length?"Missing: "+c.faltan.map(function(x){return CAM[x]||x}).join(", "):d.motivo));}
-chips($("docs-ej"),(function(){var o={};Object.keys(LAB.docs).forEach(function(i){o["#"+i+" · "+(LAB.docs[i].tipo==="bl"?"B/L":"invoice")]=i});return o})(),function(k){
-  var i=k.slice(1,6);$("docs-txt").value=LAB.docs[i].texto;pintaDocs()});
-$("docs-txt").value=LAB.docs[Object.keys(LAB.docs)[0]].texto;$("docs-txt").oninput=pintaDocs;pintaDocs();
+/* ───── CRM: tablero por etapas, ficha y próxima acción ───── */
+(function(){var A=marco("crm",L("Embudo de ventas","Sales pipeline")),C=A.querySelector(".app-c");
+  var ACT=["nuevo","contactado","diagnostico","propuesta","negociacion"],ETQ={nuevo:L("Nuevo","New"),contactado:L("Contactado","Contacted"),diagnostico:L("Diagnóstico","Assessment"),
+    propuesta:L("Propuesta","Proposal"),negociacion:L("Negociación","Negotiation"),ganado:L("Ganada","Won"),perdido:L("Perdida","Lost")};
+  var EMP=["Ferretería Demo","Distribuidora Demo","Hotel Demo","Constructora Demo","Farmacia Demo","Taller Demo","Clínica Demo","Colegio Demo","Óptica Demo","Mueblería Demo"];
+  var VEN=["Ana","Luis","Marta"],TAR={primer_contacto_hoy:L("Primer contacto hoy","First contact today"),seguimiento:L("Dar seguimiento","Follow up"),
+    recordar_propuesta:L("Recordar la propuesta","Chase the proposal"),avisar_supervisor:L("Avisar al supervisor: se enfría","Alert the supervisor: going cold"),
+    marcar_perdida_y_avisar:L("Dormida: marcar perdida y avisar","Dormant: mark lost and alert")};
+  var ops={},sel=null,ult=90607;
+  Object.keys(LAB.crm).forEach(function(i,k){ops[i]=JSON.parse(JSON.stringify(LAB.crm[i]));ops[i].emp=EMP[k%EMP.length];ops[i].ven=VEN[k%3]});
+  C.innerHTML='<div class="crm-top"><dl class="kpis"></dl><button type="button" class="b2" id="crm-dia">'+L("Pasar un día","Advance one day")+'</button></div><div class="crm-g"><div class="crm-k" id="crm-k"></div><div class="ficha" id="crm-f"></div></div>';
+  function accion(o){var d=decidir(M.crm,o);return{d:d,t:d.decision==="ejecutar"?(TAR[d.valores.tarea]||texto(d.valores)):d.decision==="revision"?L("Lo decide ","Decided by ")+o.ven:L("Sin tarea hoy","No task today")}}
+  function pinta(){var k=$("crm-k"),act=0,dorm=0;k.innerHTML="";
+    ACT.concat(["cerrado"]).forEach(function(c){var ids=Object.keys(ops).filter(function(i){return c==="cerrado"?ACT.indexOf(ops[i].etapa)<0:ops[i].etapa===c});
+      var col=document.createElement("div");col.className="col"+(c==="cerrado"?" cerr":"");col.dataset.e=c;
+      var sum=ids.reduce(function(s,i){return s+ops[i].valor},0);
+      col.innerHTML='<h4><span>'+(c==="cerrado"?L("Cerradas","Closed"):ETQ[c])+'</span><b>'+ids.length+'</b></h4><small>'+usd(sum)+'</small>';
+      ids.forEach(function(i){var o=ops[i],a=accion(o),dormida=a.d.valores.tarea==="mark_lost_and_notify"||a.d.valores.tarea==="notify_supervisor";
+        if(c!=="cerrado"){act+=o.valor;if(dormida)dorm++}
+        var b=document.createElement("button");b.type="button";b.className="tj "+a.d.decision+(i===sel?" sel":"")+(dormida?" dorm":"");b.draggable=c!=="cerrado";b.dataset.i=i;
+        b.innerHTML='<b>'+esc(o.emp)+'</b><span>#'+i+' · '+usd(o.valor)+'</span>'+(c==="cerrado"?'<em>'+ETQ[o.etapa]+'</em>':'<span>'+L("Sin contacto: ","No contact: ")+o.dias_sin_contacto+' d'+(o.molesto?' · '+L("molesto","upset"):'')+'</span><em>'+esc(a.t)+'</em>');
+        b.onclick=function(){sel=i;pinta();var x=document.querySelector('#crm-k [data-i="'+i+'"]');if(x)x.focus()};
+        b.ondragstart=function(e){e.dataTransfer.setData("text/plain",i)};
+        col.appendChild(b)});
+      col.ondragover=function(e){if(c!=="cerrado"){e.preventDefault();col.classList.add("sobre")}};col.ondragleave=function(){col.classList.remove("sobre")};
+      col.ondrop=function(e){e.preventDefault();var i=e.dataTransfer.getData("text/plain");if(ops[i])mover(i,c)};
+      k.appendChild(col)});
+    A.querySelector(".kpis").innerHTML='<div><dt>'+L("En juego","In play")+'</dt><dd>'+usd(act)+'</dd></div><div><dt>'+L("Se enfrían","Going cold")+'</dt><dd'+(dorm?' class="alerta"':'')+'>'+dorm+'</dd></div>';
+    ficha()}
+  function mover(i,e){var o=ops[i];if(o.etapa===e)return;o.etapa=e;o.dias_sin_contacto=0;sel=i;var a=accion(o);
+    registro("crm",a.d.regla,a.d.decision,o.emp+" → "+ETQ[e]+": "+a.t);pinta();pulso(document.querySelector('#crm-k [data-i="'+i+'"]'))}
+  function ficha(){var F=$("crm-f");if(!sel||!ops[sel]){F.innerHTML='<p class="vacio">'+L("Toque una tarjeta para ver la ficha. También puede arrastrarla a otra etapa.","Tap a card to open it. You can also drag it to another stage.")+'</p>';return}
+    var o=ops[sel],a=accion(o),k=ACT.indexOf(o.etapa);
+    F.innerHTML='<h4>'+esc(o.emp)+'</h4><p class="sub">#'+sel+' · '+L("vendedor: ","rep: ")+o.ven+'</p>'+
+      '<dl><div><dt>'+L("Valor","Value")+'</dt><dd>'+usd(o.valor)+'</dd></div><div><dt>'+L("Etapa","Stage")+'</dt><dd>'+ETQ[o.etapa]+'</dd></div><div><dt>'+L("Sin contacto","No contact")+'</dt><dd>'+o.dias_sin_contacto+' d</dd></div></dl>'+
+      '<div class="prox '+a.d.decision+'"><small>'+L("Próxima acción","Next action")+'</small><b>'+esc(a.t)+'</b></div>'+
+      (k>=0?'<div class="fila-b"><button type="button" class="b2" data-m="-1"'+(k===0?' disabled':'')+'>'+L("Etapa anterior","Previous stage")+'</button><button type="button" class="b2" data-m="1">'+(k===ACT.length-1?L("Marcar ganada","Mark won"):L("Etapa siguiente","Next stage"))+'</button></div>'+
+      '<div class="fila-b"><button type="button" class="b2" id="crm-c">'+L("Registrar contacto","Log a contact")+'</button><label class="chk"><input type="checkbox" id="crm-m"'+(o.molesto?' checked':'')+'> '+L("Cliente molesto","Upset customer")+'</label></div>':'')+porque(M.crm,a.d);
+    [].forEach.call(F.querySelectorAll("[data-m]"),function(b){b.onclick=function(){var n=k+(+b.dataset.m);mover(sel,n>=ACT.length?"ganado":ACT[n])}});
+    if(k>=0){$("crm-c").onclick=function(){o.dias_sin_contacto=0;var a2=accion(o);registro("crm",a2.d.regla,a2.d.decision,o.emp+": "+L("contacto registrado","contact logged"));pinta()};
+      $("crm-m").onchange=function(){o.molesto=this.checked;var a2=accion(o);registro("crm",a2.d.regla,a2.d.decision,o.emp+": "+a2.t);pinta()}}}
+  $("crm-dia").onclick=function(){var n=0;Object.keys(ops).forEach(function(i){var o=ops[i];if(ACT.indexOf(o.etapa)<0)return;var antes=accion(o).t;o.dias_sin_contacto++;var a=accion(o);
+      if(a.t!==antes){n++;registro("crm",a.d.regla,a.d.decision,o.emp+": "+a.t)}});if(!n)registro("crm","—","no_aplica",L("Pasó un día: nada cambió","A day passed: nothing changed"));pinta()};
+  A.querySelector(".otro").onclick=function(){ult=sig(ult);var i=String(ult);ops[i]={etapa:"nuevo",dias_sin_contacto:0,valor:400+Math.floor(Math.random()*40)*100,molesto:false,
+      emp:EMP[Math.floor(Math.random()*EMP.length)],ven:VEN[ult%3]};sel=i;var a=accion(ops[i]);registro("crm",a.d.regla,a.d.decision,ops[i].emp+": "+L("oportunidad nueva · ","new opportunity · ")+a.t);pinta()};
+  pinta()})();
 
-/* Assist: misma búsqueda que bot_assist.Manual */
-var MAN=crearManual(LAB.manual),SEC=MAN.nombres;  /* misma búsqueda que bot_assist.Manual (motores.js) */
-function pintaAssist(){var q=$("assist-q").value.trim();
-  if(!q){$("assist-r").innerHTML='<small>Answer</small>Type a question.';$("assist-t").innerHTML="";return}
-  var b=buscarManual(MAN,q),caso={seccion:b[0],confianza:b[1],sensible:esSensible(q)},d=decidir(M.assist,caso);
-  $("assist-r").innerHTML='<small>Answer · match with the manual '+Math.round(b[1]*100)+'%</small>'+(d.decision==="ejecutar"?
-    'According to the manual, section «'+esc(b[0])+'»: '+esc(LAB.manual[b[0]]):'I cannot answer this myself: '+esc(d.motivo)+'. I am passing your question to the responsible person.')+
-    '<div class="conf"><i style="width:'+Math.round(b[1]*100)+'%"></i></div>';
-  traza($("assist-t"),M.assist,d);}
-chips($("assist-ej"),(function(){var o={};Object.keys(LAB.preguntas).forEach(function(i){o[LAB.preguntas[i]]=i});return o})(),function(k){$("assist-q").value=k;pintaAssist()});
-$("assist-m").innerHTML=SEC.map(function(s){return'<dt>'+esc(s)+'</dt><dd>'+esc(LAB.manual[s])+'</dd>'}).join("");
-$("assist-q").value=LAB.preguntas[Object.keys(LAB.preguntas)[0]];$("assist-q").oninput=pintaAssist;pintaAssist();
+/* ───── Docs: plantilla, campos, documento en vivo y revisión ───── */
+(function(){var A=marco("docs",L("Facturas y conocimientos de embarque","Invoices and bills of lading")),C=A.querySelector(".app-c");
+  var P={factura:{t:L("Factura","Invoice"),c:[["numero","FACTURA COMERCIAL No. ",L("Número","Number")],["fecha","Fecha: ",L("Fecha","Date")],["proveedor","Proveedor: ",L("Proveedor","Supplier")],
+      ["subtotal","Subtotal: ","Subtotal"],["impuesto","Impuesto: ",L("Impuesto","Tax")],["total","Total: ","Total"]]},
+    bl:{t:"B/L",c:[["numero","BILL OF LADING B/L No. ",L("Número","Number")],["embarcador","Shipper: ",L("Embarcador","Shipper")],["consignatario","Consignee: ",L("Consignatario","Consignee")],
+      ["origen","Port of loading: ",L("Puerto de carga","Port of loading")],["destino","Port of discharge: ",L("Puerto de descarga","Port of discharge")],["contenedor","Container: ",L("Contenedor","Container")]]}};
+  var tipo="factura",val={},ej=Object.keys(LAB.docs),k=0,ultimo="";
+  C.innerHTML='<div class="docs-g"><div class="docs-f"><div class="seg" role="group" aria-label="'+L("Plantilla","Template")+'"><button type="button" data-p="factura">'+P.factura.t+'</button><button type="button" data-p="bl">B/L</button></div><div id="docs-in"></div></div>'+
+    '<div class="hoja"><pre id="docs-h"></pre><span class="sello" id="docs-s"></span></div><div class="docs-r"><ul class="req" id="docs-r"></ul><div id="docs-d" aria-live="polite"></div></div></div>';
+  function cargar(i){var x=LAB.docs[i];tipo=x.tipo;val=leerDoc(x.texto,tipo).valores;Object.keys(val).forEach(function(c){if(val[c]==null)val[c]=""});campos()}
+  function campos(){[].forEach.call(C.querySelectorAll("[data-p]"),function(b){b.setAttribute("aria-pressed",b.dataset.p===tipo)});
+    $("docs-in").innerHTML=P[tipo].c.map(function(c){return'<label>'+c[2]+'<input data-c="'+c[0]+'" value="'+esc(val[c[0]]||"")+'" spellcheck="false"></label>'}).join("")+
+      (tipo==="factura"?'<button type="button" class="b2" id="docs-sum">'+L("Calcular el total","Compute the total")+'</button>':'');
+    [].forEach.call($("docs-in").querySelectorAll("input"),function(x){x.oninput=function(){val[x.dataset.c]=x.value;revisa()}});
+    if($("docs-sum"))$("docs-sum").onclick=function(){var a=aNumero(val.subtotal),b=aNumero(val.impuesto);if(a!=null&&b!=null){val.total=(a+b).toFixed(2);campos()}};
+    revisa()}
+  function revisa(){var txt=P[tipo].c.filter(function(c){return String(val[c[0]]||"").trim()}).map(function(c){return c[1]+val[c[0]]}).join("\n");
+    var r=leerDoc(txt,tipo),d=decidir(M.docs,r);
+    $("docs-h").innerHTML=P[tipo].c.map(function(c){var v=r.valores[c[0]];return'<span class="'+(v?"si":"no")+'">'+esc(c[1])+(v?'<mark>'+esc(v)+'</mark>':'<i>'+L("falta","missing")+'</i>')+'</span>'}).join("\n");
+    $("docs-r").innerHTML=P[tipo].c.map(function(c){var v=r.valores[c[0]];return'<li class="'+(v?"si":"no")+'">'+c[2]+'</li>'}).join("")+
+      (tipo==="factura"&&r.total_cuadra!==null?'<li class="'+(r.total_cuadra?"si":"no")+'">'+L("Subtotal + impuesto = total","Subtotal + tax = total")+'</li>':'');
+    var ok=d.decision==="ejecutar",msg=ok?L("Cargado al sistema y verificado","Loaded into the system and verified"):(r.faltan.length?L("Falta: ","Missing: ")+r.faltan.join(", "):d.motivo);
+    $("docs-s").textContent=ok?L("Cargado","Loaded"):L("Revisar","Review");$("docs-s").className="sello "+d.decision;
+    $("docs-d").innerHTML='<div class="dict '+d.decision+'">'+insignia(d.decision)+'<span>'+esc(msg)+'</span></div>'+porque(M.docs,d);
+    var cl=d.regla+msg;if(cl!==ultimo){ultimo=cl;registro("docs",d.regla,d.decision,(val.numero||"#")+": "+msg)}}
+  [].forEach.call(C.querySelectorAll("[data-p]"),function(b){b.onclick=function(){if(tipo!==b.dataset.p){tipo=b.dataset.p;val={};campos()}}});
+  A.querySelector(".otro").onclick=function(){k=(k+1)%ej.length;cargar(ej[k])};
+  cargar(ej[0])})();
 
-/* Inbox: como bot_inbox.clasificar */
-var ACC={responder:"Replies with the template",ticket_ventas:"Opens a ticket for Sales and sends an acknowledgment",ticket_contabilidad:"Opens a ticket for Accounting and sends an acknowledgment"};
-function pintaInbox(){var c=clasificar($("inbox-a").value,$("inbox-c").value),d=decidir(M.inbox,c);
-  $("inbox-r").innerHTML='<small>Category · '+esc(CAT[c.categoria]||c.categoria.replace("_"," "))+(c.urgente?' · urgent':'')+'</small>'+(d.decision==="ejecutar"?
-    esc(ACC[d.valores.accion])+' «'+esc(PLN[d.valores.plantilla]||d.valores.plantilla.replace(/_/g," "))+'».':'It stays in a person’s inbox: '+esc(d.motivo)+'.');
-  traza($("inbox-t"),M.inbox,d);}
-chips($("inbox-ej"),(function(){var o={};Object.keys(LAB.inbox).forEach(function(i){o[LAB.inbox[i].asunto]=i});return o})(),function(k){
-  var e=LAB.inbox[Object.keys(LAB.inbox).filter(function(i){return LAB.inbox[i].asunto===k})[0]];$("inbox-a").value=e.asunto;$("inbox-c").value=e.cuerpo;pintaInbox()});
-var e0=LAB.inbox[Object.keys(LAB.inbox)[0]];$("inbox-a").value=e0.asunto;$("inbox-c").value=e0.cuerpo;$("inbox-a").oninput=$("inbox-c").oninput=pintaInbox;pintaInbox();
+/* ───── Assist: chat sobre el manual, con fuente y bloqueo de lo sensible ───── */
+(function(){var A=marco("assist",L("Manual interno de Empresa Demo","Demo Company internal handbook")),C=A.querySelector(".app-c");
+  var MAN=crearManual(LAB.manual),PQ=Object.keys(LAB.preguntas).map(function(i){return LAB.preguntas[i]}),k=0;
+  C.innerHTML='<div class="as-g"><div class="chat"><ol id="as-l" aria-live="polite"></ol><div class="sug" id="as-s"></div>'+
+    '<form id="as-f"><input id="as-q" autocomplete="off" aria-label="'+L("Pregunta","Question")+'" placeholder="'+L("Pregunte algo del manual…","Ask something from the handbook…")+'"><button class="b2">'+L("Enviar","Send")+'</button></form></div>'+
+    '<div class="libro"><h4>'+L("El manual","The handbook")+'</h4><dl id="as-m"></dl></div></div>';
+  $("as-m").innerHTML=MAN.nombres.map(function(s){return'<div data-s="'+esc(s)+'"><dt>§ '+esc(s)+'</dt><dd>'+esc(LAB.manual[s])+'</dd></div>'}).join("");
+  $("as-s").innerHTML=PQ.map(function(q){return'<button type="button">'+esc(q)+'</button>'}).join("");
+  [].forEach.call($("as-s").children,function(b){b.onclick=function(){pregunta(b.textContent)}});
+  function burbuja(cls,h){var li=document.createElement("li");li.className=cls;li.innerHTML=h;var l=$("as-l");l.appendChild(li);while(l.children.length>8)l.firstChild.remove();l.scrollTop=l.scrollHeight;pulso(li);return li}
+  function pregunta(q){q=q.trim();if(!q)return;burbuja("yo","<p>"+esc(q)+"</p>");
+    var b=buscarManual(MAN,q),caso={seccion:b[0],confianza:b[1],sensible:esSensible(q)},d=decidir(M.assist,caso);
+    [].forEach.call($("as-m").children,function(x){x.classList.toggle("cita",d.decision==="ejecutar"&&x.dataset.s===b[0])});
+    var h;if(d.decision==="ejecutar")h='<p>'+esc(LAB.manual[b[0]])+'</p><cite>'+L("Fuente: manual, § ","Source: handbook, § ")+esc(b[0])+'</cite><span class="conf" title="'+L("Coincidencia","Match")+'"><i style="width:'+Math.round(b[1]*100)+'%"></i></span>';
+    else if(caso.sensible)h='<p class="bloq">'+L("Tema sensible: no lo respondo yo.","Sensitive topic: I don’t answer this.")+'</p><p>'+L("Le paso su pregunta a Recursos Humanos.","I’m passing your question to HR.")+'</p>';
+    else h='<p>'+L("El manual no lo cubre, así que no invento.","The handbook doesn’t cover this, so I won’t make it up.")+'</p><p>'+L("Le paso su pregunta a la persona responsable.","I’m passing your question to the person in charge.")+'</p>';
+    burbuja("kai "+d.decision+(caso.sensible?" sens":""),h+porque(M.assist,d));
+    registro("assist",d.regla,d.decision,q.slice(0,60))}
+  $("as-f").onsubmit=function(e){e.preventDefault();pregunta($("as-q").value);$("as-q").value=""};
+  A.querySelector(".otro").onclick=function(){pregunta(PQ[k++%PQ.length])};
+  burbuja("kai","<p>"+L("Hola. Respondo con el manual de la empresa y siempre le digo de qué sección sale.","Hi. I answer from the company handbook and always tell you which section it comes from.")+"</p>")})();
 
-/* Voice: como bot_voice.interpretar */
-var RES={confirmada:"✓ Appointment confirmed in the calendar",reprogramar:"↻ A link to reschedule is sent",humano:"→ A person calls back"};
-var vsel=Object.keys(LAB.voice)[0];
-function pintaVoice(){var h='<tr><th>Appt.</th><th>Consent</th><th>Attempts</th><th>Time</th><th></th></tr>';
-  Object.keys(LAB.voice).forEach(function(i){var c=LAB.voice[i];h+='<tr'+(i===vsel?' class="sel"':'')+'><td>#'+i+'</td><td>'+(c.consentimiento?'yes':'<span class="no">no</span>')+'</td><td>'+c.intentos+'</td><td>'+c.hora_local+':00</td><td><button data-i="'+i+'">Select</button></td></tr>'});
-  $("voice-l").innerHTML=h;[].forEach.call($("voice-l").querySelectorAll("button"),function(b){b.onclick=function(){vsel=b.dataset.i;pintaVoice()}});
-  var d=decidir(M.voice,LAB.voice[vsel]);traza($("voice-t"),M.voice,d,d.decision==="ejecutar"?"Calls now with the approved script":d.motivo);
-  var L=$("voice-c");
-  if(d.decision!=="ejecutar"){L.innerHTML='<p>#'+vsel+': no call is made. '+esc(d.motivo)+'.</p>';return}
-  L.innerHTML='<p>☎ '+esc(LAB.guion.saludo.replace("{empresa}","Clínica Demo").replace("{fecha}","jueves").replace("{hora}",LAB.voice[vsel].hora_local+":00"))+' '+esc(LAB.guion.opciones)+'</p><p style="margin:6px 0 0;font-size:.85rem;opacity:.8">In English: “Hello, we are calling from Demo Clinic to confirm your appointment on Thursday at '+LAB.voice[vsel].hora_local+':00. To confirm, say yes or press 1. To change it, say change or press 2.”</p>'+
-    '<div class="ops"><button data-r="1">Press 1</button><button data-r="2">Press 2</button><button data-r="quiero hablar con alguien">“Quiero hablar con alguien” (I want to talk to someone)</button></div>'+
-    '<input id="voice-r" placeholder="…or type what they would reply" aria-label="Reply"><p id="voice-o" style="margin:12px 0 0;color:#19E3C9"></p>';
-  var out=function(r){$("voice-o").textContent=RES[interpretar(r)]};
-  [].forEach.call(L.querySelectorAll("button"),function(b){b.onclick=function(){out(b.dataset.r)}});
-  $("voice-r").onchange=function(){out(this.value)};
-}
-pintaVoice();
+/* ───── Inbox: bandeja que se clasifica y prioriza ───── */
+(function(){var A=marco("inbox",L("Bandeja de entrada de Empresa Demo","Demo Company inbox")),C=A.querySelector(".app-c");
+  var EXTRA=[["URGENTE: precio de 50 sillas","Necesito la cotización hoy mismo."],["Cotización y factura","Quiero una cotización y además la factura de marzo."],
+    ["Número de guía","No he recibido mi paquete, ¿me da el número de guía?"],["Proforma para licitación","Por favor envíen una proforma de 30 escritorios."],["Mal servicio","El técnico no llegó, quiero presentar un reclamo."]];
+  var CAT={cotizacion:L("Ventas","Sales"),estado_pedido:L("Pedidos","Orders"),factura:L("Contabilidad","Accounting"),reclamo:L("Reclamos","Complaints"),ninguna:L("Sin categoría","Uncategorized")};
+  var ACC={responder:L("Respondido con la plantilla","Replied with the template"),ticket_ventas:L("Ticket a Ventas y acuse enviado","Ticket to Sales, acknowledgment sent"),ticket_contabilidad:L("Ticket a Contabilidad y acuse enviado","Ticket to Accounting, acknowledgment sent")};
+  var DE=["compras@ferreteria.demo","ana@hotel.demo","pagos@colegio.demo","info@taller.demo","luis@optica.demo"];
+  var bz=[],sel=null,ult=90905,ke=0;
+  Object.keys(LAB.inbox).forEach(function(i,k){bz.push({id:i,de:DE[k%5],a:LAB.inbox[i].asunto,c:LAB.inbox[i].cuerpo})});
+  C.innerHTML='<div class="ib-top"><ul class="cont" id="ib-n"></ul><button type="button" class="b2" id="ib-todo">'+L("Clasificar la bandeja","Sort the inbox")+'</button></div>'+
+    '<div class="ib-g"><ul class="lista" id="ib-l"></ul><div class="lect" id="ib-r" aria-live="polite"></div></div>'+
+    '<details class="esc-c"><summary>'+L("Escribir un correo de prueba","Write a test email")+'</summary><form id="ib-f"><input id="ib-a" aria-label="'+L("Asunto","Subject")+'" placeholder="'+L("Asunto","Subject")+'"><textarea id="ib-c" aria-label="'+L("Cuerpo del correo","Email body")+'" placeholder="'+L("Cuerpo del correo","Email body")+'"></textarea><button class="b2">'+L("Enviar a la bandeja","Send to the inbox")+'</button></form></details>';
+  function clasifica(m){if(m.r)return;m.r=clasificar(m.a,m.c);m.d=decidir(M.inbox,m.r);
+    registro("inbox",m.d.regla,m.d.decision,m.a+" → "+(m.d.decision==="ejecutar"?ACC[m.d.valores.accion]:m.d.motivo))}
+  function prio(m){return!m.r?2:m.d.decision!=="ejecutar"?(m.r.urgente?0:1):3}
+  function pinta(){var n={};bz.forEach(function(m){if(m.r){var c=m.d.decision==="ejecutar"?m.r.categoria:"persona";n[c]=(n[c]||0)+1}});
+    $("ib-n").innerHTML=["cotizacion","estado_pedido","factura","persona"].map(function(c){return'<li class="c-'+c+'"><b>'+(n[c]||0)+'</b>'+(c==="persona"?L("Para una persona","For a person"):CAT[c])+'</li>'}).join("")+
+      '<li><b>'+bz.filter(function(m){return!m.r}).length+'</b>'+L("Sin leer","Unread")+'</li>';
+    var or=bz.slice().sort(function(a,b){return prio(a)-prio(b)||(a.id<b.id?1:-1)});
+    $("ib-l").innerHTML=or.map(function(m){var t=!m.r?'<em class="nuevo">'+L("Nuevo","New")+'</em>':'<em class="'+m.d.decision+'">'+(m.d.decision==="ejecutar"?CAT[m.r.categoria]:L("Una persona","A person"))+(m.r.urgente?' · '+L("urgente","urgent"):'')+'</em>';
+      return'<li><button type="button" data-i="'+m.id+'" class="'+(m.id===sel?"sel ":"")+(m.r?"":"nl")+'"><span>'+esc(m.de)+'</span><b>'+esc(m.a||"—")+'</b>'+t+'</button></li>'}).join("");
+    [].forEach.call($("ib-l").querySelectorAll("button"),function(b){b.onclick=function(){sel=b.dataset.i;clasifica(bz.filter(function(m){return m.id===sel})[0]);pinta()}});
+    var m=bz.filter(function(x){return x.id===sel})[0],R=$("ib-r");
+    if(!m){R.innerHTML='<p class="vacio">'+L("Abra un correo o clasifique toda la bandeja.","Open an email or sort the whole inbox.")+'</p>';return}
+    R.innerHTML='<small>'+esc(m.de)+' · #'+m.id+'</small><h4>'+esc(m.a)+'</h4><p>'+esc(m.c)+'</p><div class="dict '+m.d.decision+'">'+insignia(m.d.decision)+'<span>'+
+      esc(m.d.decision==="ejecutar"?ACC[m.d.valores.accion]+" · "+String(m.d.valores.plantilla).replace(/_/g," "):L("Queda con una persona: ","Stays with a person: ")+m.d.motivo)+'</span></div>'+porque(M.inbox,m.d)}
+  $("ib-todo").onclick=function(){var pend=bz.filter(function(m){return!m.r});(function uno(){var m=pend.shift();if(!m)return;clasifica(m);sel=m.id;pinta();if(pend.length)setTimeout(uno,RM?0:450)})()};
+  function nuevo(a,c){ult=sig(ult);bz.push({id:String(ult),de:DE[ult%5],a:a,c:c});sel=null;pinta();pulso($("ib-l").querySelector('[data-i="'+ult+'"]'))}
+  $("ib-f").onsubmit=function(e){e.preventDefault();if($("ib-a").value.trim()||$("ib-c").value.trim()){nuevo($("ib-a").value,$("ib-c").value);$("ib-a").value=$("ib-c").value=""}};
+  A.querySelector(".otro").onclick=function(){var x=EXTRA[ke++%EXTRA.length];nuevo(x[0],x[1])};
+  pinta()})();
 
-/* Cobra: misma matriz que core/bots/cobra */
-var csel=Object.keys(LAB.cobra)[0];
-function pintaCobra(){var h='<tr><th>Invoice</th><th>Status</th><th>Days</th><th>Remind.</th><th></th></tr>';
-  Object.keys(LAB.cobra).forEach(function(i){var c=LAB.cobra[i];h+='<tr'+(i===csel?' class="sel"':'')+'><td>#'+i+'</td><td>'+esc(({en_disputa:"in dispute",vencida:"overdue"})[c.estado]||c.estado.replace("_"," "))+(c.promesa_pago_vigente?' · promise':'')+'</td><td>'+c.dias_vencida+'</td><td>'+c.recordatorios_enviados+'</td><td><button data-i="'+i+'">Select</button></td></tr>'});
-  $("cobra-l").innerHTML=h;[].forEach.call($("cobra-l").querySelectorAll("button"),function(b){b.onclick=function(){csel=b.dataset.i;pintaCobra()}});
-  var c=LAB.cobra[csel],d=decidir(M.cobra,c);
-  $("cobra-r").innerHTML='<small>Message · only the invoice number and days overdue</small>'+(d.decision==="ejecutar"?
-    (d.valores.plantilla==="cobro_amable"?'Hello, a reminder that invoice '+csel+' fell due '+c.dias_vencida+' days ago. If you have already paid, please ignore this message.':
-    'Invoice '+csel+' is '+c.dias_vencida+' days overdue. Please settle it or reply to agree on a payment date.'):'Not sent: '+esc(d.motivo)+'.');
-  traza($("cobra-t"),M.cobra,d);}
-pintaCobra();
+/* ───── Voice: llamada paso a paso con transcripción ───── */
+(function(){var A=marco("voice",L("Confirmación de citas de Clínica Demo","Demo Clinic appointment confirmations")),C=A.querySelector(".app-c");
+  var citas={},sel=null,ult=91006,DIA=[L("jueves","Thursday"),L("viernes","Friday"),L("lunes","Monday")];
+  var EST={por_confirmar:L("Por confirmar","To confirm"),confirmada:L("Confirmada","Confirmed"),reprogramada:L("Reprogramada","Rescheduled"),persona:L("A una persona","To a person"),no:L("No se llama","Not called")};
+  Object.keys(LAB.voice).forEach(function(i,k){citas[i]=JSON.parse(JSON.stringify(LAB.voice[i]));citas[i].dia=DIA[k%3];citas[i].vista="por_confirmar"});
+  C.innerHTML='<div class="vo-g"><ul class="citas" id="vo-l"></ul><div class="tel"><div class="tel-p"><span id="vo-e">'+L("Elija una cita","Pick an appointment")+'</span><ol id="vo-t" aria-live="polite"></ol><div id="vo-o"></div></div></div></div>';
+  var hh=function(h){return h+":00"};
+  function lista(){$("vo-l").innerHTML=Object.keys(citas).map(function(i){var c=citas[i];return'<li><button type="button" data-i="'+i+'"'+(i===sel?' class="sel"':'')+'><b>#'+i+'</b><span>'+c.dia+' · '+hh(c.hora_local)+'</span><small>'+
+      (c.consentimiento?L("acepta llamadas","accepts calls"):L("sin permiso de llamada","no call consent"))+' · '+L("intentos: ","attempts: ")+c.intentos+'</small><em class="v-'+c.vista+'">'+EST[c.vista]+'</em></button></li>'}).join("");
+    [].forEach.call($("vo-l").querySelectorAll("button"),function(b){b.onclick=function(){sel=b.dataset.i;lista();inicio()}})}
+  function di(q,t){var li=document.createElement("li");li.className=q;li.textContent=t;$("vo-t").appendChild(li);pulso(li)}
+  function ops(h){$("vo-o").innerHTML=h}
+  function inicio(){var c=citas[sel];$("vo-t").innerHTML="";$("vo-e").textContent="#"+sel+" · "+c.dia+" "+hh(c.hora_local);
+    ops('<button type="button" class="llamar">'+L("Llamar","Call")+'</button>');$("vo-o").querySelector("button").onclick=llamar}
+  function llamar(){var c=citas[sel],d=decidir(M.voice,c);
+    if(d.decision!=="ejecutar"){c.vista=d.decision==="revision"?"persona":"no";di("sis",L("No se llama: ","Not called: ")+d.motivo+".");ops(porque(M.voice,d));registro("voice",d.regla,d.decision,"#"+sel+": "+d.motivo);lista();return}
+    c.intentos++;$("vo-e").textContent=L("En llamada · #","On call · #")+sel;
+    di("kai",LAB.guion.saludo.replace("{empresa}","Clínica Demo").replace("{fecha}",c.dia).replace("{hora}",hh(c.hora_local))+" "+LAB.guion.opciones);
+    var R=[["1",L("Marcar 1","Press 1")],["2",L("Marcar 2","Press 2")],["sí, ahí estaré",L("«Sí, ahí estaré»","«Sí, ahí estaré» (yes)")],["mejor otro día",L("«Mejor otro día»","«Mejor otro día» (another day)")],["¿quién habla?",L("«¿Quién habla?»","«¿Quién habla?» (who is this?)")]];
+    ops('<div class="resp-b">'+R.map(function(r){return'<button type="button" data-r="'+esc(r[0])+'">'+r[1]+'</button>'}).join("")+'</div><form id="vo-f"><input id="vo-r" aria-label="'+L("Su respuesta","Your answer")+'" placeholder="'+L("…o escriba lo que respondería","…or type what you would answer")+'"></form>');
+    [].forEach.call($("vo-o").querySelectorAll("[data-r]"),function(b){b.onclick=function(){responde(b.dataset.r,b.textContent)}});
+    $("vo-f").onsubmit=function(e){e.preventDefault();var v=$("vo-r").value.trim();if(v)responde(v,v)};
+    registro("voice",d.regla,d.decision,"#"+sel+": "+L("llamada con el guion aprobado","call with the approved script"))}
+  function responde(r,vis){var c=citas[sel],x=interpretar(r);di("cli",vis);
+    if(x==="confirmada"){c.vista="confirmada";di("kai",L("Listo, su cita queda confirmada. Gracias.","Done, your appointment is confirmed. Thank you."));fin("confirmada")}
+    else if(x==="reprogramar"){di("kai",L("Con gusto. Tengo estos espacios:","Sure. I have these slots:"));
+      var S=[[DIA[1],9],[DIA[1],11],[DIA[2],10]];ops('<div class="resp-b">'+S.map(function(s,j){return'<button type="button" data-j="'+j+'">'+s[0]+' '+hh(s[1])+'</button>'}).join("")+'</div>');
+      [].forEach.call($("vo-o").querySelectorAll("button"),function(b){b.onclick=function(){var s=S[+b.dataset.j];di("cli",b.textContent);c.vista="reprogramada";c.dia=s[0];c.hora_local=s[1];
+        di("kai",L("Su cita queda para el ","Your appointment is now on ")+b.textContent+L(". Le llega la confirmación por WhatsApp.",". The confirmation arrives on WhatsApp."));fin("reprogramada")}})}
+    else{c.vista="persona";di("kai",L("Le paso con una persona de la clínica. Gracias por su paciencia.","I’m passing you to a person at the clinic. Thank you for your patience."));fin("humano")}}
+  function fin(x){$("vo-e").textContent=L("Llamada terminada · #","Call ended · #")+sel;
+    ops('<p class="tr-n">'+L("Transcripción guardada en la ficha de la cita.","Transcript saved to the appointment record.")+'</p>');registro("voice",x==="humano"?"HUMANO":"OK",x==="humano"?"revision":"ejecutar","#"+sel+": "+EST[citas[sel].vista]);lista()}
+  A.querySelector(".otro").onclick=function(){ult=sig(ult);var i=String(ult);citas[i]={consentimiento:Math.random()>.2,intentos:Math.floor(Math.random()*4),hora_local:7+Math.floor(Math.random()*14),estado:"por_confirmar",dia:DIA[ult%3],vista:"por_confirmar"};sel=i;lista();inicio()};
+  sel=Object.keys(citas)[0];lista();inicio()})();
 
-/* DocCheck: como core/bots/doccheck.revisar (hoy fijo para la demo) */
-var HOY=new Date("2026-10-06");
-var DCN={"FALTA":"Missing field","FORMATO":"Invalid format in","VENCIDO":"Document older than "+LAB.checklist.fecha_max_dias+" days","SIN_FIRMA":"Signature missing"};
-var dc=JSON.parse(JSON.stringify(LAB.doccheck[0]));
-function pintaDC(){var F=$("dc-f");
-  F.innerHTML='<label>Form no.<input id="dc-n" value="'+esc(dc.numero_formulario)+'"></label><label>Date (YYYY-MM-DD)<input id="dc-d" value="'+esc(dc.fecha)+'"></label>'+
-   '<label>Total<input id="dc-t" value="'+esc(dc.total)+'"></label><label><span>Signature present</span><input id="dc-s" type="checkbox"'+(dc.firma_presente?' checked':'')+'></label>';
-  [["dc-n","numero_formulario"],["dc-d","fecha"],["dc-t","total"]].forEach(function(p){$(p[0]).oninput=function(){dc[p[1]]=this.value;res()}});
-  $("dc-s").onchange=function(){dc.firma_presente=this.checked;res()};res();}
-function res(){var r=revisar(dc,LAB.checklist,HOY);
-  $("dc-r").innerHTML='<small>Result · '+esc(LAB.checklist.documento)+' · codes only, never the content</small><div class="dec" style="padding:6px 0"><span class="b b-'+(r[0]==="completo"?"ejecutar":"revision")+'">'+(r[0]==="completo"?"Complete: ready to send":"Goes back for review")+'</span></div>'+
-   (r[1].length?'<ul style="margin:8px 0 0 18px">'+r[1].map(function(x){var k=x.split(":");return'<li><code>'+esc(x)+'</code> · '+DCN[k[0]]+(k[1]?' '+esc(DCF[k[1]]||k[1]):'')+'</li>'}).join("")+'</ul>':'')+
-   '<p style="color:var(--mut);margin-top:10px;font-size:.85rem">Rules: required '+LAB.checklist.obligatorios.map(function(x){return DCF[x]||x}).join(", ")+'; number in 9xxxx format; at most '+LAB.checklist.fecha_max_dias+' days old; signature required.</p>';  resumen($("dc-r"),4,{decision:r[0]==="completo"?"ejecutar":"revision",regla:r[1].length?r[1][0].split(":")[0]:"COMPLETO",i:3},r[1].length?r[1].join(", "):"Completo: listo para enviar");}
-chips($("dc-ej"),(function(){var o={};LAB.doccheck.forEach(function(d,i){o["Example "+(i+1)]=i});return o})(),function(k){dc=JSON.parse(JSON.stringify(LAB.doccheck[+k.slice(-1)-1]));pintaDC()});
-pintaDC();
+/* ───── Cobra: cartera por antigüedad, mensaje sugerido y total que cambia ───── */
+(function(){var A=marco("cobra",L("Cartera de Empresa Demo","Demo Company receivables")),C=A.querySelector(".app-c");
+  var fs={},sel=null,ult=90505,CLI=["Hotel Demo","Colegio Demo","Taller Demo","Óptica Demo","Mueblería Demo","Farmacia Demo"];
+  var TR=[[1,15,"1–15"],[16,30,"16–30"],[31,60,"31–60"],[61,1e9,"+60"]];
+  Object.keys(LAB.cobra).forEach(function(i,k){fs[i]=JSON.parse(JSON.stringify(LAB.cobra[i]));fs[i].monto=150+(+i%7)*85+k*40;fs[i].cli=CLI[k%CLI.length]});
+  C.innerHTML='<div class="co-top"><div class="tot"><small>'+L("Por cobrar","Receivable")+'</small><b id="co-tot"></b></div><div class="tramos" id="co-tr" aria-label="'+L("Antigüedad de la cartera","Receivables by age")+'"></div></div>'+
+    '<div class="co-g"><div class="cart-w"><table class="cart"><thead><tr><th>'+L("Factura","Invoice")+'</th><th>'+L("Cliente","Customer")+'</th><th>'+L("Atraso","Late")+'</th><th>'+L("Monto","Amount")+'</th><th>'+L("Qué hace","What it does")+'</th></tr></thead><tbody id="co-l"></tbody></table></div><div class="wa" id="co-w" aria-live="polite"></div></div>';
+  function pinta(){var vivas=Object.keys(fs).filter(function(i){return fs[i].estado!=="pagada"}),tot=0,por=[0,0,0,0];
+    vivas.forEach(function(i){var f=fs[i];tot+=f.monto;TR.forEach(function(t,k){if(f.dias_vencida>=t[0]&&f.dias_vencida<=t[1])por[k]+=f.monto})});
+    $("co-tot").textContent=usd(tot);pulso($("co-tot"));
+    $("co-tr").innerHTML=TR.map(function(t,k){return'<div style="--p:'+(tot?por[k]/tot*100:0)+'%" class="t'+k+'"><i></i><span>'+t[2]+' d</span><b>'+usd(por[k])+'</b></div>'}).join("");
+    $("co-l").innerHTML=Object.keys(fs).map(function(i){var f=fs[i],d=decidir(M.cobra,f),q=f.estado==="pagada"?L("Al día","Paid up"):d.decision==="ejecutar"?(d.valores.plantilla==="cobro_amable"?L("Recordatorio amable","Friendly reminder"):L("Recordatorio firme","Firm reminder")):d.motivo;
+      return'<tr class="'+(i===sel?"sel ":"")+(f.estado==="pagada"?"pag":"")+'"><td><button type="button" data-i="'+i+'">#'+i+'</button></td><td>'+esc(f.cli)+'</td><td>'+f.dias_vencida+' d</td><td>'+usd(f.monto)+'</td><td><span class="q '+(f.estado==="pagada"?"ok":d.decision)+'">'+esc(q)+'</span></td></tr>'}).join("");
+    [].forEach.call($("co-l").querySelectorAll("button"),function(b){b.onclick=function(){sel=b.dataset.i;pinta()}});
+    var f=fs[sel],W=$("co-w");if(!f){W.innerHTML='<p class="vacio">'+L("Elija una factura para ver el mensaje que enviaría.","Pick an invoice to see the message it would send.")+'</p>';return}
+    var d=decidir(M.cobra,f),msg=d.valores.plantilla==="cobro_amable"?L("Hola, le recordamos que la factura "+sel+" está vencida. Si ya pagó, ignore este mensaje.","Hello, a reminder that invoice "+sel+" is overdue. If you already paid, please ignore this message."):
+      L("La factura "+sel+" sigue con atraso. Por favor regularice o responda para acordar una fecha de pago.","Invoice "+sel+" is still overdue. Please settle it or reply to agree on a payment date.");
+    W.innerHTML='<div class="wa-cab"><b>'+esc(f.cli)+'</b><span>WhatsApp</span></div><div class="wa-c">'+(f.estado==="pagada"?'<p class="sis">'+L("Pago registrado. No se envían más mensajes.","Payment logged. No more messages are sent.")+'</p>':
+      d.decision==="ejecutar"?'<p class="msg">'+esc(msg)+'</p><small>'+L("Enviados antes: ","Sent before: ")+f.recordatorios_enviados+'</small>':'<p class="sis">'+L("No se envía: ","Not sent: ")+esc(d.motivo)+'.</p>')+'</div>'+
+      '<div class="fila-b"><button type="button" class="b2" data-a="env"'+(d.decision==="ejecutar"&&f.estado!=="pagada"?'':' disabled')+'>'+L("Enviar recordatorio","Send reminder")+'</button><button type="button" class="b2" data-a="pro"'+(f.estado==="pagada"?' disabled':'')+'>'+(f.promesa_pago_vigente?L("Quitar promesa","Remove promise"):L("Promesa de pago","Payment promise"))+'</button>'+
+      '<button type="button" class="b2" data-a="dis"'+(f.estado!=="vencida"?' disabled':'')+'>'+L("Abrir disputa","Open dispute")+'</button><button type="button" class="b2" data-a="pag"'+(f.estado==="pagada"?' disabled':'')+'>'+L("Registrar pago","Log payment")+'</button></div>'+porque(M.cobra,d);
+    [].forEach.call(W.querySelectorAll("[data-a]"),function(b){b.onclick=function(){var a=b.dataset.a,t;
+      if(a==="env"){f.recordatorios_enviados++;t=L("recordatorio enviado","reminder sent")}else if(a==="pro"){f.promesa_pago_vigente=!f.promesa_pago_vigente;t=f.promesa_pago_vigente?L("promesa anotada: se respeta","promise logged: respected"):L("promesa retirada","promise removed")}
+      else if(a==="dis"){f.estado="en_disputa";t=L("disputa: la ve una persona","dispute: a person handles it")}else{f.estado="pagada";t=L("pago registrado","payment logged")}
+      var d2=decidir(M.cobra,f);registro("cobra",d2.regla,a==="dis"?"revision":d2.decision,"#"+sel+": "+t);pinta()}})}
+  A.querySelector(".otro").onclick=function(){ult=sig(ult);var i=String(ult);fs[i]={estado:"vencida",dias_vencida:1+Math.floor(Math.random()*90),consentimiento:Math.random()>.15,promesa_pago_vigente:false,
+      recordatorios_enviados:Math.floor(Math.random()*4),monto:90+Math.floor(Math.random()*30)*25,cli:CLI[ult%CLI.length]};sel=i;var d=decidir(M.cobra,fs[i]);registro("cobra",d.regla,d.decision,"#"+i+": "+L("factura nueva en la cartera","new invoice in the ledger"));pinta()};
+  pinta()})();
+
+/* ───── DocCheck: expediente con requisitos que se marcan solos y dictamen ───── */
+(function(){var A=marco("doccheck",L("Formularios de reclamo de Clínica Demo","Demo Clinic claim forms")),C=A.querySelector(".app-c"),K=LAB.checklist;
+  var ej=LAB.doccheck.map(function(d){return JSON.parse(JSON.stringify(d))}),k=0,dc=ej[0],ultimo="";
+  var NC={numero_formulario:L("Nº de formulario","Form number"),fecha:L("Fecha","Date"),total:"Total"};
+  C.innerHTML='<div class="dc-g"><div class="exp"><h4 id="dc-h"></h4><div id="dc-f"></div></div><div><ol class="req vivo" id="dc-r"></ol><div class="dictamen" id="dc-d" aria-live="polite"></div></div></div>';
+  function form(){$("dc-h").textContent=L("File ","File ")+(dc.numero_formulario||"—");
+    $("dc-f").innerHTML='<label>'+NC.numero_formulario+'<input id="dc-n" value="'+esc(dc.numero_formulario)+'"></label><label>'+L("Fecha (AAAA-MM-DD)","Date (YYYY-MM-DD)")+'<input id="dc-d0" value="'+esc(dc.fecha)+'"></label>'+
+      '<label>Total<input id="dc-t" value="'+esc(dc.total)+'"></label><label class="chk"><input id="dc-s" type="checkbox"'+(firmado(dc.firma_presente)?' checked':'')+'> '+L("Firmado","Signed")+'</label>';
+    [["dc-n","numero_formulario"],["dc-d0","fecha"],["dc-t","total"]].forEach(function(p){$(p[0]).oninput=function(){dc[p[1]]=this.value;revisa(false)}});
+    $("dc-s").onchange=function(){dc.firma_presente=this.checked;revisa(false)};revisa(true)}
+  function revisa(anim){var r=revisar(dc,K,HOY),f=r[1],tiene=function(c){return f.indexOf(c)<0};
+    var Q=K.obligatorios.map(function(c){return[L("Tiene ","Has ")+NC[c].toLowerCase(),tiene("FALTA:"+c)]}).concat([
+      [L("Nº con formato 9xxxx","Number in 9xxxx format"),tiene("FORMATO:numero_formulario")],[L("Fecha válida y dentro del límite","Valid date within the limit"),tiene("FORMATO:fecha")&&tiene("VENCIDO")],
+      [L("Firma presente","Signature present"),tiene("SIN_FIRMA")]]);
+    $("dc-r").className="req vivo"+(anim&&!RM?" corre":"");
+    $("dc-r").innerHTML=Q.map(function(q,i){return'<li class="'+(q[1]?"si":"no")+'" style="--d:'+(i*.18).toFixed(2)+'s">'+q[0]+'</li>'}).join("");
+    var ok=r[0]==="completo";$("dc-d").className="dictamen "+(ok?"ejecutar":"revision")+(anim&&!RM?" corre":"");
+    $("dc-d").innerHTML='<b>'+(ok?L("Listo para enviar","Ready to send"):L("Vuelve a revisión","Back for review"))+'</b><span>'+(ok?L("Todos los requisitos se cumplen.","Every requirement is met."):L("Por corregir: ","To fix: ")+f.join(", "))+'</span>';
+    var cl=r[0]+f.join();if(cl!==ultimo){ultimo=cl;registro("doccheck",f.length?f[0].split(":")[0]:"OK",ok?"ejecutar":"revision",L("File ","File ")+(dc.numero_formulario||"—")+": "+(ok?L("completo","complete"):f.join(", ")))}}
+  A.querySelector(".otro").onclick=function(){k++;dc=k<ej.length?ej[k]:{numero_formulario:String(90400+Math.floor(Math.random()*99)),fecha:["2026-09-28","2026-04-02","2026-10-01",""][k%4],
+      total:["210.00","","95.50","0"][k%4],firma_presente:k%3!==0};form()};
+  form()})();
 })();
 
 /* «¿Qué le quita tiempo?» (antes en la portada): un tablero distinto por proceso, con datos ficticios (IDs 9xxxx).
@@ -509,7 +577,7 @@ function pasoDocumentos(){var li=$("pb-doc-c").children[doc.i];if(!li){var ok=!d
 
 var M={agendar:[iniAgendar,pasoAgendar],atender:[iniAtender,pasoAtender],cobrar:[iniCobrar,pasoCobrar],documentos:[iniDocumentos,pasoDocumentos]};
 function elegir(b,foco){act=b.getAttribute("aria-controls").slice(3);tabs.forEach(function(x){var s=x===b;x.setAttribute("aria-selected",s);x.tabIndex=s?0:-1;
-  $(x.getAttribute("aria-controls")).hidden=!s});if(foco)b.focus();nV=0;nP=0;$("pb-nv").textContent=0;$("pb-np").textContent=0;$("pb-ult").textContent="—";
+  $(x.getAttribute("aria-controls")).hidden=!s;var ad=$("pb-ad-"+x.getAttribute("aria-controls").slice(3));if(ad)ad.hidden=!s});if(foco)b.focus();nV=0;nP=0;$("pb-nv").textContent=0;$("pb-np").textContent=0;$("pb-ult").textContent="—";
   M[act][0]();for(var i=0;i<2;i++)M[act][1]()}
 tabs.forEach(function(b,i){b.addEventListener("click",function(){elegir(b)});
   b.addEventListener("keydown",function(e){var d={ArrowRight:1,ArrowLeft:-1}[e.key];if(d){e.preventDefault();elegir(tabs[(i+d+tabs.length)%tabs.length],true)}})});
@@ -520,7 +588,7 @@ if(!RM)setInterval(function(){if(!document.hidden&&vis){M[act][1]();if(act==="do
 </script>
 </main>
 <!--VX:PIE-->
-<aside class="ksig" aria-label="Next folio"><div class="wrap"><a href="en-pricing.html"><span class="ksig-g" aria-hidden="true">IV</span><span><span class="ksig-e">Next folio</span><span class="ksig-t"><i>IV</i> · Pricing</span><span class="ksig-n">What it costs and how we work, step by step.</span></span><span class="ksig-d"><ol class="ksig-r" aria-hidden="true"><li class="ya">I</li><li class="ya">II</li><li class="ya">III</li><li class="va">IV</li><li class="">V</li></ol><span class="ksig-f" aria-hidden="true">→</span></span></a></div></aside>
+<aside class="ksig" aria-label="Next folio"><div class="wrap"><a href="en-pricing.html" style="--de:2;--a:3"><span class="ksig-g" aria-hidden="true">IV</span><span class="ksig-c"><span class="ksig-e">Next folio</span><span class="ksig-t"><i>IV</i> Pricing</span><span class="ksig-n">What it costs and how we work, step by step.</span></span><span class="ksig-v"><span class="ksig-l">Inside</span><ul><li style="--d:0"><b aria-hidden="true">$</b>Pricing</li><li style="--d:1"><b aria-hidden="true">↗</b>Step-by-step route</li><li style="--d:2"><b aria-hidden="true">≡</b>What’s included</li></ul></span><span class="ksig-p" aria-hidden="true"><ol class="ksig-r"><li class="ya" style="--j:0">I</li><li class="ya" style="--j:1">II</li><li class="ya" style="--j:2">III</li><li class="va" style="--j:3">IV</li><li class="" style="--j:4">V</li></ol><span class="ksig-f">→</span></span></a></div></aside>
 <footer class="kpie"><div class="kw">
   <div><div class="km">KAIROS</div><div class="kl">Processes that run themselves.</div><p>Process automation for companies in Panama. Anything uncertain is always reviewed by a person.</p></div>
   <div><b>I · What we do</b><a href="en.html">Home</a><a href="en-about.html">About</a></div><div><b>II · Solutions</b><a href="en-solutions.html">All solutions</a><a href="en-claims.html">Kairos Claims</a><a href="en-solutions.html#industrias">Industries</a></div><div><b>III · See it work</b><a href="en-demos.html">Demos</a><a href="en-demo-claims.html">Demo Claims</a><a href="en-demo-agenda.html">Demo Agenda</a><a href="en-demo-monitor.html">Demo Monitor</a></div><div><b>IV · Pricing</b><a href="en-pricing.html">Pricing and route</a></div><div><b>V · Contact</b><a href="en-assessment.html">Self-assessment</a><a href="en-express.html">Express Assessment</a><a href="en.html#contacto" data-agenda>Let’s talk</a></div>
